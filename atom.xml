@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ajn</title>
+  
+  <subtitle>Cohen</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://jianai0330.github.io/"/>
+  <updated>2019-10-29T21:46:48.309Z</updated>
+  <id>https://jianai0330.github.io/</id>
+  
+  <author>
+    <name>A jian</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test push</title>
+    <link href="https://jianai0330.github.io/2019/10/29/test-push/"/>
+    <id>https://jianai0330.github.io/2019/10/29/test-push/</id>
+    <published>2019-10-29T21:45:54.000Z</published>
+    <updated>2019-10-29T21:46:48.309Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="2019" scheme="https://jianai0330.github.io/categories/2019/"/>
+    
+      <category term="test" scheme="https://jianai0330.github.io/categories/2019/test/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://jianai0330.github.io/2019/10/29/hello-world/"/>
+    <id>https://jianai0330.github.io/2019/10/29/hello-world/</id>
+    <published>2019-10-29T21:42:13.439Z</published>
+    <updated>2019-10-29T21:42:13.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="2019" scheme="https://jianai0330.github.io/categories/2019/"/>
+    
+      <category term="语言" scheme="https://jianai0330.github.io/categories/2019/%E8%AF%AD%E8%A8%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>auto 6</title>
+    <link href="https://jianai0330.github.io/2019/10/29/auto-6/"/>
+    <id>https://jianai0330.github.io/2019/10/29/auto-6/</id>
+    <published>2019-10-29T19:43:10.000Z</published>
+    <updated>2019-10-29T21:42:13.428Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>5 password</title>
+    <link href="https://jianai0330.github.io/2019/10/29/5-password/"/>
+    <id>https://jianai0330.github.io/2019/10/29/5-password/</id>
+    <published>2019-10-29T17:21:23.000Z</published>
+    <updated>2019-10-29T21:42:13.425Z</updated>
+    
+    <content type="html"><![CDATA[<p>password test</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;password test&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="2019" scheme="https://jianai0330.github.io/categories/2019/"/>
+    
+      <category term="test" scheme="https://jianai0330.github.io/categories/2019/test/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>forth</title>
+    <link href="https://jianai0330.github.io/2019/10/29/forth/"/>
+    <id>https://jianai0330.github.io/2019/10/29/forth/</id>
+    <published>2019-10-29T15:32:29.000Z</published>
+    <updated>2019-10-29T21:42:13.436Z</updated>
+    
+    <content type="html"><![CDATA[<p>why click every button of menu always 404 in next’s config</p><h1 id="20"><a href="#20" class="headerlink" title="%20"></a>%20</h1><p>That’s URL Percent Encoding. It’s used to place characters in URLs that aren’t typically allowed. The encoding is a percent sign followed by an ASCII value (in hexadecimal). So %20 is a space, %30 is the number 0, %3b is semicolon and so on.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;why click every button of menu always 404 in next’s config&lt;/p&gt;
+&lt;h1 id=&quot;20&quot;&gt;&lt;a href=&quot;#20&quot; class=&quot;headerlink&quot; title=&quot;%20&quot;&gt;&lt;/a&gt;%20&lt;/h1&gt;&lt;p&gt;Th
+      
+    
+    </summary>
+    
+    
+    
+      <category term="try" scheme="https://jianai0330.github.io/tags/try/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>third</title>
+    <link href="https://jianai0330.github.io/2019/10/29/third/"/>
+    <id>https://jianai0330.github.io/2019/10/29/third/</id>
+    <published>2019-10-29T15:19:14.000Z</published>
+    <updated>2019-10-29T21:42:13.448Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="why404" scheme="https://jianai0330.github.io/tags/why404/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>second post</title>
+    <link href="https://jianai0330.github.io/2019/10/29/second-post/"/>
+    <id>https://jianai0330.github.io/2019/10/29/second-post/</id>
+    <published>2019-10-29T01:05:02.000Z</published>
+    <updated>2019-10-29T21:42:13.444Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>点击日志后出现404</li><li>访客次数不现实</li><li>侧面目录滑动</li><li>黑色主题更好看</li><li>右上角的follow</li><li>markdown语法 尤其是链接</li><li>目录的分类,子类怎么操作</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;点击日志后出现404&lt;/li&gt;
+&lt;li&gt;访客次数不现实&lt;/li&gt;
+&lt;li&gt;侧面目录滑动&lt;/li&gt;
+&lt;li&gt;黑色主题更好看&lt;/li&gt;
+&lt;li&gt;右上角的follow&lt;/li&gt;
+&lt;li&gt;markdown语法 尤其是链接&lt;/li&gt;
+&lt;li&gt;目录的分类,子类怎么操作&lt;/l
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>first post_01</title>
+    <link href="https://jianai0330.github.io/2019/10/28/first-post-01/"/>
+    <id>https://jianai0330.github.io/2019/10/28/first-post-01/</id>
+    <published>2019-10-28T03:49:17.000Z</published>
+    <updated>2019-10-29T21:42:13.432Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="try" scheme="https://jianai0330.github.io/tags/try/"/>
+    
+  </entry>
+  
+</feed>
