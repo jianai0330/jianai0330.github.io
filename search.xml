@@ -3,15 +3,10 @@
   <entry>
     <title>CMTE's_note</title>
     <url>/2019/10/30/cmte-s-note/</url>
-    <content><![CDATA[<h1 id="Sem1"><a href="#Sem1" class="headerlink" title="Sem1"></a>Sem1</h1><h2 id="4-Vector-Algebra"><a href="#4-Vector-Algebra" class="headerlink" title="4 Vector  Algebra"></a>4 Vector  Algebra</h2><h3 id="空间直线-空间平面"><a href="#空间直线-空间平面" class="headerlink" title="空间直线,空间平面"></a>空间直线,空间平面</h3><ul>
-<li>空间直线几个形式的方程,空间平面的方程.</li>
-</ul>
-<p>Ax +By +Cz + D = 0</p>
+    <content><![CDATA[<h1 id="Sem1"><a href="#Sem1" class="headerlink" title="Sem1"></a>Sem1</h1><h2 id="4-Vector-Algebra"><a href="#4-Vector-Algebra" class="headerlink" title="4 Vector  Algebra"></a>4 Vector  Algebra</h2><h3 id="空间直线-空间平面"><a href="#空间直线-空间平面" class="headerlink" title="空间直线,空间平面"></a>空间直线,空间平面</h3><a id="more"></a>
+<h4 id="空间直线几个形式的方程-空间平面的方程"><a href="#空间直线几个形式的方程-空间平面的方程" class="headerlink" title="空间直线几个形式的方程,空间平面的方程."></a>空间直线几个形式的方程,空间平面的方程.</h4><p>Ax +By +Cz + D = 0</p>
 <p>其中n = (A, B, C)是平面的法向量，D是将平面平移到坐标原点所需距离（所以D=0时，平面过原点）</p>
-<ul>
-<li>空间两直线的距离,点到平面以及到直线的距离 公式</li>
-</ul>
-<p>(联立方程)</p>
+<h4 id="空间两直线的距离-点到平面以及到直线的距离-公式"><a href="#空间两直线的距离-点到平面以及到直线的距离-公式" class="headerlink" title="空间两直线的距离,点到平面以及到直线的距离 公式"></a>空间两直线的距离,点到平面以及到直线的距离 公式</h4><p>(联立方程)<br><img src="https://pic002.cnblogs.com/img/zdd/201007/2010071013450338.jpg" alt="点到平面" title="公式"></p>
 <h2 id="5-Matrix-Algebra"><a href="#5-Matrix-Algebra" class="headerlink" title="5 Matrix Algebra"></a>5 Matrix Algebra</h2>]]></content>
       <categories>
         <category>2019</category>
