@@ -36,15 +36,6 @@
       </tags>
   </entry>
   <entry>
-    <title>test push</title>
-    <url>/2019/10/29/test-push/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>2019</category>
-        <category>test</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2019/10/29/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -64,21 +55,6 @@
       </categories>
   </entry>
   <entry>
-    <title>auto 6</title>
-    <url>/2019/10/29/auto-6/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>5 password</title>
-    <url>/2019/10/29/5-password/</url>
-    <content><![CDATA[<p>password test</p>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>test</category>
-      </categories>
-  </entry>
-  <entry>
     <title>forth</title>
     <url>/2019/10/29/forth/</url>
     <content><![CDATA[<p>why click every button of menu always 404 in next’s config</p>
@@ -86,14 +62,6 @@
 ]]></content>
       <tags>
         <tag>try</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>third</title>
-    <url>/2019/10/29/third/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>why404</tag>
       </tags>
   </entry>
   <entry>
@@ -109,13 +77,5 @@
 <li>目录的分类,子类怎么操作</li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>first post_01</title>
-    <url>/2019/10/28/first-post-01/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>try</tag>
-      </tags>
   </entry>
 </search>

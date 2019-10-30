@@ -71,25 +71,6 @@
   </entry>
   
   <entry>
-    <title>test push</title>
-    <link href="https://jianai0330.github.io/2019/10/29/test-push/"/>
-    <id>https://jianai0330.github.io/2019/10/29/test-push/</id>
-    <published>2019-10-29T21:45:54.000Z</published>
-    <updated>2019-10-29T21:46:48.309Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="2019" scheme="https://jianai0330.github.io/categories/2019/"/>
-    
-      <category term="test" scheme="https://jianai0330.github.io/categories/2019/test/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="https://jianai0330.github.io/2019/10/29/hello-world/"/>
     <id>https://jianai0330.github.io/2019/10/29/hello-world/</id>
@@ -108,48 +89,6 @@
       <category term="2019" scheme="https://jianai0330.github.io/categories/2019/"/>
     
       <category term="语言" scheme="https://jianai0330.github.io/categories/2019/%E8%AF%AD%E8%A8%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>auto 6</title>
-    <link href="https://jianai0330.github.io/2019/10/29/auto-6/"/>
-    <id>https://jianai0330.github.io/2019/10/29/auto-6/</id>
-    <published>2019-10-29T19:43:10.000Z</published>
-    <updated>2019-10-29T21:42:13.428Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>5 password</title>
-    <link href="https://jianai0330.github.io/2019/10/29/5-password/"/>
-    <id>https://jianai0330.github.io/2019/10/29/5-password/</id>
-    <published>2019-10-29T17:21:23.000Z</published>
-    <updated>2019-10-29T21:42:13.425Z</updated>
-    
-    <content type="html"><![CDATA[<p>password test</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;password test&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="2019" scheme="https://jianai0330.github.io/categories/2019/"/>
-    
-      <category term="test" scheme="https://jianai0330.github.io/categories/2019/test/"/>
     
     
   </entry>
@@ -180,23 +119,6 @@
   </entry>
   
   <entry>
-    <title>third</title>
-    <link href="https://jianai0330.github.io/2019/10/29/third/"/>
-    <id>https://jianai0330.github.io/2019/10/29/third/</id>
-    <published>2019-10-29T15:19:14.000Z</published>
-    <updated>2019-10-29T21:42:13.448Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-      <category term="why404" scheme="https://jianai0330.github.io/tags/why404/"/>
-    
-  </entry>
-  
-  <entry>
     <title>second post</title>
     <link href="https://jianai0330.github.io/2019/10/29/second-post/"/>
     <id>https://jianai0330.github.io/2019/10/29/second-post/</id>
@@ -222,23 +144,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>first post_01</title>
-    <link href="https://jianai0330.github.io/2019/10/28/first-post-01/"/>
-    <id>https://jianai0330.github.io/2019/10/28/first-post-01/</id>
-    <published>2019-10-28T03:49:17.000Z</published>
-    <updated>2019-10-29T21:42:13.432Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-      <category term="try" scheme="https://jianai0330.github.io/tags/try/"/>
     
   </entry>
   
