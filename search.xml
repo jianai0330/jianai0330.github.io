@@ -37,15 +37,15 @@
 <li>矩阵---多元方程组</li>
 <li>changes of  axes 旋转----结合预科课件: 逆时针顺时针</li>
 <li><h3 id="几个矩阵和概念"><a href="#几个矩阵和概念" class="headerlink" title="几个矩阵和概念"></a>几个矩阵和概念</h3><ul>
-<li>square matrix,column//row vector,diagonal matrix,unit//identity matrix,symmetric matrix,upper-//lower-triangular matrix,</li>
+<li>square matrix,column/row vector,diagonal matrix,unit/identity matrix,symmetric matrix,upper-/lower-triangular matrix,</li>
 <li>singular:奇异</li>
 <li>trace: sum of <strong>leading diagonal</strong></li>
-<li>A^T^ // A<sup>T</sup>: 手心手背</li>
+<li>A<sup>T</sup>: 手心手背</li>
 <li>minor:余子式</li>
-<li>adjoint:伴随矩阵 <em>注意特性和公式!</em></li>
+<li>adjoint:伴随矩阵 <strong><em>注意特性和公式</em></strong></li>
 <li>inverse matrix:</li>
 <li><h4 id="Cramer’s-rule卡姆拉法则"><a href="#Cramer’s-rule卡姆拉法则" class="headerlink" title="Cramer’s rule卡姆拉法则 :"></a>Cramer’s rule卡姆拉法则 :</h4></li>
-<li><h4 id="Gaussian-elimination-见6"><a href="#Gaussian-elimination-见6" class="headerlink" title="Gaussian elimination: 见6"></a>Gaussian elimination: 见6</h4></li>
+<li><h4 id="Gaussian-elimination-见矩阵运算板块"><a href="#Gaussian-elimination-见矩阵运算板块" class="headerlink" title="Gaussian elimination: 见矩阵运算板块"></a>Gaussian elimination: 见矩阵运算板块</h4></li>
 <li><h4 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref<br></h4><pre><code>row echelon form: 下阶梯,leadingentry是1.
 rref:在ref基上每一列只有一个非0.
 每个矩阵,ref不唯一,**rref唯一**.</code></pre></li>
@@ -69,10 +69,12 @@ rref:在ref基上每一列只有一个非0.
 <li>eigenvalue: AX = aX<pre><code> - 已知A可求a
  - 已知A和a可求X(eigenvector) </code></pre><h2 id="疑问疑惑不理解"><a href="#疑问疑惑不理解" class="headerlink" title="疑问疑惑不理解"></a>疑问疑惑不理解</h2></li>
 </ul>
-</li>
+<ol>
 <li>矩阵这么乘啊加啊,它行列式的值不会变吗,为什么可以这样</li>
 <li>转化成ref</li>
 <li>怎么用矩阵解三元一次方程(就像解eigenvector)</li>
+</ol>
+</li>
 </ol>
 ]]></content>
       <categories>
