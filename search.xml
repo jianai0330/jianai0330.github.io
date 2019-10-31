@@ -27,12 +27,12 @@
   <entry>
     <title>CMTE's_note</title>
     <url>/2019/10/30/cmte-s-note/</url>
-    <content><![CDATA[<h1 id="4-Vector-Algebra"><a href="#4-Vector-Algebra" class="headerlink" title="4 Vector  Algebra"></a>4 Vector  Algebra</h1><h2 id="空间直线-空间平面"><a href="#空间直线-空间平面" class="headerlink" title="空间直线,空间平面"></a>空间直线,空间平面</h2><a id="more"></a>
+    <content><![CDATA[<h1 id="四-Vector-Algebra"><a href="#四-Vector-Algebra" class="headerlink" title="四 Vector  Algebra"></a>四 Vector  Algebra</h1><h2 id="空间直线-空间平面"><a href="#空间直线-空间平面" class="headerlink" title="空间直线,空间平面"></a>空间直线,空间平面</h2><a id="more"></a>
 <h3 id="空间直线几个形式的方程-空间平面的方程"><a href="#空间直线几个形式的方程-空间平面的方程" class="headerlink" title="空间直线几个形式的方程,空间平面的方程."></a>空间直线几个形式的方程,空间平面的方程.</h3><p>Ax +By +Cz + D = 0</p>
 <p>其中n = (A, B, C)是平面的法向量，D是将平面平移到坐标原点所需距离（所以D=0时，平面过原点）</p>
 <h3 id="空间两直线的距离-点到平面以及到直线的距离-公式"><a href="#空间两直线的距离-点到平面以及到直线的距离-公式" class="headerlink" title="空间两直线的距离,点到平面以及到直线的距离 公式"></a>空间两直线的距离,点到平面以及到直线的距离 公式</h3><p>(联立方程)<br><img src="https://pic002.cnblogs.com/img/zdd/201007/2010071013450338.jpg" alt="点到平面" title="公式"></p>
 <h2 id="已知两平面方程求交点坐标"><a href="#已知两平面方程求交点坐标" class="headerlink" title="已知两平面方程求交点坐标"></a>已知两平面方程求交点坐标</h2><h2 id="物理学中的力矩和功"><a href="#物理学中的力矩和功" class="headerlink" title="物理学中的力矩和功"></a>物理学中的力矩和功</h2><p>机械功:work<br>力矩:moment of force<br>     the tendency of a force to make an object <strong>rotate</strong> .<br>两个物理意义不同,符号相同.牛顿-米.<br>力矩<em>t=rXF</em>, 这个r不是功里面那样的在F方向的位移,而是从转轴到施力点的位移矢量.</p>
-<h1 id="5-Matrix-Algebra"><a href="#5-Matrix-Algebra" class="headerlink" title="5 Matrix Algebra"></a>5 Matrix Algebra</h1><h2 id="3阶矩阵运算易错的是"><a href="#3阶矩阵运算易错的是" class="headerlink" title="3阶矩阵运算易错的是:"></a>3阶矩阵运算易错的是:</h2><p>第二列的余子式中两列的顺序: 是从左到右 不是从右到左!1</p>
+<h1 id="五-Matrix-Algebra"><a href="#五-Matrix-Algebra" class="headerlink" title="五 Matrix Algebra"></a>五 Matrix Algebra</h1><h2 id="3阶矩阵运算易错的是"><a href="#3阶矩阵运算易错的是" class="headerlink" title="3阶矩阵运算易错的是:"></a>3阶矩阵运算易错的是:</h2><p>第二列的余子式中两列的顺序: 是从左到右 不是从右到左!1</p>
 <h2 id="课件提纲-amp-概念"><a href="#课件提纲-amp-概念" class="headerlink" title="课件提纲&amp;概念"></a>课件提纲&amp;概念</h2><ol>
 <li>矩阵---多元方程组</li>
 <li>changes of  axes 旋转----结合预科课件: 逆时针顺时针</li>
