@@ -32,14 +32,14 @@
 <p>其中n = (A, B, C)是平面的法向量，D是将平面平移到坐标原点所需距离（所以D=0时，平面过原点）</p>
 <h3 id="空间两直线的距离-点到平面以及到直线的距离-公式"><a href="#空间两直线的距离-点到平面以及到直线的距离-公式" class="headerlink" title="空间两直线的距离,点到平面以及到直线的距离 公式"></a>空间两直线的距离,点到平面以及到直线的距离 公式</h3><p>(联立方程)<br><img src="https://pic002.cnblogs.com/img/zdd/201007/2010071013450338.jpg" alt="点到平面" title="公式"></p>
 <h2 id="已知两平面方程求交点坐标"><a href="#已知两平面方程求交点坐标" class="headerlink" title="已知两平面方程求交点坐标"></a>已知两平面方程求交点坐标</h2><h2 id="物理学中的力矩和功"><a href="#物理学中的力矩和功" class="headerlink" title="物理学中的力矩和功"></a>物理学中的力矩和功</h2><p>机械功:work<br>力矩:moment of force<br>     the tendency of a force to make an object <strong>rotate</strong> .<br>两个物理意义不同,符号相同.牛顿-米.<br>力矩<em>t=rXF</em>, 这个r不是功里面那样的在F方向的位移,而是从转轴到施力点的位移矢量.</p>
-<h1 id="五-Matrix-Algebra"><a href="#五-Matrix-Algebra" class="headerlink" title="五 Matrix Algebra"></a>五 Matrix Algebra</h1><h2 id="3阶矩阵运算易错的是"><a href="#3阶矩阵运算易错的是" class="headerlink" title="3阶矩阵运算易错的是:"></a>3阶矩阵运算易错的是:</h2><p>第二列的余子式中两列的顺序: 是从左到右 不是从右到左!1</p>
+<h1 id="五-Matrix-Algebra"><a href="#五-Matrix-Algebra" class="headerlink" title="五 Matrix Algebra"></a>五 Matrix Algebra</h1><h2 id="3阶矩阵运算易错的是"><a href="#3阶矩阵运算易错的是" class="headerlink" title="3阶矩阵运算易错的是:"></a>3阶矩阵运算易错的是:</h2><p>第二列的余子式中两列的顺序: 是从左到右 不是从右到左!</p>
 <h2 id="课件提纲-amp-概念"><a href="#课件提纲-amp-概念" class="headerlink" title="课件提纲&amp;概念"></a>课件提纲&amp;概念</h2><ol>
 <li><p>矩阵---多元方程组</p>
 </li>
 <li><p>changes of  axes 旋转----结合预科课件: 逆时针顺时针</p>
 </li>
 <li><h3 id="几个矩阵和概念"><a href="#几个矩阵和概念" class="headerlink" title="几个矩阵和概念"></a>几个矩阵和概念</h3><ul>
-<li><p>square matrix,column/row vector,diagonal matrix,unit/identity matrix,symmetric matrix,upper-/lower-triangular matrix,diagonal对角矩阵,scalar数量矩阵(主对角元全相等)</p>
+<li><p>square m,column/row vector,diagonal m,unit/identity ma,symmetric m,upper-/lower-triangular m,diagonal对角矩阵,scalar数量矩阵(主对角元全相等)</p>
 </li>
 <li><p>singular:奇异(行列式为0)</p>
 </li>
@@ -71,7 +71,7 @@ rref:在ref基上每一列只有一个非0.
 <li><p>注意<strong>矩阵×标量</strong>与行列式×标量的区别: 矩阵式乘每个元素,行列式乘一行.</p>
 </li>
 <li><h3 id="公式总结"><a href="#公式总结" class="headerlink" title="公式总结:"></a>公式总结:</h3><ul>
-<li><code>(AB)^T^ = B^T^A^T^</code> &amp; <code>adj(AB) = adj(B)adj(A)</code></li>
+<li>(AB)^T^ = B^T^A^T^ &amp; adj(AB) = adj(B)adj(A)</li>
 <li>eigenvalue的性质(PPT末尾)</li>
 <li><code>AA*=A*A=|A|E</code>  (*伴随矩阵)</li>
 <li>A<sup>-1</sup>=(1/|A|)<em>A</em>(可轻易有上一行结合AA<sup>-1</sup>=E推出)</li>
@@ -111,8 +111,13 @@ rref:在ref基上每一列只有一个非0.
 <h2 id="疑问疑惑不理解"><a href="#疑问疑惑不理解" class="headerlink" title="疑问疑惑不理解"></a>疑问疑惑不理解</h2><ol>
 <li>矩阵这么乘啊加啊,它行列式的值不会变吗,为什么可以这样</li>
 <li>转化成ref</li>
-<li>怎么用矩阵解三元一次方程(就像解eigenvector)  ---<em>于10.31</em></li>
+<li>怎么用矩阵解三元一次方程(就像解eigenvector)  </li>
 <li>我记得我总结过行列式与矩阵的不同??</li>
+<li>记得PPT最后的几个性质 PPT的例题----可以lab时候做---<em>于10.31</em></li>
+</ol>
+<h2 id="难点和做题总结"><a href="#难点和做题总结" class="headerlink" title="难点和做题总结"></a>难点和做题总结</h2><ol>
+<li>求特征向量的时候,就设xyz根据向量积的基本法则求,它们积是0.</li>
+<li></li>
 </ol>
 ]]></content>
       <categories>
