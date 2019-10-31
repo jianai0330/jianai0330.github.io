@@ -25,7 +25,7 @@
       </tags>
   </entry>
   <entry>
-    <title>CMTE's_note</title>
+    <title>CMTE_note</title>
     <url>/2019/10/30/cmte-s-note/</url>
     <content><![CDATA[<h1 id="四-Vector-Algebra"><a href="#四-Vector-Algebra" class="headerlink" title="四 Vector  Algebra"></a>四 Vector  Algebra</h1><h2 id="空间直线-空间平面"><a href="#空间直线-空间平面" class="headerlink" title="空间直线,空间平面"></a>空间直线,空间平面</h2><a id="more"></a>
 <h3 id="空间直线几个形式的方程-空间平面的方程"><a href="#空间直线几个形式的方程-空间平面的方程" class="headerlink" title="空间直线几个形式的方程,空间平面的方程."></a>空间直线几个形式的方程,空间平面的方程.</h3><p>Ax +By +Cz + D = 0</p>
@@ -40,8 +40,8 @@
 <li>square matrix,column/row vector,diagonal matrix,unit/identity matrix,symmetric matrix,upper-/lower-triangular matrix,</li>
 <li>singular:奇异</li>
 <li>trace: sum of <strong>leading diagonal</strong></li>
-<li>A<sup>T</sup>: 手心手背</li>
-<li>minor:余子式</li>
+<li>A<sup>T</sup>: 手心手背 转置行列式<pre><code>   行列式和转置行列式**相等**</code></pre></li>
+<li>minor:余子式,cofactor</li>
 <li>adjoint:伴随矩阵 <strong><em>注意特性和公式</em></strong></li>
 <li>inverse matrix:</li>
 <li><h4 id="Cramer’s-rule卡姆拉法则"><a href="#Cramer’s-rule卡姆拉法则" class="headerlink" title="Cramer’s rule卡姆拉法则 :"></a>Cramer’s rule卡姆拉法则 :</h4></li>
@@ -67,14 +67,20 @@ rref:在ref基上每一列只有一个非0.
 <li>转化成ref(下阶梯):PPT第58页<pre><code>1. pivot</code></pre></li>
 <li>find matrix <strong>rank</strong>:<pre><code>1. 矩阵的ref形式里含有非0行的数量 = 矩阵中independent vector(每一行就是一个vector)</code></pre></li>
 <li>eigenvalue: AX = aX<pre><code> - 已知A可求a
- - 已知A和a可求X(eigenvector) </code></pre><h2 id="疑问疑惑不理解"><a href="#疑问疑惑不理解" class="headerlink" title="疑问疑惑不理解"></a>疑问疑惑不理解</h2></li>
+ - 已知A和a可求X(eigenvector) </code></pre><h2 id="二级结论"><a href="#二级结论" class="headerlink" title="二级结论"></a>二级结论</h2><h3 id="上三角行列式"><a href="#上三角行列式" class="headerlink" title="- 上三角行列式"></a>- 上三角行列式</h3><pre><code>    的值D = 对角线元素乘积</code></pre><h3 id="n阶行列式的性质"><a href="#n阶行列式的性质" class="headerlink" title="-  n阶行列式的性质"></a>-  n阶行列式的性质</h3><pre><code>    1. 行列式等于它的转置行列式
+    2. 互换行列式中的两行/列,行列式变号(**行列式是一个值数,与矩阵不同**),那矩阵换行呢**??**
+    3. 行列式有两行/列对应相等或者对应成比例,行列式 = 0或者行列式有一行全为0,行列式也为0
+    4. 行列式乘一个数,就乘一行,跟矩阵一样??
+    5. 最重要的来了: 把某一行/列元素的k倍加到另一行/列,行列式的值不变不变不变!
+    6. 可以用上述这些进行行列式的计算</code></pre></li>
 </ul>
-<ol>
+</li>
+</ol>
+<h2 id="疑问疑惑不理解"><a href="#疑问疑惑不理解" class="headerlink" title="疑问疑惑不理解"></a>疑问疑惑不理解</h2><ol>
 <li>矩阵这么乘啊加啊,它行列式的值不会变吗,为什么可以这样</li>
 <li>转化成ref</li>
-<li>怎么用矩阵解三元一次方程(就像解eigenvector)</li>
-</ol>
-</li>
+<li>怎么用矩阵解三元一次方程(就像解eigenvector)  ---<em>于10.31</em></li>
+<li>我记得我总结过行列式与矩阵的不同??</li>
 </ol>
 ]]></content>
       <categories>
@@ -85,25 +91,6 @@ rref:在ref基上每一列只有一个非0.
       <tags>
         <tag>空间向量</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2019/10/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>语言</category>
-      </categories>
   </entry>
   <entry>
     <title>forth</title>
