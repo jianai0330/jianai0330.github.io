@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Arduino</title>
+    <url>/2019/11/01/arduino/</url>
+    <content><![CDATA[<h2 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><a id="more"></a>
+
+<ol>
+<li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
+<li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li>
+</ol>
+<h3 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h3><ol>
+<li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
+<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
+ 它们 连接着the external digital pins
+         | Atemega pin  |  Nano digital pin |
+         | -----------  |  --------------   |
+         |     PB0      |      D8           |
+         |     PB1      |      D9           |
+         | ....         |     ....          |</code></pre></li>
+<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li>
+<li>CPU怎么链接PORTB: databus</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>Arduino</category>
+      </categories>
+      <tags>
+        <tag>单片机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Assembly_note</title>
     <url>/2019/10/31/assembly/</url>
     <content><![CDATA[<h1 id="Arduino里元器件-amp-概念"><a href="#Arduino里元器件-amp-概念" class="headerlink" title="Arduino里元器件&amp;概念"></a>Arduino里元器件&amp;概念</h1><a id="more"></a>

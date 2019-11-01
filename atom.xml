@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jianai0330.github.io/"/>
-  <updated>2019-10-31T14:35:34.966Z</updated>
+  <updated>2019-11-01T17:00:37.618Z</updated>
   <id>https://jianai0330.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Arduino</title>
+    <link href="https://jianai0330.github.io/2019/11/01/arduino/"/>
+    <id>https://jianai0330.github.io/2019/11/01/arduino/</id>
+    <published>2019-11-01T16:22:08.000Z</published>
+    <updated>2019-11-01T17:00:37.618Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><a id="more"></a><ol><li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li><li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li></ol><h3 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h3><ol><li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li><li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0) 它们 连接着the external digital pins         | Atemega pin  |  Nano digital pin |         | -----------  |  --------------   |         |     PB0      |      D8           |         |     PB1      |      D9           |         | ....         |     ....          |</code></pre></li><li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li><li>CPU怎么链接PORTB: databus</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;lab2&quot;&gt;&lt;a href=&quot;#lab2&quot; class=&quot;headerlink&quot; title=&quot;lab2&quot;&gt;&lt;/a&gt;lab2&lt;/h2&gt;&lt;h3 id=&quot;缩写&quot;&gt;&lt;a href=&quot;#缩写&quot; class=&quot;headerlink&quot; title=&quot;缩写&quot;&gt;&lt;/a&gt;缩写&lt;/h3&gt;
+    
+    </summary>
+    
+    
+      <category term="2019" scheme="https://jianai0330.github.io/categories/2019/"/>
+    
+      <category term="KCL" scheme="https://jianai0330.github.io/categories/2019/KCL/"/>
+    
+      <category term="Arduino" scheme="https://jianai0330.github.io/categories/2019/KCL/Arduino/"/>
+    
+    
+      <category term="单片机" scheme="https://jianai0330.github.io/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Assembly_note</title>
