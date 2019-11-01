@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jianai0330.github.io/"/>
-  <updated>2019-11-01T17:00:37.618Z</updated>
+  <updated>2019-11-01T20:15:03.162Z</updated>
   <id>https://jianai0330.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://jianai0330.github.io/2019/11/01/arduino/"/>
     <id>https://jianai0330.github.io/2019/11/01/arduino/</id>
     <published>2019-11-01T16:22:08.000Z</published>
-    <updated>2019-11-01T17:00:37.618Z</updated>
+    <updated>2019-11-01T20:15:03.162Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><a id="more"></a><ol><li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li><li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li></ol><h3 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h3><ol><li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li><li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0) 它们 连接着the external digital pins         | Atemega pin  |  Nano digital pin |         | -----------  |  --------------   |         |     PB0      |      D8           |         |     PB1      |      D9           |         | ....         |     ....          |</code></pre></li><li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li><li>CPU怎么链接PORTB: databus</li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="Lab–汇编语言初识"><a href="#Lab–汇编语言初识" class="headerlink" title="Lab–汇编语言初识"></a>Lab–汇编语言初识</h2><a id="more"></a><h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序."></a>第一个程序.</h3><ol><li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li><li>.org 0     :the start address</li><li>r16在microprocessor’s CPU里</li></ol><h2 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol><li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li><li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li></ol><h3 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h3><ol><li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li><li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0) 它们 连接着the external digital pins         | Atemega pin  |  Nano digital pin |         | -----------  |  --------------   |         |     PB0      |      D8           |         |     PB1      |      D9           |         | ....         |     ....          |</code></pre></li><li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li><li>CPU怎么链接PORTB: databus</li><li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.</li><li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;lab2&quot;&gt;&lt;a href=&quot;#lab2&quot; class=&quot;headerlink&quot; title=&quot;lab2&quot;&gt;&lt;/a&gt;lab2&lt;/h2&gt;&lt;h3 id=&quot;缩写&quot;&gt;&lt;a href=&quot;#缩写&quot; class=&quot;headerlink&quot; title=&quot;缩写&quot;&gt;&lt;/a&gt;缩写&lt;/h3&gt;
+      &lt;h2 id=&quot;Lab–汇编语言初识&quot;&gt;&lt;a href=&quot;#Lab–汇编语言初识&quot; class=&quot;headerlink&quot; title=&quot;Lab–汇编语言初识&quot;&gt;&lt;/a&gt;Lab–汇编语言初识&lt;/h2&gt;
     
     </summary>
     

@@ -104,15 +104,15 @@
 
 
 
-<meta name="description" content="lab2缩写">
+<meta name="description" content="Lab–汇编语言初识">
 <meta name="keywords" content="单片机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Arduino">
 <meta property="og:url" content="https:&#x2F;&#x2F;jianai0330.github.io&#x2F;2019&#x2F;11&#x2F;01&#x2F;arduino&#x2F;index.html">
 <meta property="og:site_name" content="Ajn">
-<meta property="og:description" content="lab2缩写">
+<meta property="og:description" content="Lab–汇编语言初识">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-01T17:00:37.618Z">
+<meta property="og:updated_time" content="2019-11-01T20:15:03.162Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -361,7 +361,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-01T17:00:37+00:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-01T20:15:03+00:00">
                 2019-11-01
               </time>
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  92
+                  169
                 </span>
               
 
@@ -470,9 +470,13 @@
       
 
       
-        <h2 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><a id="more"></a>
-
-<ol>
+        <h2 id="Lab–汇编语言初识"><a href="#Lab–汇编语言初识" class="headerlink" title="Lab–汇编语言初识"></a>Lab–汇编语言初识</h2><a id="more"></a>
+<h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序."></a>第一个程序.</h3><ol>
+<li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
+<li>.org 0     :the start address</li>
+<li>r16在microprocessor’s CPU里</li>
+</ol>
+<h2 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
 <li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
 <li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li>
 </ol>
@@ -487,6 +491,8 @@
          | ....         |     ....          |</code></pre></li>
 <li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li>
 <li>CPU怎么链接PORTB: databus</li>
+<li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.</li>
+<li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.</li>
 </ol>
 
       
@@ -685,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#lab2"><span class="nav-number">1.</span> <span class="nav-text">lab2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缩写"><span class="nav-number">1.1.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SREG-status-register"><span class="nav-number">1.1.1.</span> <span class="nav-text">SREG : status register</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rd-Destination-register-in-the-register-file"><span class="nav-number">1.1.2.</span> <span class="nav-text">Rd : Destination register in the register file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几个概念"><span class="nav-number">1.2.</span> <span class="nav-text">几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ATmega是Arduino里面的正方形芯片-microcontroller"><span class="nav-number">1.2.1.</span> <span class="nav-text">ATmega是Arduino里面的正方形芯片,microcontroller</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PORTB"><span class="nav-number">1.2.2.</span> <span class="nav-text">PORTB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digital-pin"><span class="nav-number">1.2.3.</span> <span class="nav-text">digital pin:</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab–汇编语言初识"><span class="nav-number">1.</span> <span class="nav-text">Lab–汇编语言初识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个程序"><span class="nav-number">1.1.</span> <span class="nav-text">第一个程序.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lab2"><span class="nav-number">2.</span> <span class="nav-text">lab2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缩写"><span class="nav-number">2.1.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SREG-status-register"><span class="nav-number">2.1.1.</span> <span class="nav-text">SREG : status register</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rd-Destination-register-in-the-register-file"><span class="nav-number">2.1.2.</span> <span class="nav-text">Rd : Destination register in the register file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几个概念"><span class="nav-number">2.2.</span> <span class="nav-text">几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ATmega是Arduino里面的正方形芯片-microcontroller"><span class="nav-number">2.2.1.</span> <span class="nav-text">ATmega是Arduino里面的正方形芯片,microcontroller</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PORTB"><span class="nav-number">2.2.2.</span> <span class="nav-text">PORTB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digital-pin"><span class="nav-number">2.2.3.</span> <span class="nav-text">digital pin:</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -731,7 +737,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.5k</span>
+    <span title="Site words total count">1.6k</span>
   
   
 </div>
@@ -754,7 +760,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了1.5k字</span>
+  <span class="post-count">共ha了1.6k字</span>
 </div>
 -->
 
