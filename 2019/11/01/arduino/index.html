@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="Ajn">
 <meta property="og:description" content="Lab–汇编语言初识">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-01T20:15:03.162Z">
+<meta property="og:updated_time" content="2019-11-02T17:20:12.586Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -361,8 +361,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-01T20:15:03+00:00">
-                2019-11-01
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-02T17:20:12+00:00">
+                2019-11-02
               </time>
             
           </span>
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  169
+                  251
                 </span>
               
 
@@ -474,7 +474,7 @@
 <h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序."></a>第一个程序.</h3><ol>
 <li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
 <li>.org 0     :the start address</li>
-<li>r16在microprocessor’s CPU里</li>
+<li>r16--r31,PPRB,PORTC等等在microprocessor’s CPU也就是Atmega328p里</li>
 </ol>
 <h2 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
 <li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
@@ -483,16 +483,37 @@
 <h3 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h3><ol>
 <li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
 <li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
- 它们 连接着the external digital pins
-         | Atemega pin  |  Nano digital pin |
-         | -----------  |  --------------   |
-         |     PB0      |      D8           |
-         |     PB1      |      D9           |
-         | ....         |     ....          |</code></pre></li>
+ 它们 连接着the external digital pins</code></pre><table>
+<thead>
+<tr>
+<th>Atemega pin</th>
+<th>Nano digital pin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PB0</td>
+<td>D8</td>
+</tr>
+<tr>
+<td>PB1</td>
+<td>D9</td>
+</tr>
+<tr>
+<td>….</td>
+<td>….</td>
+</tr>
+</tbody></table>
+</li>
 <li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li>
 <li>CPU怎么链接PORTB: databus</li>
-<li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.</li>
+<li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
 <li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.</li>
+</ol>
+<h2 id="疑问疑惑"><a href="#疑问疑惑" class="headerlink" title="疑问疑惑"></a>疑问疑惑</h2><h3 id="程序内的语法"><a href="#程序内的语法" class="headerlink" title="程序内的语法:"></a>程序内的语法:</h3><ol>
+<li>main,mainloop的意思</li>
+<li>rjmp?</li>
+<li>brlo <strong>lessthan</strong>? 为什么是lessthan,brlo本身不就是当lower时吗</li>
+<li>.org 0,地址0 是跟0x06等等同一地位吗,那我在.equ里面最小的那个地址开始可以吗</li>
 </ol>
 
       
@@ -691,7 +712,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab–汇编语言初识"><span class="nav-number">1.</span> <span class="nav-text">Lab–汇编语言初识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个程序"><span class="nav-number">1.1.</span> <span class="nav-text">第一个程序.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lab2"><span class="nav-number">2.</span> <span class="nav-text">lab2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缩写"><span class="nav-number">2.1.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SREG-status-register"><span class="nav-number">2.1.1.</span> <span class="nav-text">SREG : status register</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rd-Destination-register-in-the-register-file"><span class="nav-number">2.1.2.</span> <span class="nav-text">Rd : Destination register in the register file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几个概念"><span class="nav-number">2.2.</span> <span class="nav-text">几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ATmega是Arduino里面的正方形芯片-microcontroller"><span class="nav-number">2.2.1.</span> <span class="nav-text">ATmega是Arduino里面的正方形芯片,microcontroller</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PORTB"><span class="nav-number">2.2.2.</span> <span class="nav-text">PORTB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digital-pin"><span class="nav-number">2.2.3.</span> <span class="nav-text">digital pin:</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab–汇编语言初识"><span class="nav-number">1.</span> <span class="nav-text">Lab–汇编语言初识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个程序"><span class="nav-number">1.1.</span> <span class="nav-text">第一个程序.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lab2"><span class="nav-number">2.</span> <span class="nav-text">lab2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缩写"><span class="nav-number">2.1.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SREG-status-register"><span class="nav-number">2.1.1.</span> <span class="nav-text">SREG : status register</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rd-Destination-register-in-the-register-file"><span class="nav-number">2.1.2.</span> <span class="nav-text">Rd : Destination register in the register file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几个概念"><span class="nav-number">2.2.</span> <span class="nav-text">几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ATmega是Arduino里面的正方形芯片-microcontroller"><span class="nav-number">2.2.1.</span> <span class="nav-text">ATmega是Arduino里面的正方形芯片,microcontroller</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PORTB"><span class="nav-number">2.2.2.</span> <span class="nav-text">PORTB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digital-pin"><span class="nav-number">2.2.3.</span> <span class="nav-text">digital pin:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#疑问疑惑"><span class="nav-number">3.</span> <span class="nav-text">疑问疑惑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#程序内的语法"><span class="nav-number">3.1.</span> <span class="nav-text">程序内的语法:</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -737,7 +758,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.6k</span>
+    <span title="Site words total count">1.7k</span>
   
   
 </div>
@@ -760,7 +781,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了1.6k字</span>
+  <span class="post-count">共ha了1.7k字</span>
 </div>
 -->
 
