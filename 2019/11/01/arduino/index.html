@@ -104,15 +104,15 @@
 
 
 
-<meta name="description" content="Lab–汇编语言初识">
+<meta name="description" content="Lab–汇编语言初识&amp;amp;语法结构">
 <meta name="keywords" content="单片机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Arduino">
+<meta property="og:title" content="Arduino与Assembly">
 <meta property="og:url" content="https:&#x2F;&#x2F;jianai0330.github.io&#x2F;2019&#x2F;11&#x2F;01&#x2F;arduino&#x2F;index.html">
 <meta property="og:site_name" content="Ajn">
-<meta property="og:description" content="Lab–汇编语言初识">
+<meta property="og:description" content="Lab–汇编语言初识&amp;amp;语法结构">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-02T17:23:18.236Z">
+<meta property="og:updated_time" content="2019-11-02T18:23:20.943Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -149,7 +149,7 @@
 
 
 
-  <title>Arduino | Ajn</title>
+  <title>Arduino与Assembly | Ajn</title>
   
 
 
@@ -333,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Arduino</h1>
+          <h1 class="post-title" itemprop="name headline">Arduino与Assembly</h1>
         
 
         <div class="post-meta">
@@ -361,7 +361,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-02T17:23:18+00:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-02T18:23:20+00:00">
                 2019-11-02
               </time>
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  270
+                  333
                 </span>
               
 
@@ -470,17 +470,17 @@
       
 
       
-        <h2 id="Lab–汇编语言初识"><a href="#Lab–汇编语言初识" class="headerlink" title="Lab–汇编语言初识"></a>Lab–汇编语言初识</h2><a id="more"></a>
-<h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序."></a>第一个程序.</h3><ol>
+        <h2 id="Lab–汇编语言初识-amp-语法结构"><a href="#Lab–汇编语言初识-amp-语法结构" class="headerlink" title="Lab–汇编语言初识&amp;语法结构"></a>Lab–汇编语言初识&amp;语法结构</h2><a id="more"></a>
+<h3 id="第一个程序的理解"><a href="#第一个程序的理解" class="headerlink" title="第一个程序的理解"></a>第一个程序的理解</h3><ol>
 <li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
 <li>.org 0     :the start address</li>
 <li>r16--r31,PPRB,PORTC等等在microprocessor’s CPU也就是Atmega328p里</li>
 </ol>
-<h2 id="lab2"><a href="#lab2" class="headerlink" title="lab2"></a>lab2</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
+<h2 id="lab2-portb-连led"><a href="#lab2-portb-连led" class="headerlink" title="lab2 portb 连led"></a>lab2 portb 连led</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
 <li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
 <li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li>
 </ol>
-<h3 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h3><ol>
+<h3 id="arduino里几个概念"><a href="#arduino里几个概念" class="headerlink" title="arduino里几个概念"></a>arduino里几个概念</h3><ol>
 <li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
 <li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
  它们 连接着the external digital pins</code></pre><table>
@@ -507,13 +507,15 @@
 <li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li>
 <li>CPU怎么链接PORTB: databus</li>
 <li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
-<li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.</li>
+<li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.<h2 id="Lab3-portc-很好理解-读value"><a href="#Lab3-portc-很好理解-读value" class="headerlink" title="Lab3 portc 很好理解 读value"></a>Lab3 portc 很好理解 读value</h2></li>
 </ol>
 <h2 id="疑问疑惑"><a href="#疑问疑惑" class="headerlink" title="疑问疑惑"></a>疑问疑惑</h2><h3 id="程序内的语法"><a href="#程序内的语法" class="headerlink" title="程序内的语法:"></a>程序内的语法:</h3><ol>
 <li>main,mainloop的意思</li>
 <li>rjmp?</li>
 <li>brlo <strong>lessthan</strong>? 为什么是lessthan,brlo本身不就是当lower时吗</li>
-<li>.org 0,地址0 是跟0x06等等同一地位吗,那我在.equ里面最小的那个地址开始可以吗</li>
+<li>.org 0,地址0 是跟0x06等等同一地位吗,那我在.equ里面最小的那个地址开始可以吗 --11.3<h3 id="led-on-s"><a href="#led-on-s" class="headerlink" title="led_on.s:"></a>led_on.s:</h3></li>
+<li>SREG的作用是什么,设置为0要干什么<h3 id="第三个程序-portc-lab3"><a href="#第三个程序-portc-lab3" class="headerlink" title="第三个程序:portc(lab3)"></a>第三个程序:portc(lab3)</h3></li>
+<li>从PINC中读取数据到PORTC,那pinc的数据从何而来?</li>
 </ol>
 
       
@@ -545,8 +547,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/31/assembly/" rel="next" title="Assembly_note">
-                <i class="fa fa-chevron-left"></i> Assembly_note
+              <a href="/2019/10/31/assembly/" rel="next" title="CS_note">
+                <i class="fa fa-chevron-left"></i> CS_note
               </a>
             
           </div>
@@ -712,7 +714,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab–汇编语言初识"><span class="nav-number">1.</span> <span class="nav-text">Lab–汇编语言初识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个程序"><span class="nav-number">1.1.</span> <span class="nav-text">第一个程序.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lab2"><span class="nav-number">2.</span> <span class="nav-text">lab2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缩写"><span class="nav-number">2.1.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SREG-status-register"><span class="nav-number">2.1.1.</span> <span class="nav-text">SREG : status register</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rd-Destination-register-in-the-register-file"><span class="nav-number">2.1.2.</span> <span class="nav-text">Rd : Destination register in the register file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几个概念"><span class="nav-number">2.2.</span> <span class="nav-text">几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ATmega是Arduino里面的正方形芯片-microcontroller"><span class="nav-number">2.2.1.</span> <span class="nav-text">ATmega是Arduino里面的正方形芯片,microcontroller</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PORTB"><span class="nav-number">2.2.2.</span> <span class="nav-text">PORTB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digital-pin"><span class="nav-number">2.2.3.</span> <span class="nav-text">digital pin:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#疑问疑惑"><span class="nav-number">3.</span> <span class="nav-text">疑问疑惑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#程序内的语法"><span class="nav-number">3.1.</span> <span class="nav-text">程序内的语法:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab–汇编语言初识-amp-语法结构"><span class="nav-number">1.</span> <span class="nav-text">Lab–汇编语言初识&amp;语法结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个程序的理解"><span class="nav-number">1.1.</span> <span class="nav-text">第一个程序的理解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lab2-portb-连led"><span class="nav-number">2.</span> <span class="nav-text">lab2 portb 连led</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缩写"><span class="nav-number">2.1.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SREG-status-register"><span class="nav-number">2.1.1.</span> <span class="nav-text">SREG : status register</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rd-Destination-register-in-the-register-file"><span class="nav-number">2.1.2.</span> <span class="nav-text">Rd : Destination register in the register file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arduino里几个概念"><span class="nav-number">2.2.</span> <span class="nav-text">arduino里几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ATmega是Arduino里面的正方形芯片-microcontroller"><span class="nav-number">2.2.1.</span> <span class="nav-text">ATmega是Arduino里面的正方形芯片,microcontroller</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PORTB"><span class="nav-number">2.2.2.</span> <span class="nav-text">PORTB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digital-pin"><span class="nav-number">2.2.3.</span> <span class="nav-text">digital pin:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab3-portc-很好理解-读value"><span class="nav-number">3.</span> <span class="nav-text">Lab3 portc 很好理解 读value</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#疑问疑惑"><span class="nav-number">4.</span> <span class="nav-text">疑问疑惑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#程序内的语法"><span class="nav-number">4.1.</span> <span class="nav-text">程序内的语法:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#led-on-s"><span class="nav-number">4.2.</span> <span class="nav-text">led_on.s:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三个程序-portc-lab3"><span class="nav-number">4.3.</span> <span class="nav-text">第三个程序:portc(lab3)</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -758,7 +760,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.7k</span>
+    <span title="Site words total count">1.9k</span>
   
   
 </div>
@@ -781,7 +783,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了1.7k字</span>
+  <span class="post-count">共ha了1.9k字</span>
 </div>
 -->
 
