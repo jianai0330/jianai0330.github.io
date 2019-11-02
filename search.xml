@@ -24,8 +24,8 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>PB0</td>
-<td>D8</td>
+<td>PB0(在芯片的四周))</td>
+<td>D8(在nano的两周,可连接面包板的线)</td>
 </tr>
 <tr>
 <td>PB1</td>
