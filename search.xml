@@ -69,7 +69,9 @@
 </li>
 <li><p>benchmarking: </p>
 </li>
-<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br><strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong><br> simple instructions,few addressing mode<br><strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong><br> complex instructions,many addressing modes<br>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
+<pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
 </li>
 <li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
 <p>注意比较各种情况下的好坏</p>
