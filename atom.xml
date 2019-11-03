@@ -73,6 +73,33 @@
     <link href="https://jianai0330.github.io/2019/10/31/assembly/"/>
     <id>https://jianai0330.github.io/2019/10/31/assembly/</id>
     <published>2019-10-31T13:24:07.000Z</published>
+    <updated>2019-11-03T12:35:41.768Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a><h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol><li><p>性能equation : 1. CPU time 2. Amdahl’s law</p></li><li><p>benchmarking: </p></li><li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p><pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p><pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p></li><li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p><p>注意比较各种情况下的好坏</p><h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol><li>flushing the pipeline: conditional branck instructions</li><li>clock rate=machine cycles per second</li><li></li><li></li></ol></li></ol><h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol><li>CPU里clock cycle的理解</li><li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li><li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) </code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;五-performance-measurement-and-analysis&quot;&gt;&lt;a href=&quot;#五-performance-measurement-and-analysis&quot; class=&quot;headerlink&quot; title=&quot;五 performance measurement and analysis&quot;&gt;&lt;/a&gt;五 performance measurement and analysis&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="2019" scheme="https://jianai0330.github.io/categories/2019/"/>
+    
+      <category term="KCL" scheme="https://jianai0330.github.io/categories/2019/KCL/"/>
+    
+      <category term="CS" scheme="https://jianai0330.github.io/categories/2019/KCL/CS/"/>
+    
+    
+      <category term="CS" scheme="https://jianai0330.github.io/tags/CS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS_note</title>
+    <link href="https://jianai0330.github.io/2019/10/31/cs-note/"/>
+    <id>https://jianai0330.github.io/2019/10/31/cs-note/</id>
+    <published>2019-10-31T13:24:07.000Z</published>
     <updated>2019-11-02T19:48:53.297Z</updated>
     
     <content type="html"><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a><h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol><li><p>性能equation : 1. CPU time 2. Amdahl’s law</p></li><li><p>benchmarking: </p></li><li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p><pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p><pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p></li><li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p><p>注意比较各种情况下的好坏</p><h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><p>1. </p></li></ol>]]></content>
