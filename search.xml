@@ -13,7 +13,12 @@
 <li>Index vs Iterator:<strong>remove</strong>的时候用iterator,</li>
 <li>anonymous objects: ?啥玩意儿,不管了</li>
 </ol>
-<h2 id="week7-Chapter6"><a href="#week7-Chapter6" class="headerlink" title="week7 Chapter6"></a>week7 Chapter6</h2><h3 id="研读课本"><a href="#研读课本" class="headerlink" title="研读课本"></a>研读课本</h3><h3 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h3><ol>
+<h2 id="week7-Chapter6"><a href="#week7-Chapter6" class="headerlink" title="week7 Chapter6"></a>week7 Chapter6</h2><h3 id="研读课本"><a href="#研读课本" class="headerlink" title="研读课本"></a>研读课本</h3><ol>
+<li>responsibility-driven design, cohesion, coupling, refactoring</li>
+<li>intance method:invoked on an <strong>intance</strong> of a class, 注意class method和instance method不互通不能互相引用</li>
+<li>enum(enumerated types):枚举<pre><code> 枚举类型可以像类(class)类型一样，定义为一个单独的文件，当然也可以定义在其他类内部</code></pre></li>
+</ol>
+<h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
 <li>auction project的源代码 看 ---11.4早于lse</li>
 </ol>
 ]]></content>
