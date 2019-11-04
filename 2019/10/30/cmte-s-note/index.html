@@ -113,7 +113,7 @@
 <meta property="og:description" content="四 Vector  Algebra空间直线,空间平面">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;pic002.cnblogs.com&#x2F;img&#x2F;zdd&#x2F;201007&#x2F;2010071013450338.jpg">
-<meta property="og:updated_time" content="2019-10-31T03:50:24.860Z">
+<meta property="og:updated_time" content="2019-11-04T20:44:16.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;pic002.cnblogs.com&#x2F;img&#x2F;zdd&#x2F;201007&#x2F;2010071013450338.jpg">
 
@@ -363,8 +363,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-10-31T03:50:24+00:00">
-                2019-10-31
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-04T20:44:16+00:00">
+                2019-11-04
               </time>
             
           </span>
@@ -435,7 +435,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.3k
+                  1.4k
                 </span>
               
 
@@ -451,7 +451,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  5
                 </span>
               
             </div>
@@ -499,13 +499,13 @@
 <li><h4 id="inverse-matrix-逆矩阵"><a href="#inverse-matrix-逆矩阵" class="headerlink" title="inverse matrix: 逆矩阵"></a>inverse matrix: 逆矩阵</h4></li>
 <li><h4 id="Cramer’s-rule卡姆拉法则"><a href="#Cramer’s-rule卡姆拉法则" class="headerlink" title="Cramer’s rule卡姆拉法则 :"></a>Cramer’s rule卡姆拉法则 :</h4></li>
 <li><h4 id="Gaussian-elimination-见矩阵运算板块高斯消元法"><a href="#Gaussian-elimination-见矩阵运算板块高斯消元法" class="headerlink" title="Gaussian elimination: 见矩阵运算板块高斯消元法"></a>Gaussian elimination: 见矩阵运算板块<em>高斯消元法</em></h4></li>
-<li><h4 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref<br></h4><pre><code>row echelon form: 下阶梯,leadingentry是1.
-rref:在ref基上每一列只有一个非0.
+<li><h4 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref<br></h4><pre><code>row echelon form阶梯型矩阵: 下阶梯,leadingentry是1.
+rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;&gt;除了非零首元外，其余元素全为0.每个首项是1.
 每个矩阵,ref不唯一,**rref唯一**.</code></pre></li>
 <li><p>independent &amp; dependent vectors线性相关无关</p>
 <pre><code>linear combination of vectors线性组合(是一个向量而不是关系)
 注意根据定义,线性相关是n个向量组成的组,至少其余n-个可以表示一个</code></pre></li>
-<li><p>Rank 秩 :最大线性无关的向量的个数</p>
+<li><p>Rank 秩 :最大线性无关的向量的个数  在ref形势下含非0的行数</p>
 </li>
 <li><p><strong>eigenvalue</strong>特征值</p>
 <pre><code> - characteristic polynomial(PPT72页),特征多项式characteristic equation of A特征方程
@@ -516,7 +516,7 @@ rref:在ref基上每一列只有一个非0.
 <li><p>注意<strong>矩阵×标量</strong>与行列式×标量的区别: 矩阵式乘每个元素,行列式乘一行.</p>
 </li>
 <li><h3 id="公式总结"><a href="#公式总结" class="headerlink" title="公式总结:"></a>公式总结:</h3><ul>
-<li>(AB)^T^ = B^T^A^T^ &amp; adj(AB) = adj(B)adj(A)</li>
+<li>(AB)<sup>T</sup> = B<sup>T</sup>A<sup>T</sup> &amp; adj(AB) = adj(B)adj(A)</li>
 <li>eigenvalue的性质(PPT末尾)</li>
 <li><code>AA*=A*A=|A|E</code>  (*伴随矩阵)</li>
 <li>A<sup>-1</sup>=(1/|A|)<em>A</em>(可轻易有上一行结合AA<sup>-1</sup>=E推出)</li>
@@ -533,7 +533,10 @@ rref:在ref基上每一列只有一个非0.
       3. 同乘不为0的数后加到另一方程去</code></pre></li>
 </ol>
 </li>
-<li>转化成ref(下阶梯):PPT第58页<pre><code>1. pivot</code></pre></li>
+<li>转化成ref(下阶梯):PPT第58页<pre><code>1. pivot:第一个第一列不为0的行,提到第一行
+2. 依次把下面行的第一列第一行变为0
+3. 去掉第一列,从新开始找pivot
+4. 在此基础上转化成**rref**: 找到非0首元,把其上的全变为0</code></pre></li>
 <li>find matrix <strong>rank</strong>:<pre><code>1. 矩阵的ref形式里含有非0行的数量 = 矩阵中independent vector(每一行就是一个vector)</code></pre></li>
 <li>eigenvalue: AX = aX<pre><code> - 已知A可求a
  - 已知A和a可求X(eigenvector) </code></pre></li>
@@ -811,7 +814,7 @@ rref:在ref基上每一列只有一个非0.
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.3k</span>
+    <span title="Site words total count">2.4k</span>
   
   
 </div>
@@ -834,7 +837,7 @@ rref:在ref基上每一列只有一个非0.
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了2.3k字</span>
+  <span class="post-count">共ha了2.4k字</span>
 </div>
 -->
 
