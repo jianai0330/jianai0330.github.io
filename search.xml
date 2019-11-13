@@ -226,14 +226,24 @@
 <h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2></li>
 </ol>
 <h1 id="七-二进制①-JoshM"><a href="#七-二进制①-JoshM" class="headerlink" title="七 二进制① JoshM"></a>七 二进制① JoshM</h1><h2 id="PPT提纲-1"><a href="#PPT提纲-1" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
-<li>negative numbers in binary: 几个概念: unsighed binary<br> formats: 1. signed magnitude  : MSB(the most significant bit) is a sign bit---0+&amp;1-<pre><code>      2. One&#39;s complement  源码
-      3. Two&#39;s complement. 补码
-      4. 注意优缺点!!!(PPT17)</code></pre></li>
+<li>negative numbers in binary: 几个概念: unsighed binary<br> formats: 1. signed magnitude  : MSB(the most significant bit) is a sign bit---0+&amp;1-  源码<pre><code>      2. One&#39;s complement  补码(对于正数补码相同)
+                           对于负数:1. 真值:将各位变反,then最低位+1
+                                   2.源码: 符号位不变,其余各位变反then最低位+1
+                           11111111是-1的补码,10000000是-128的补码.
+      3. Two&#39;s complement. 反码
+      4. 注意优缺点!!!(PPT17)
+      5. 各方式表示的范围
+              补码:-128(10000000)\-\-\-127(01111111)</code></pre></li>
 </ol>
-<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
+<h2 id="二进制运算法则"><a href="#二进制运算法则" class="headerlink" title="二进制运算法则"></a>二进制运算法则</h2><pre><code>1. 10转2:减权定位
+         除基取余(直到商为0)
+   小数10转2:减权定位
+            除基取余
+2. 2转10: 按权相加(小数2转10同)</code></pre><h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
 <li>Assembly 2 里 JnS </li>
 <li>那么load store jump好像没区别啊? ---11.6</li>
 <li>对于Assembly1作业中的第3题.醍醐灌顶:<br>A 1-bit address can address two words (0, 1).<br>A 2-bit address can address four words (00, 01, 10, 11).<br>A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br>but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></li>
+<li>需要加强理解和动手去做的:1. 三种表示二进制数的转化自己去操作. 2. 禁制直接每种情况的转化去运算.   ---11.13</li>
 </ol>
 ]]></content>
       <categories>
