@@ -263,12 +263,47 @@
 <li>division: 很像十进制的除法方式.</li>
 </ol>
 </li>
+<li>signed magnitude arithmetric:<ol>
+<li>加<ol>
+<li>check the <strong>sign</strong> firstly</li>
+<li>如果<strong>符号不同</strong>: 比较绝对值大小------用大的减小的------用绝对值大的数的sign.</li>
+<li>overflow 那个圈没理解</li>
 </ol>
+</li>
+<li>减<ol>
+<li>x-y: - y如果是<code>负</code>------变成<strong>加</strong><ul>
+<li>y是<code>正</code>且x是<code>负</code>----变成<strong>加</strong></li>
+<li>y是<code>正</code>且x是<code>正</code>----变成<strong>(-y)+x</strong></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>one’s complement arithmetic<ol>
+<li>反码,加完多一位,再加(多么神奇…需要记忆以及与其它区分)</li>
+</ol>
+</li>
+<li>two’s complement arithmetic<ol>
+<li>忽略加完后的第一位.</li>
+<li><strong>detecting overflow</strong></li>
+</ol>
+</li>
+<li>Error detection and correction:</li>
+</ol>
+<h2 id="重难点解析"><a href="#重难点解析" class="headerlink" title="重难点解析"></a>重难点解析</h2><ol>
+<li><p>三个overflow的图一定要好好理解.</p>
+</li>
+<li><p>真值,补码,反码,源码之间的变化!!</p>
 <h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
 <li>Assembly 2 里 JnS </li>
 <li>那么load store jump好像没区别啊? ---11.6</li>
 <li>对于Assembly1作业中的第3题.醍醐灌顶:<br>A 1-bit address can address two words (0, 1).<br>A 2-bit address can address four words (00, 01, 10, 11).<br>A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br>but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></li>
-<li>需要加强理解和动手去做的:1. 三种表示二进制数的转化自己去操作. 2. 禁制直接每种情况的转化去运算.   ---11.13</li>
+<li><strong>八---二进制2</strong>需要加强理解和动手去做的:1. 三种表示二进制数的转化自己去操作. 2. 禁制直接每种情况的转化去运算.   ---11.13</li>
+<li>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?  ---11.13八课上</li>
+<li>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</li>
+</ol>
+</li>
 </ol>
 ]]></content>
       <categories>
