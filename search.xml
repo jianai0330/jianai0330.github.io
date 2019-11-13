@@ -301,7 +301,8 @@
             乘基取整:从最上面的余数开始
 2. 2转10: 按权相加(小数2转10同)
 3. 十转八:除基取余比较简单</code></pre><h1 id="八-binary-②"><a href="#八-binary-②" class="headerlink" title="八 binary ②"></a>八 binary ②</h1><h2 id="上课-PPT"><a href="#上课-PPT" class="headerlink" title="上课 PPT"></a>上课 PPT</h2><ol>
-<li>unsigned: <ol>
+<li><p>unsigned: </p>
+<ol>
 <li>unsigned addtion---<strong>overflow</strong><ul>
 <li>是一个圈,从111再加就是000了</li>
 <li>incrementinf by one <strong>?!?!</strong> 那几句话没理解PPT第5页</li>
@@ -318,7 +319,8 @@
 <li>division: 很像十进制的除法方式.</li>
 </ol>
 </li>
-<li>signed magnitude arithmetric:<ol>
+<li><p>signed magnitude arithmetric:</p>
+<ol>
 <li>加<ol>
 <li>check the <strong>sign</strong> firstly</li>
 <li>如果<strong>符号不同</strong>: 比较绝对值大小------用大的减小的------用绝对值大的数的sign.</li>
@@ -329,22 +331,26 @@
 <li>x-y: - y如果是<code>负</code>------变成<strong>x+(-y)</strong><ul>
 <li>y是<code>正</code>且x是<code>负</code>----变成<em>-(-x+y)*</em></li>
 <li>y是<code>正</code>且x是<code>正</code>----变成<strong>(-y)+x</strong></li>
+<li>但我第一次做作业,全错…</li>
 </ul>
 </li>
 </ol>
 </li>
 </ol>
 </li>
-<li>one’s complement arithmetic<ol>
+<li><p>one’s complement arithmetic</p>
+<ol>
 <li>反码,加完多一位,再加(多么神奇…需要记忆以及与其它区分)</li>
 </ol>
 </li>
-<li>two’s complement arithmetic<ol>
+<li><p>two’s complement arithmetic</p>
+<ol>
 <li>忽略加完后的第一位.</li>
-<li><strong>detecting overflow</strong></li>
+<li><strong>detecting overflow</strong><br> 新概念:carry和borrow<br> carry-in = carry-out------no overflow<br> but这个是怎么计算的???</li>
 </ol>
 </li>
-<li>Error detection and correction:<ol>
+<li><p>Error detection and correction:</p>
+<ol>
 <li>hamming distance:不同的位数</li>
 <li>parity bit :要sufficient才能correct error,</li>
 <li>code word : 存在的必要是什么</li>
@@ -354,18 +360,26 @@
 </ol>
 <h2 id="重难点解析"><a href="#重难点解析" class="headerlink" title="重难点解析"></a>重难点解析</h2><ol>
 <li>三个overflow的图一定要好好理解.</li>
-<li>真值,补码,反码,源码之间的变化!!</li>
+<li><del>真值,补码,反码,源码之间的变化!!</del></li>
+<li>补码overflow detect</li>
+<li>sign的减法和乘除</li>
 </ol>
 <h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
 <li>Assembly 2 里 JnS </li>
 <li>那么load store jump好像没区别啊? ---11.6</li>
 <li>对于Assembly1作业中的第3题.醍醐灌顶:<br> A 1-bit address can address two words (0, 1).<br> A 2-bit address can address four words (00, 01, 10, 11).<br> A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br> but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></li>
-<li><strong>八---二进制2</strong>需要加强理解和动手去做的:1. 三种表示二进制数的转化自己去操作. 2. 禁制直接每种情况的转化去运算.   ---11.13</li>
-<li>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?  ---11.13八课上</li>
+<li><strong>八---二进制2</strong>需要加强理解和动手去做的:1. <del>三种表示二进制数的转化自己去操作</del>. 2. 进制直接每种情况的转化去运算.   ---11.13</li>
+<li><del>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?</del>  ---11.13八课上</li>
 <li>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</li>
 <li>---11.13晚自习 二进制转八进制,万一位数除不尽3怎么办?</li>
 </ol>
 <h2 id="作业tutorial-的总结"><a href="#作业tutorial-的总结" class="headerlink" title="作业tutorial 的总结"></a>作业tutorial 的总结</h2><ol>
+<li>---11.13晚,week7,binary1.<ul>
+<li>减权定位终于知道了怎么做</li>
+<li>小数10转2,乘积取整还不会</li>
+<li>4个表示方法的范围需要记住</li>
+</ul>
+</li>
 <li>---11.13晚,week8,binary2.<ul>
 <li>unsigned减法必须是正数,因为它无负数</li>
 <li>unsigned除法中除不尽就用reminder余数</li>
@@ -374,6 +388,7 @@
 <li>signed的乘除法,全错.(我原本的方法是忽略头一位,再在最后加上头一位)</li>
 <li>反码的加:01101+00100 为何overflow</li>
 <li>补码的加: carry-in和carry-out和overflow detected 是什么</li>
+<li>一定要记住正数的反码和补码都是它,运算的时候一定要仔细1+1变为0</li>
 </ul>
 </li>
 </ol>
