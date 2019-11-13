@@ -226,19 +226,26 @@
 <h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2></li>
 </ol>
 <h1 id="七-二进制①-JoshM"><a href="#七-二进制①-JoshM" class="headerlink" title="七 二进制① JoshM"></a>七 二进制① JoshM</h1><h2 id="PPT提纲-1"><a href="#PPT提纲-1" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
-<li>negative numbers in binary: 几个概念: unsighed binary<br> formats: 1. signed magnitude  : MSB(the most significant bit) is a sign bit---0+&amp;1-  源码<pre><code>      2. One&#39;s complement  补码(对于正数补码相同)
-                           对于负数:1. 真值:将各位变反,then最低位+1
-                                   2.源码: 符号位不变,其余各位变反then最低位+1
-                           11111111是-1的补码,10000000是-128的补码.
-      3. Two&#39;s complement. 反码
-      4. 注意优缺点!!!(PPT17)
-      5. 各方式表示的范围
-              补码:-128(10000000)\-\-\-127(01111111)</code></pre></li>
+<li><p>negative numbers in binary: 几个概念: unsighed binary<br> formats: </p>
+<ol>
+<li><p>signed magnitude  : MSB(the most significant bit) is a sign bit---0+&amp;1-  源码</p>
+<pre><code>      0的源码有两种:00000000&amp;10000000,0的补码只有一个:00000000.</code></pre></li>
+<li><p>One’s complement. 反码</p>
+</li>
+<li><p>Two’s complement  补码(对于正数补码相同)<br>  [X]<sub>补</sub> = X + M<br>  这个M是mod M,模数M根据机器数的位数而定,位数为81则M=2<sup>8</sup><br>对于负数:<br>1.真值:将各位变反,then最低位+1<br>2.源码: 符号位不变,其余各位变反then最低位+1</p>
+<pre><code>                        11111111是-1的补码,10000000是-128的补码.0的补码只有一个:00000000.</code></pre></li>
+<li><p>注意优缺点!!!(PPT17)</p>
+</li>
+<li><p>各方式表示的范围</p>
+<pre><code>           源码:-127(11111111)\-\-\-+127(01111111)
+           补码:-128(10000000)\-\-\-+127(01111111)</code></pre></li>
+</ol>
+</li>
 </ol>
 <h2 id="二进制运算法则"><a href="#二进制运算法则" class="headerlink" title="二进制运算法则"></a>二进制运算法则</h2><pre><code>1. 10转2:减权定位
-         除基取余(直到商为0)
+         除基取余(直到商为0):从最下面的余数开始!
    小数10转2:减权定位
-            除基取余
+            乘基取整:从最上面的余数开始
 2. 2转10: 按权相加(小数2转10同)</code></pre><h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
 <li>Assembly 2 里 JnS </li>
 <li>那么load store jump好像没区别啊? ---11.6</li>
