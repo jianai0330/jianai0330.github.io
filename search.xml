@@ -289,7 +289,13 @@
 <li><strong>detecting overflow</strong></li>
 </ol>
 </li>
-<li>Error detection and correction:</li>
+<li>Error detection and correction:<ol>
+<li>hamming distance:不同的位数</li>
+<li>parity bit :要sufficient才能correct error,</li>
+<li>code word :存在的必要是什么</li>
+<li>是在bus上传递数据用的吗?那学过的存储模式pocode+address跟这个是什么关系?</li>
+</ol>
+</li>
 </ol>
 <h2 id="重难点解析"><a href="#重难点解析" class="headerlink" title="重难点解析"></a>重难点解析</h2><ol>
 <li><p>三个overflow的图一定要好好理解.</p>
