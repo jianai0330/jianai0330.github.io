@@ -152,6 +152,44 @@
   </entry>
   <entry>
     <title>CS_note</title>
+    <url>/2019/10/31/assembly/</url>
+    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a>
+<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
+<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
+</li>
+<li><p>benchmarking: </p>
+</li>
+<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
+<pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+</li>
+<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
+<p>注意比较各种情况下的好坏</p>
+<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol>
+<li>flushing the pipeline: conditional branck instructions</li>
+<li>clock rate=machine cycles per second</li>
+<li></li>
+<li></li>
+</ol>
+</li>
+</ol>
+<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
+<li>CPU里clock cycle的理解</li>
+<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
+<li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) </code></pre></li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>CS</category>
+      </categories>
+      <tags>
+        <tag>CS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS_note</title>
     <url>/2019/10/31/cs-note/</url>
     <content><![CDATA[<h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><h2 id="冯诺依曼结构"><a href="#冯诺依曼结构" class="headerlink" title="冯诺依曼结构"></a>冯诺依曼结构</h2><a id="more"></a>
 <h1 id="二-Assembly-1"><a href="#二-Assembly-1" class="headerlink" title="二 Assembly 1"></a>二 Assembly 1</h1><ol>
@@ -288,8 +326,8 @@
 </ol>
 </li>
 <li>减<ol>
-<li>x-y: - y如果是<code>负</code>------变成<strong>加</strong><ul>
-<li>y是<code>正</code>且x是<code>负</code>----变成<strong>加</strong></li>
+<li>x-y: - y如果是<code>负</code>------变成<strong>x+(-y)</strong><ul>
+<li>y是<code>正</code>且x是<code>负</code>----变成<em>-(-x+y)*</em></li>
 <li>y是<code>正</code>且x是<code>正</code>----变成<strong>(-y)+x</strong></li>
 </ul>
 </li>
@@ -315,57 +353,29 @@
 </li>
 </ol>
 <h2 id="重难点解析"><a href="#重难点解析" class="headerlink" title="重难点解析"></a>重难点解析</h2><ol>
-<li><p>三个overflow的图一定要好好理解.</p>
-</li>
-<li><p>真值,补码,反码,源码之间的变化!!</p>
+<li>三个overflow的图一定要好好理解.</li>
+<li>真值,补码,反码,源码之间的变化!!</li>
+</ol>
 <h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
 <li>Assembly 2 里 JnS </li>
 <li>那么load store jump好像没区别啊? ---11.6</li>
-<li>对于Assembly1作业中的第3题.醍醐灌顶:<br>A 1-bit address can address two words (0, 1).<br>A 2-bit address can address four words (00, 01, 10, 11).<br>A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br>but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></li>
+<li>对于Assembly1作业中的第3题.醍醐灌顶:<br> A 1-bit address can address two words (0, 1).<br> A 2-bit address can address four words (00, 01, 10, 11).<br> A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br> but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></li>
 <li><strong>八---二进制2</strong>需要加强理解和动手去做的:1. 三种表示二进制数的转化自己去操作. 2. 禁制直接每种情况的转化去运算.   ---11.13</li>
 <li>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?  ---11.13八课上</li>
 <li>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</li>
 <li>---11.13晚自习 二进制转八进制,万一位数除不尽3怎么办?</li>
 </ol>
+<h2 id="作业tutorial-的总结"><a href="#作业tutorial-的总结" class="headerlink" title="作业tutorial 的总结"></a>作业tutorial 的总结</h2><ol>
+<li>---11.13晚,week8,binary2.<ul>
+<li>unsigned减法必须是正数,因为它无负数</li>
+<li>unsigned除法中除不尽就用reminder余数</li>
+<li>signed的减法中,1110111-0010001为何overflow呢</li>
+<li>0010101-0110011算不对啊,按照(-y)+x的规则啊</li>
+<li>signed的乘除法,全错.(我原本的方法是忽略头一位,再在最后加上头一位)</li>
+<li>反码的加:01101+00100 为何overflow</li>
+<li>补码的加: carry-in和carry-out和overflow detected 是什么</li>
+</ul>
 </li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>CS</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS_note</title>
-    <url>/2019/10/31/assembly/</url>
-    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a>
-<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
-<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
-</li>
-<li><p>benchmarking: </p>
-</li>
-<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
-</li>
-<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
-<p>注意比较各种情况下的好坏</p>
-<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol>
-<li>flushing the pipeline: conditional branck instructions</li>
-<li>clock rate=machine cycles per second</li>
-<li></li>
-<li></li>
-</ol>
-</li>
-</ol>
-<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
-<li>CPU里clock cycle的理解</li>
-<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
-<li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) </code></pre></li>
 </ol>
 ]]></content>
       <categories>
