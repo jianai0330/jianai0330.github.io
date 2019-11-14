@@ -45,6 +45,15 @@
 <li>tree traversal: preoder,inorder,postorder</li>
 </ol>
 <h1 id="作业中易错点总结"><a href="#作业中易错点总结" class="headerlink" title="作业中易错点总结"></a>作业中易错点总结</h1><ol>
+<li>---11.14 五 概率<ol>
+<li>题型: 要运用贝叶斯定理的题目,1. 先画个<em>二叉树</em>帮助理解, 2. 计算时哪个包含哪个一定要搞清楚</li>
+<li>判断indenpent: 三个公式</li>
+</ol>
+</li>
+<li>---11.14 Small六<ul>
+<li>六个工作分给五个人的答案没理解</li>
+</ul>
+</li>
 <li>---11.14 六 graph<ul>
 <li>isomorphic: f是bijection(one-to-one&amp;onto)</li>
 <li>invariant</li>
