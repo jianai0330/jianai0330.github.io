@@ -6,9 +6,9 @@
     <content><![CDATA[<h1 id="六-graphs"><a href="#六-graphs" class="headerlink" title="六 graphs"></a>六 graphs</h1><a id="more"></a>
 <h2 id="PPT提纲-11-13-拖延症…"><a href="#PPT提纲-11-13-拖延症…" class="headerlink" title="PPT提纲 ---11.13 拖延症…"></a>PPT提纲 ---11.13 拖延症…</h2><ol>
 <li>graph的种类:<ul>
-<li>simple(e.g.Niche overlap graphs in ecology)</li>
-<li>multigraph(e.g.Road networks)</li>
-<li>directed graph(e.g.representing binary relations前几章学的)</li>
+<li>simple(e.g.Niche overlap graphs in ecology): --------没方向undirected,没multiple edges,没loop edges</li>
+<li>multigraph(e.g.Road networks):----------------没方向undirected,有multiple edges,有loop</li>
+<li>directed graph(e.g.representing binary relations前几章学的):--有方向directed,没multiple edges,有loop</li>
 <li>!开头比较三者的表格理解!</li>
 </ul>
 </li>
@@ -43,6 +43,17 @@
 <li>逻辑式可以用二叉树</li>
 <li>binary search trees : sorting linearly ordered list</li>
 <li>tree traversal: preoder,inorder,postorder</li>
+</ol>
+<h1 id="作业中易错点总结"><a href="#作业中易错点总结" class="headerlink" title="作业中易错点总结"></a>作业中易错点总结</h1><ol>
+<li>---11.14 六 graph<ul>
+<li>isomorphic: f是bijection(one-to-one&amp;onto)</li>
+<li>invariant</li>
+<li>题型:判断一句话是否是invariant: 与onto和one-to-one结合为题目服务(例题好好理解)</li>
+<li>题型:根据题干描述画graph时,注意看清楚给出的要求的类型!</li>
+<li>题型:证明两个graph是isomorphic的: 画出图,再一一f对应</li>
+<li>Largetutorial最后一题:只能说思维要开阔了…</li>
+</ul>
+</li>
 </ol>
 <h1 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h1><ol>
 <li>---11.13 六graph里directed graph的计算edge的公式,一个点可以同时有in和out,且数量不同,那怎么算?</li>
