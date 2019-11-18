@@ -248,6 +248,7 @@
 <li>primitive-type values wrap in objects to be stored in a <strong>collection</strong></li>
 <li>autoboxing &amp; unboxing</li>
 <li><a href="https://blog.csdn.net/chenliguan/article/details/53888018" target="_blank" rel="noopener" title="int和Integer">int和Integer的比较</a></li>
+<li><a href="https://blog.csdn.net/Teacher_Lee_ZZSXT/article/details/79230501" target="_blank" rel="noopener" title="更详细的比较">这个讲的更详细</a></li>
 </ul>
 </li>
 <li><p>class variables</p>
