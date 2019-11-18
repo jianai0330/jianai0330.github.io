@@ -624,11 +624,14 @@
 
 <h2 id="创建x轴的数组"><a href="#创建x轴的数组" class="headerlink" title="创建x轴的数组"></a>创建x轴的数组</h2><p>s = linspace()<br>与直接[ : : ]</p>
 <h2 id="绘制函数图象时"><a href="#绘制函数图象时" class="headerlink" title="绘制函数图象时"></a>绘制函数图象时</h2><p>syms变量–fplot<br>与直接设置x和y对应数组–plot</p>
-<h2 id="设置坐标轴范围时"><a href="#设置坐标轴范围时" class="headerlink" title="设置坐标轴范围时"></a>设置坐标轴范围时</h2><p>xlim(xmin ymin)和ylim()<br>与aixs[xmin xmax ymin ymax]</p>
+<h2 id="设置坐标轴范围时"><a href="#设置坐标轴范围时" class="headerlink" title="设置坐标轴范围时"></a>设置坐标轴范围时</h2><p>xlim(xmin ymin)和ylim()<br>与aixs[xmin xmax ymin ymax]<br>是一个道理</p>
 <h2 id="绘制图像的几个函数"><a href="#绘制图像的几个函数" class="headerlink" title="绘制图像的几个函数"></a>绘制图像的几个函数</h2><ul>
 <li>plot()</li>
 <li>line():画直线型</li>
-<li>polar():极坐标下绘曲线</li>
+<li>polar():极坐标下绘曲线<h2 id="求函数一段范围内的极值"><a href="#求函数一段范围内的极值" class="headerlink" title="求函数一段范围内的极值"></a>求函数一段范围内的极值</h2></li>
+<li>lab7</li>
+<li>感觉有几种方法</li>
+<li>画分段函数的几种方法:正常拆分开;@x</li>
 </ul>
 <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="创建矩阵的方法"><a href="#创建矩阵的方法" class="headerlink" title="创建矩阵的方法"></a>创建矩阵的方法</h2><ol>
 <li>B=a:h:b;  其中a,b代表一维矩阵（向量）的区间，h为步宽</li>
