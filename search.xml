@@ -242,7 +242,8 @@
 <li>primitive types(int,boolean等等)不是object</li>
 <li>引出wrapper class(Interger,Float…)</li>
 <li>primitive-type values wrap in objects to be stored in a <strong>collection</strong></li>
-<li>此处应有引用</li>
+<li>autoboxing &amp; unboxing</li>
+<li><a href="https://blog.csdn.net/chenliguan/article/details/53888018" target="_blank" rel="noopener" title="int和Integer">int和Integer的比较</a></li>
 </ul>
 </li>
 </ol>
