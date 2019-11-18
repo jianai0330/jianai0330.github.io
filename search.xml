@@ -237,7 +237,8 @@
 </ul>
 </li>
 <li>2 important: coupling: loose coupling  : interface,change 1 do not need to change another.</li>
-<li>周五上课---看的回放<ul>
+<li>周五上课---看的回放----11.18<ol>
+<li><ul>
 <li>arraylist和hashmap等等里面不能有primitive types</li>
 <li>primitive types(int,boolean等等)不是object</li>
 <li>引出wrapper class(Interger,Float…)</li>
@@ -245,6 +246,36 @@
 <li>autoboxing &amp; unboxing</li>
 <li><a href="https://blog.csdn.net/chenliguan/article/details/53888018" target="_blank" rel="noopener" title="int和Integer">int和Integer的比较</a></li>
 </ul>
+</li>
+<li>class variables<ul>
+<li>shared between all instances of the class.</li>
+<li>属于class, 独立于instances</li>
+<li>有keyword:<strong>static</strong></li>
+<li>用class的name在引用.前</li>
+<li>与fields的区别?:field属于class的对象里??</li>
+<li>用于:在一个class里不同的对象都需要用的变量</li>
+</ul>
+</li>
+<li>constant<ul>
+<li><strong>final</strong></li>
+<li>不能change</li>
+<li>可以是public的</li>
+<li>static final : 经常的组合</li>
+<li>class constants:变量名大写</li>
+<li>疑惑:final,constant和fields…static的关系</li>
+<li>static和final得关系</li>
+<li>明确field,local variable…等等这些的关系</li>
+<li>constant 也可以不是final的,可以再更改它的值</li>
+</ul>
+</li>
+<li>class method<ul>
+<li>static的方法都是class method</li>
+<li>可直接调用</li>
+<li>那存在的必要是什呢,跟其他的object method比<br>   ---不 depend于object</li>
+<li>limitations: instance method can call class method, but class method cannot call instance method and instance fields. 也就是说它只能用static fields,但object method 能用所有fields.</li>
+</ul>
+</li>
+</ol>
 </li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
