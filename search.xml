@@ -237,9 +237,20 @@
 </ul>
 </li>
 <li>2 important: coupling: loose coupling  : interface,change 1 do not need to change another.</li>
+<li>周五上课---看的回放<ul>
+<li>arraylist和hashmap等等里面不能有primitive types</li>
+<li>primitive types(int,boolean等等)不是object</li>
+<li>引出wrapper class(Interger,Float…)</li>
+<li>primitive-type values wrap in objects to be stored in a <strong>collection</strong></li>
+<li>此处应有引用</li>
+</ul>
+</li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
 <li>auction project的源代码 看 ---11.4早于lse</li>
+</ol>
+<h2 id="网址干货收藏"><a href="#网址干货收藏" class="headerlink" title="网址干货收藏"></a>网址干货收藏</h2><ol>
+<li><a href="https://songlee24.github.io/2016/03/16/java-basic-note-1/" target="_blank" rel="noopener" title="java基础知识">java基础博客</a></li>
 </ol>
 ]]></content>
       <categories>
