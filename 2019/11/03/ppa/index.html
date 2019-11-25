@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Ajn">
 <meta property="og:description" content="week5">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T18:08:34.760Z">
+<meta property="og:updated_time" content="2019-11-25T19:20:28.980Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T18:08:34+00:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T19:20:28+00:00">
                 2019-11-25
               </time>
             
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  863
+                  931
                 </span>
               
 
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  4
                 </span>
               
             </div>
@@ -586,16 +586,32 @@
 <li>array更改element的原理</li>
 <li>array literals</li>
 <li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
-<li>for-each loop: remove和add会导致error <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip </span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>for-each loop: remove和add会导致error <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip </span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 <ul>
 <li>为何呢</li>
 <li>用 for loop? ---也不好</li>
-<li>解决办法:<strong>Iterator</strong></li>
+<li>解决办法:<strong>Iterator</strong>(用while)</li>
+<li>Iterator用for的话,最后一个counter不需要</li>
+<li><a href="https://blog.csdn.net/github_2011/article/details/54927531" target="_blank" rel="noopener" title="总结">遍历list删除元素的总结</a></li>
 </ul>
+<ol start="2">
+<li>二维数组[][]<ol>
+<li>例子:brain</li>
+</ol>
+<ul>
+<li>Environment里面的setup好奇怪</li>
+</ul>
+<ol start="2">
+<li>处理图片就是处理二维数组</li>
+</ol>
 </li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
 <li>auction project的源代码 看 ---11.4早于lse</li>
+</ol>
+<h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><h3 id="brain"><a href="#brain" class="headerlink" title="brain"></a>brain</h3><ol>
+<li>cells二维数组的初始化令人迷惑</li>
 </ol>
 <h2 id="网址干货收藏"><a href="#网址干货收藏" class="headerlink" title="网址干货收藏"></a>网址干货收藏</h2><ol>
 <li><a href="https://songlee24.github.io/2016/03/16/java-basic-note-1/" target="_blank" rel="noopener" title="java基础知识">java基础博客</a></li>
@@ -798,7 +814,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#week5"><span class="nav-number">1.</span> <span class="nav-text">week5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PPT提纲"><span class="nav-number">1.1.</span> <span class="nav-text">PPT提纲</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#searching"><span class="nav-number">1.1.1.</span> <span class="nav-text">searching:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#week7-Chapter6"><span class="nav-number">2.</span> <span class="nav-text">week7 Chapter6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#研读课本"><span class="nav-number">2.1.</span> <span class="nav-text">研读课本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预习PPT-amp-提纲"><span class="nav-number">2.2.</span> <span class="nav-text">预习PPT&amp;提纲</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七"><span class="nav-number">3.</span> <span class="nav-text">七</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#yi"><span class="nav-number">3.1.</span> <span class="nav-text">yi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八-Week-8"><span class="nav-number">4.</span> <span class="nav-text">八 Week 8</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上课-ppt"><span class="nav-number">4.1.</span> <span class="nav-text">上课 ppt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九-week9"><span class="nav-number">5.</span> <span class="nav-text">九 week9</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-java-without-bluej"><span class="nav-number">5.1.</span> <span class="nav-text">Using java without bluej</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fixed-sized-collections"><span class="nav-number">5.2.</span> <span class="nav-text">Fixed-sized collections</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#周五11-22的回看11-25"><span class="nav-number">5.3.</span> <span class="nav-text">周五11.22的回看11.25</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#疑惑与计划"><span class="nav-number">6.</span> <span class="nav-text">疑惑与计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网址干货收藏"><span class="nav-number">7.</span> <span class="nav-text">网址干货收藏</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#week5"><span class="nav-number">1.</span> <span class="nav-text">week5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PPT提纲"><span class="nav-number">1.1.</span> <span class="nav-text">PPT提纲</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#searching"><span class="nav-number">1.1.1.</span> <span class="nav-text">searching:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#week7-Chapter6"><span class="nav-number">2.</span> <span class="nav-text">week7 Chapter6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#研读课本"><span class="nav-number">2.1.</span> <span class="nav-text">研读课本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预习PPT-amp-提纲"><span class="nav-number">2.2.</span> <span class="nav-text">预习PPT&amp;提纲</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七"><span class="nav-number">3.</span> <span class="nav-text">七</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#yi"><span class="nav-number">3.1.</span> <span class="nav-text">yi</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八-Week-8"><span class="nav-number">4.</span> <span class="nav-text">八 Week 8</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上课-ppt"><span class="nav-number">4.1.</span> <span class="nav-text">上课 ppt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九-week9"><span class="nav-number">5.</span> <span class="nav-text">九 week9</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-java-without-bluej"><span class="nav-number">5.1.</span> <span class="nav-text">Using java without bluej</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fixed-sized-collections"><span class="nav-number">5.2.</span> <span class="nav-text">Fixed-sized collections</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#周五11-22的回看11-25"><span class="nav-number">5.3.</span> <span class="nav-text">周五11.22的回看11.25</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#疑惑与计划"><span class="nav-number">6.</span> <span class="nav-text">疑惑与计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码分析"><span class="nav-number">7.</span> <span class="nav-text">代码分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#brain"><span class="nav-number">7.1.</span> <span class="nav-text">brain</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网址干货收藏"><span class="nav-number">8.</span> <span class="nav-text">网址干货收藏</span></a></li></ol></div>
             
 
           </div>

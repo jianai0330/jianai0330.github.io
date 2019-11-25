@@ -421,16 +421,32 @@
 <li>array更改element的原理</li>
 <li>array literals</li>
 <li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
-<li>for-each loop: remove和add会导致error <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip </span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>for-each loop: remove和add会导致error <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip </span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 <ul>
 <li>为何呢</li>
 <li>用 for loop? ---也不好</li>
-<li>解决办法:<strong>Iterator</strong></li>
+<li>解决办法:<strong>Iterator</strong>(用while)</li>
+<li>Iterator用for的话,最后一个counter不需要</li>
+<li><a href="https://blog.csdn.net/github_2011/article/details/54927531" target="_blank" rel="noopener" title="总结">遍历list删除元素的总结</a></li>
 </ul>
+<ol start="2">
+<li>二维数组[][]<ol>
+<li>例子:brain</li>
+</ol>
+<ul>
+<li>Environment里面的setup好奇怪</li>
+</ul>
+<ol start="2">
+<li>处理图片就是处理二维数组</li>
+</ol>
 </li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
 <li>auction project的源代码 看 ---11.4早于lse</li>
+</ol>
+<h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><h3 id="brain"><a href="#brain" class="headerlink" title="brain"></a>brain</h3><ol>
+<li>cells二维数组的初始化令人迷惑</li>
 </ol>
 <h2 id="网址干货收藏"><a href="#网址干货收藏" class="headerlink" title="网址干货收藏"></a>网址干货收藏</h2><ol>
 <li><a href="https://songlee24.github.io/2016/03/16/java-basic-note-1/" target="_blank" rel="noopener" title="java基础知识">java基础博客</a></li>
