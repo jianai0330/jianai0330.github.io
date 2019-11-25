@@ -284,10 +284,43 @@
 </li>
 <li><p>outside bluej</p>
 <ul>
-<li>public static void main(String[] arg)</li>
+<li>public static void main(String[] arg)<h2 id="九-week9"><a href="#九-week9" class="headerlink" title="九 week9"></a>九 week9</h2><h3 id="Using-java-without-bluej"><a href="#Using-java-without-bluej" class="headerlink" title="Using java without bluej"></a>Using java without bluej</h3></li>
 </ul>
+<ol>
+<li>几个文件的后缀：java，class,txt..</li>
+<li>Javac :终端命令，是java编译器的名称？</li>
+<li>Javac 把.java变成.class</li>
+<li>Emacs命令</li>
+<li>java命令（后接类名无后缀）start JVM，开始执行程序</li>
+<li>the edit-compile-execute cycle：理解JVM</li>
+</ol>
+<ul>
+<li>Editor---source file---compiler(javac)---class file---virtual machine(java)</li>
+</ul>
+<ol start="7">
+<li>每个system都有其JVM</li>
+<li>main method应该做什么 ---PPT里<h3 id="Fixed-sized-collections"><a href="#Fixed-sized-collections" class="headerlink" title="Fixed-sized collections"></a>Fixed-sized collections</h3></li>
+<li>Arrays的特性</li>
+</ol>
 </li>
 </ol>
+<ul>
+<li>Fixed in length 他在讲什么memory之类的东西。。。</li>
+<li>Use a special syntax语法</li>
+<li>它的对象没有methods，methods从其他class而来</li>
+<li>methods都是static的<ol start="2">
+<li>-最大size可以？？</li>
+<li>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</li>
+<li>例子project：weblog-analyzer</li>
+<li>array的语法</li>
+<li>mutator和accessor忘了</li>
+<li>array更改element的原理</li>
+<li>array literals</li>
+<li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
+<li>for-each loop: </li>
+</ol>
+</li>
+</ul>
 </li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
@@ -363,44 +396,6 @@
       </categories>
       <tags>
         <tag>单片机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS_note</title>
-    <url>/2019/10/31/assembly/</url>
-    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a>
-<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
-<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
-</li>
-<li><p>benchmarking: </p>
-</li>
-<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
-</li>
-<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
-<p>注意比较各种情况下的好坏</p>
-<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol>
-<li>flushing the pipeline: conditional branck instructions</li>
-<li>clock rate=machine cycles per second</li>
-<li></li>
-<li></li>
-</ol>
-</li>
-</ol>
-<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
-<li>CPU里clock cycle的理解</li>
-<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
-<li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) </code></pre></li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>CS</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -579,16 +574,24 @@
 <li>补码overflow detect</li>
 <li>sign的减法和乘除</li>
 </ol>
-<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
-<li>Assembly 2 里 JnS </li>
-<li>那么load store jump好像没区别啊? ---11.6</li>
-<li>对于Assembly1作业中的第3题.醍醐灌顶:<br> A 1-bit address can address two words (0, 1).<br> A 2-bit address can address four words (00, 01, 10, 11).<br> A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br> but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></li>
-<li><strong>八---二进制2</strong>需要加强理解和动手去做的:1. <del>三种表示二进制数的转化自己去操作</del>. 2. 进制直接每种情况的转化去运算.   ---11.13</li>
-<li><del>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?</del>  ---11.13八课上</li>
-<li>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</li>
-<li>---11.13晚自习 二进制转八进制,万一位数除不尽3怎么办?</li>
+<h1 id="九-floating-point-binary"><a href="#九-floating-point-binary" class="headerlink" title="九 floating-point binary"></a>九 floating-point binary</h1><h2 id="预习-回看"><a href="#预习-回看" class="headerlink" title="预习+回看"></a>预习+回看</h2><ol>
+<li><h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1></li>
+<li><p>Assembly 2 里 JnS </p>
+</li>
+<li><p>那么load store jump好像没区别啊? ---11.6</p>
+</li>
+<li><p>对于Assembly1作业中的第3题.醍醐灌顶:<br> A 1-bit address can address two words (0, 1).<br> A 2-bit address can address four words (00, 01, 10, 11).<br> A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br> but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></p>
+</li>
+<li><p><strong>八---二进制2</strong>需要加强理解和动手去做的:1. <del>三种表示二进制数的转化自己去操作</del>. 2. 进制直接每种情况的转化去运算.   ---11.13</p>
+</li>
+<li><p><del>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?</del>  ---11.13八课上</p>
+</li>
+<li><p>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</p>
+</li>
+<li><p>---11.13晚自习 二进制转八进制,万一位数除不尽3怎么办?</p>
+</li>
 </ol>
-<h2 id="作业tutorial-的总结"><a href="#作业tutorial-的总结" class="headerlink" title="作业tutorial 的总结"></a>作业tutorial 的总结</h2><ol>
+<h1 id="作业tutorial-的总结"><a href="#作业tutorial-的总结" class="headerlink" title="作业tutorial 的总结"></a>作业tutorial 的总结</h1><ol>
 <li>---11.13晚,week7,binary1.<ul>
 <li>减权定位终于知道了怎么做</li>
 <li>小数10转2,乘积取整还不会</li>
@@ -606,6 +609,44 @@
 <li>一定要记住正数的反码和补码都是它,运算的时候一定要仔细1+1变为0</li>
 </ul>
 </li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>CS</category>
+      </categories>
+      <tags>
+        <tag>CS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS_note</title>
+    <url>/2019/10/31/assembly/</url>
+    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a>
+<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
+<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
+</li>
+<li><p>benchmarking: </p>
+</li>
+<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
+<pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+</li>
+<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
+<p>注意比较各种情况下的好坏</p>
+<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol>
+<li>flushing the pipeline: conditional branck instructions</li>
+<li>clock rate=machine cycles per second</li>
+<li></li>
+<li></li>
+</ol>
+</li>
+</ol>
+<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
+<li>CPU里clock cycle的理解</li>
+<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
+<li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) </code></pre></li>
 </ol>
 ]]></content>
       <categories>
