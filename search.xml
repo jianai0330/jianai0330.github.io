@@ -551,8 +551,8 @@ list<span class="token punctuation">.</span><span class="token function">remove<
       </tags>
   </entry>
   <entry>
-    <title>CS_note</title>
-    <url>/2019/10/31/cs-note/</url>
+    <title>CS</title>
+    <url>/2019/10/31/cs/</url>
     <content><![CDATA[<h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><h2 id="冯诺依曼结构"><a href="#冯诺依曼结构" class="headerlink" title="冯诺依曼结构"></a>冯诺依曼结构</h2><a id="more"></a>
 <h1 id="二-Assembly-1"><a href="#二-Assembly-1" class="headerlink" title="二 Assembly 1"></a>二 Assembly 1</h1><ol>
 <li><p>CPU<br> registers<br> ALU<br> control unit<br> data bus</p>
