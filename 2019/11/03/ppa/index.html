@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Ajn">
 <meta property="og:description" content="week5">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T17:48:51.305Z">
+<meta property="og:updated_time" content="2019-11-25T17:59:15.156Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T17:48:51+00:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T17:59:15+00:00">
                 2019-11-25
               </time>
             
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  865
+                  863
                 </span>
               
 
@@ -560,52 +560,33 @@
 </li>
 </ol>
 <h2 id="九-week9"><a href="#九-week9" class="headerlink" title="九 week9"></a>九 week9</h2><h3 id="Using-java-without-bluej"><a href="#Using-java-without-bluej" class="headerlink" title="Using java without bluej"></a>Using java without bluej</h3><ol>
-<li><p>几个文件的后缀：java，class,txt..</p>
-</li>
-<li><p>Javac :终端命令，是java编译器的名称？</p>
-</li>
-<li><p>Javac 把.java变成.class</p>
-</li>
-<li><p>Emacs命令</p>
-</li>
-<li><p>java命令（后接类名无后缀）start JVM，开始执行程序</p>
-</li>
-<li><p>the edit-compile-execute cycle：理解JVM</p>
-<ul>
+<li>几个文件的后缀：java，class,txt..</li>
+<li>Javac :终端命令，是java编译器的名称？</li>
+<li>Javac 把.java变成.class</li>
+<li>Emacs命令</li>
+<li>java命令（后接类名无后缀）start JVM，开始执行程序</li>
+<li>the edit-compile-execute cycle：理解JVM<ul>
 <li>Editor---source file---compiler(javac)---class file---virtual machine(java)</li>
 </ul>
 </li>
-<li><p>每个system都有其JVM</p>
-</li>
-<li><p>main method应该做什么 ---PPT里</p>
-<h3 id="Fixed-sized-collections"><a href="#Fixed-sized-collections" class="headerlink" title="Fixed-sized collections"></a>Fixed-sized collections</h3></li>
-<li><p>Arrays的特性</p>
-<ul>
+<li>每个system都有其JVM</li>
+<li>main method应该做什么 ---PPT里<h3 id="Fixed-sized-collections"><a href="#Fixed-sized-collections" class="headerlink" title="Fixed-sized collections"></a>Fixed-sized collections</h3></li>
+<li>Arrays的特性<ul>
 <li>Fixed in length 他在讲什么memory之类的东西。。。</li>
 <li>Use a special syntax语法</li>
 <li>它的对象没有methods，methods从其他class而来</li>
 <li>methods都是static的</li>
 </ul>
 </li>
-<li><p>-最大size可以？？</p>
-</li>
-<li><p>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</p>
-</li>
-<li><p>例子project：weblog-analyzer</p>
-</li>
-<li><p>array的语法</p>
-</li>
-<li><p>mutator和accessor忘了</p>
-</li>
-<li><p>array更改element的原理</p>
-</li>
-<li><p>array literals</p>
-</li>
-<li><p>array length</p>
-<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
-<li><p>for-each loop: remove和add会导致error </p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(<span class="keyword">String</span> s : <span class="keyword">list</span>)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    <span class="keyword">list</span>.<span class="keyword">remove</span>(s);</span><br><span class="line">    //如果<span class="keyword">remove</span>,会skip </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<li>-最大size可以？？</li>
+<li>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</li>
+<li>例子project：weblog-analyzer</li>
+<li>array的语法</li>
+<li>mutator和accessor忘了</li>
+<li>array更改element的原理</li>
+<li>array literals</li>
+<li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
+<li>for-each loop: remove和add会导致error <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip </span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>为何呢</li>
 <li>用 for loop? ---也不好</li>
