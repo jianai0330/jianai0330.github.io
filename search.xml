@@ -424,7 +424,7 @@
 <li>for-each loop: remove和add会导致error <pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>String s <span class="token operator">:</span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
 <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">startWith</span><span class="token punctuation">(</span><span class="token string">"t"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token comment" spellcheck="true">//如果remove,会skip </span>
+<span class="token comment" spellcheck="true">//如果remove,会skip </span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <ul>
