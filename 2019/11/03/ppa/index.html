@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Ajn">
 <meta property="og:description" content="week5">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T17:45:01.274Z">
+<meta property="og:updated_time" content="2019-11-25T17:48:51.305Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T17:45:01+00:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T17:48:51+00:00">
                 2019-11-25
               </time>
             
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  935
+                  863
                 </span>
               
 
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  3
                 </span>
               
             </div>
@@ -602,30 +602,19 @@
 <li><p>array literals</p>
 </li>
 <li><p>array length</p>
-<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3><ol>
-<li>for-each loop: remove和add会导致error <pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>String s <span class="token operator">:</span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">startWith</span><span class="token punctuation">(</span><span class="token string">"t"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//如果remove,会skip </span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">L2Character</span> <span class="token keyword">extends</span> <span class="token class-name">L2Object</span> <span class="token punctuation">{</span>
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> Short ABNORMAL_EFFECT_BLEEDING <span class="token operator">=</span> 0x0_0_0_1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// not sure</span>
-</code></pre>
+<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
+<li><p>for-each loop: remove和add会导致error </p>
+<pre><code>for(String s : list){
+if(s.startWith(&quot;t&quot;)){
+list.remove(s);
+//如果remove,会skip 
+}
+}</code></pre><ul>
+<li>为何呢</li>
+<li>用 for loop? ---也不好</li>
+<li>解决办法:<strong>Iterator</strong></li>
+</ul>
 </li>
-</ol>
-<p>public void moveTo(int x, int y, int z) {<br>_ai = null;<br>_log.warning(“Should not be called”);<br>if (1 &gt; 5) {<br> return;<br>}<br>}</p>
-<p>/** Task of AI notification */<br>@SuppressWarnings( { “nls”, “unqualified-field-access”, “boxing” })<br>public class NotifyAITask implements Runnable {<br>private final CtrlEvent _evt;</p>
-<p>List mList = new ArrayList()</p>
-<p>public void run() {<br> try {<br>   getAI().notifyEvent(_evt, _evt.class, null);<br> } catch (Throwable t) {<br>   t.printStackTrace();<br> }<br>}<br>}<br>}</p>
-<pre><code> - 为何呢
- - 用 for loop? \-\-\-也不好
- - 解决办法:**Iterator**
-
-
-
-
-</code></pre></li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
 <li>auction project的源代码 看 ---11.4早于lse</li>
@@ -877,7 +866,7 @@ list<span class="token punctuation">.</span><span class="token function">remove<
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.1k</span>
+    <span title="Site words total count">6k</span>
   
   
 </div>
@@ -900,7 +889,7 @@ list<span class="token punctuation">.</span><span class="token function">remove<
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了6.1k字</span>
+  <span class="post-count">共ha了6k字</span>
 </div>
 -->
 
