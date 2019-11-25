@@ -3,7 +3,8 @@
   <entry>
     <title>每日总结</title>
     <url>/2019/11/25/mei-ri-zong-jie/</url>
-    <content><![CDATA[<h1 id="11-25-周一-week10"><a href="#11-25-周一-week10" class="headerlink" title="11.25 周一 week10"></a>11.25 周一 week10</h1><h2 id="吃了什么"><a href="#吃了什么" class="headerlink" title="吃了什么"></a>吃了什么</h2><ul>
+    <content><![CDATA[<h1 id="11-25-周一-week10"><a href="#11-25-周一-week10" class="headerlink" title="11.25 周一 week10"></a>11.25 周一 week10</h1><h2 id="吃了什么"><a href="#吃了什么" class="headerlink" title="吃了什么"></a>吃了什么</h2><a id="more"></a>
+<ul>
 <li>0.1:无</li>
 <li>0.2:两个cheese roll,一袋李子</li>
 <li>0.3:一个鸡蛋,半杯麦片</li>
@@ -387,31 +388,31 @@
 </li>
 <li><p>outside bluej</p>
 <ul>
-<li>public static void main(String[] arg)<h2 id="九-week9"><a href="#九-week9" class="headerlink" title="九 week9"></a>九 week9</h2><h3 id="Using-java-without-bluej"><a href="#Using-java-without-bluej" class="headerlink" title="Using java without bluej"></a>Using java without bluej</h3></li>
+<li>public static void main(String[] arg)</li>
 </ul>
-<ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="九-week9"><a href="#九-week9" class="headerlink" title="九 week9"></a>九 week9</h2><h3 id="Using-java-without-bluej"><a href="#Using-java-without-bluej" class="headerlink" title="Using java without bluej"></a>Using java without bluej</h3><ol>
 <li>几个文件的后缀：java，class,txt..</li>
 <li>Javac :终端命令，是java编译器的名称？</li>
 <li>Javac 把.java变成.class</li>
 <li>Emacs命令</li>
 <li>java命令（后接类名无后缀）start JVM，开始执行程序</li>
-<li>the edit-compile-execute cycle：理解JVM</li>
-</ol>
-<ul>
+<li>the edit-compile-execute cycle：理解JVM<ul>
 <li>Editor---source file---compiler(javac)---class file---virtual machine(java)</li>
 </ul>
-<ol start="7">
+</li>
 <li>每个system都有其JVM</li>
 <li>main method应该做什么 ---PPT里<h3 id="Fixed-sized-collections"><a href="#Fixed-sized-collections" class="headerlink" title="Fixed-sized collections"></a>Fixed-sized collections</h3></li>
-<li>Arrays的特性</li>
-</ol>
-</li>
-</ol>
-<ul>
+<li>Arrays的特性<ul>
 <li>Fixed in length 他在讲什么memory之类的东西。。。</li>
 <li>Use a special syntax语法</li>
 <li>它的对象没有methods，methods从其他class而来</li>
-<li>methods都是static的<ol start="2">
+<li>methods都是static的</li>
+</ul>
+</li>
 <li>-最大size可以？？</li>
 <li>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</li>
 <li>例子project：weblog-analyzer</li>
@@ -419,22 +420,20 @@
 <li>mutator和accessor忘了</li>
 <li>array更改element的原理</li>
 <li>array literals</li>
-<li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
+<li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3><ol>
 <li>for-each loop: remove和add会导致error <pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>String s <span class="token operator">:</span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
 <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">startWith</span><span class="token punctuation">(</span><span class="token string">"t"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//如果remove,会skip </span>
+  <span class="token comment" spellcheck="true">//如果remove,会skip </span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-</li>
-</ol>
 <ul>
 <li>为何呢</li>
 <li>用 for loop? ---也不好</li>
 <li>解决办法:<strong>Iterator</strong></li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
