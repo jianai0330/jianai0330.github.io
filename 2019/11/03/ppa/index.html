@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Ajn">
 <meta property="og:description" content="week5">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T17:41:31.471Z">
+<meta property="og:updated_time" content="2019-11-25T17:45:01.274Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T17:41:31+00:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T17:45:01+00:00">
                 2019-11-25
               </time>
             
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  859
+                  935
                 </span>
               
 
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  4
                 </span>
               
             </div>
@@ -560,46 +560,72 @@
 </li>
 </ol>
 <h2 id="九-week9"><a href="#九-week9" class="headerlink" title="九 week9"></a>九 week9</h2><h3 id="Using-java-without-bluej"><a href="#Using-java-without-bluej" class="headerlink" title="Using java without bluej"></a>Using java without bluej</h3><ol>
-<li>几个文件的后缀：java，class,txt..</li>
-<li>Javac :终端命令，是java编译器的名称？</li>
-<li>Javac 把.java变成.class</li>
-<li>Emacs命令</li>
-<li>java命令（后接类名无后缀）start JVM，开始执行程序</li>
-<li>the edit-compile-execute cycle：理解JVM<ul>
+<li><p>几个文件的后缀：java，class,txt..</p>
+</li>
+<li><p>Javac :终端命令，是java编译器的名称？</p>
+</li>
+<li><p>Javac 把.java变成.class</p>
+</li>
+<li><p>Emacs命令</p>
+</li>
+<li><p>java命令（后接类名无后缀）start JVM，开始执行程序</p>
+</li>
+<li><p>the edit-compile-execute cycle：理解JVM</p>
+<ul>
 <li>Editor---source file---compiler(javac)---class file---virtual machine(java)</li>
 </ul>
 </li>
-<li>每个system都有其JVM</li>
-<li>main method应该做什么 ---PPT里<h3 id="Fixed-sized-collections"><a href="#Fixed-sized-collections" class="headerlink" title="Fixed-sized collections"></a>Fixed-sized collections</h3></li>
-<li>Arrays的特性<ul>
+<li><p>每个system都有其JVM</p>
+</li>
+<li><p>main method应该做什么 ---PPT里</p>
+<h3 id="Fixed-sized-collections"><a href="#Fixed-sized-collections" class="headerlink" title="Fixed-sized collections"></a>Fixed-sized collections</h3></li>
+<li><p>Arrays的特性</p>
+<ul>
 <li>Fixed in length 他在讲什么memory之类的东西。。。</li>
 <li>Use a special syntax语法</li>
 <li>它的对象没有methods，methods从其他class而来</li>
 <li>methods都是static的</li>
 </ul>
 </li>
-<li>-最大size可以？？</li>
-<li>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</li>
-<li>例子project：weblog-analyzer</li>
-<li>array的语法</li>
-<li>mutator和accessor忘了</li>
-<li>array更改element的原理</li>
-<li>array literals</li>
-<li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3><ol>
+<li><p>-最大size可以？？</p>
+</li>
+<li><p>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</p>
+</li>
+<li><p>例子project：weblog-analyzer</p>
+</li>
+<li><p>array的语法</p>
+</li>
+<li><p>mutator和accessor忘了</p>
+</li>
+<li><p>array更改element的原理</p>
+</li>
+<li><p>array literals</p>
+</li>
+<li><p>array length</p>
+<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3><ol>
 <li>for-each loop: remove和add会导致error <pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>String s <span class="token operator">:</span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
 <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">startWith</span><span class="token punctuation">(</span><span class="token string">"t"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//如果remove,会skip </span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<ul>
-<li>为何呢</li>
-<li>用 for loop? ---也不好</li>
-<li>解决办法:<strong>Iterator</strong></li>
-</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">L2Character</span> <span class="token keyword">extends</span> <span class="token class-name">L2Object</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> Short ABNORMAL_EFFECT_BLEEDING <span class="token operator">=</span> 0x0_0_0_1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// not sure</span>
+</code></pre>
 </li>
 </ol>
-</li>
+<p>public void moveTo(int x, int y, int z) {<br>_ai = null;<br>_log.warning(“Should not be called”);<br>if (1 &gt; 5) {<br> return;<br>}<br>}</p>
+<p>/** Task of AI notification */<br>@SuppressWarnings( { “nls”, “unqualified-field-access”, “boxing” })<br>public class NotifyAITask implements Runnable {<br>private final CtrlEvent _evt;</p>
+<p>List mList = new ArrayList()</p>
+<p>public void run() {<br> try {<br>   getAI().notifyEvent(_evt, _evt.class, null);<br> } catch (Throwable t) {<br>   t.printStackTrace();<br> }<br>}<br>}<br>}</p>
+<pre><code> - 为何呢
+ - 用 for loop? \-\-\-也不好
+ - 解决办法:**Iterator**
+
+
+
+
+</code></pre></li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
 <li>auction project的源代码 看 ---11.4早于lse</li>
@@ -851,7 +877,7 @@ list<span class="token punctuation">.</span><span class="token function">remove<
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6k</span>
+    <span title="Site words total count">6.1k</span>
   
   
 </div>
@@ -874,7 +900,7 @@ list<span class="token punctuation">.</span><span class="token function">remove<
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了6k字</span>
+  <span class="post-count">共ha了6.1k字</span>
 </div>
 -->
 
