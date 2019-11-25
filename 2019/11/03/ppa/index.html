@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  863
+                  865
                 </span>
               
 
@@ -482,7 +482,7 @@
 <h2 id="week7-Chapter6"><a href="#week7-Chapter6" class="headerlink" title="week7 Chapter6"></a>week7 Chapter6</h2><h3 id="研读课本"><a href="#研读课本" class="headerlink" title="研读课本"></a>研读课本</h3><ol>
 <li>responsibility-driven design, cohesion, coupling, refactoring</li>
 <li>intance method:invoked on an <strong>intance</strong> of a class, 注意class method和instance method不互通不能互相引用</li>
-<li>enum(enumerated types):枚举<pre><code> 枚举类型可以像类(class)类型一样，定义为一个单独的文件，当然也可以定义在其他类内部</code></pre><h3 id="预习PPT-amp-提纲"><a href="#预习PPT-amp-提纲" class="headerlink" title="预习PPT&amp;提纲"></a>预习PPT&amp;提纲</h3><ol>
+<li>enum(enumerated types):枚举<pre><code>枚举类型可以像类(class)类型一样，定义为一个单独的文件，当然也可以定义在其他类内部</code></pre><h3 id="预习PPT-amp-提纲"><a href="#预习PPT-amp-提纲" class="headerlink" title="预习PPT&amp;提纲"></a>预习PPT&amp;提纲</h3><ol>
 <li>几个class:random</li>
 <li>Set,Map<br>hashSet,hashMap</li>
 <li>list,map和set的比较</li>
@@ -604,12 +604,9 @@
 <li><p>array length</p>
 <h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
 <li><p>for-each loop: remove和add会导致error </p>
-<pre><code>for(String s : list){
-if(s.startWith(&quot;t&quot;)){
-list.remove(s);
-//如果remove,会skip 
-}
-}</code></pre><ul>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for(<span class="keyword">String</span> s : <span class="keyword">list</span>)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    <span class="keyword">list</span>.<span class="keyword">remove</span>(s);</span><br><span class="line">    //如果<span class="keyword">remove</span>,会skip </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li>为何呢</li>
 <li>用 for loop? ---也不好</li>
 <li>解决办法:<strong>Iterator</strong></li>

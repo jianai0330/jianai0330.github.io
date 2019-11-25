@@ -317,7 +317,7 @@
 <h2 id="week7-Chapter6"><a href="#week7-Chapter6" class="headerlink" title="week7 Chapter6"></a>week7 Chapter6</h2><h3 id="研读课本"><a href="#研读课本" class="headerlink" title="研读课本"></a>研读课本</h3><ol>
 <li>responsibility-driven design, cohesion, coupling, refactoring</li>
 <li>intance method:invoked on an <strong>intance</strong> of a class, 注意class method和instance method不互通不能互相引用</li>
-<li>enum(enumerated types):枚举<pre><code> 枚举类型可以像类(class)类型一样，定义为一个单独的文件，当然也可以定义在其他类内部</code></pre><h3 id="预习PPT-amp-提纲"><a href="#预习PPT-amp-提纲" class="headerlink" title="预习PPT&amp;提纲"></a>预习PPT&amp;提纲</h3><ol>
+<li>enum(enumerated types):枚举<pre><code>枚举类型可以像类(class)类型一样，定义为一个单独的文件，当然也可以定义在其他类内部</code></pre><h3 id="预习PPT-amp-提纲"><a href="#预习PPT-amp-提纲" class="headerlink" title="预习PPT&amp;提纲"></a>预习PPT&amp;提纲</h3><ol>
 <li>几个class:random</li>
 <li>Set,Map<br>hashSet,hashMap</li>
 <li>list,map和set的比较</li>
@@ -439,12 +439,9 @@
 <li><p>array length</p>
 <h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
 <li><p>for-each loop: remove和add会导致error </p>
-<pre><code>for(String s : list){
-if(s.startWith(&quot;t&quot;)){
-list.remove(s);
-//如果remove,会skip 
-}
-}</code></pre><ul>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">for(<span class="keyword">String</span> s : <span class="keyword">list</span>)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    <span class="keyword">list</span>.<span class="keyword">remove</span>(s);</span><br><span class="line">    //如果<span class="keyword">remove</span>,会skip </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li>为何呢</li>
 <li>用 for loop? ---也不好</li>
 <li>解决办法:<strong>Iterator</strong></li>
@@ -482,8 +479,8 @@ list.remove(s);
 </ol>
 <h3 id="arduino里几个概念"><a href="#arduino里几个概念" class="headerlink" title="arduino里几个概念"></a>arduino里几个概念</h3><ol>
 <li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
-<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
- 它们 连接着the external digital pins</code></pre><table>
+<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code>: an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
+它们 连接着the external digital pins</code></pre><table>
 <thead>
 <tr>
 <th>Atemega pin</th>
@@ -504,7 +501,7 @@ list.remove(s);
 </tr>
 </tbody></table>
 </li>
-<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li>
+<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code>位于nona两周: I/O interface(HIGH/LOW)</code></pre></li>
 <li>CPU怎么链接PORTB: databus</li>
 <li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
 <li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.<h2 id="Lab3-portc-很好理解-读value"><a href="#Lab3-portc-很好理解-读value" class="headerlink" title="Lab3 portc 很好理解 读value"></a>Lab3 portc 很好理解 读value</h2></li>
@@ -537,8 +534,8 @@ list.remove(s);
 <li><p>benchmarking: </p>
 </li>
 <li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+<pre><code>simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code>complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
 </li>
 <li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
 <p>注意比较各种情况下的好坏</p>
@@ -553,7 +550,7 @@ list.remove(s);
 <h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
 <li>CPU里clock cycle的理解</li>
 <li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
-<li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) </code></pre></li>
+<li>byte-addressable &amp; word-addressable:<pre><code>byte..:every byte has its own address. (word:every word) </code></pre></li>
 </ol>
 ]]></content>
       <categories>
@@ -605,11 +602,7 @@ list.remove(s);
 <li><p>Assemblers汇编器的工作流程:PPT!<br>  1st pass: symbol table<br>  2nd pass: the instructions are completed using the value from the <strong>symbol table</strong>.<br>  完成将汇编语言变成机器语言的过程</p>
 </li>
 <li><p>一个汇编语言程序:main和mainloop是address label.?? main&amp;mainloop的理解</p>
-<pre><code>   .equ SREG,0x3F
-   .org
-   main:   ldi r16,0
-           out SREG,r16
-   mainloop: rjmp mainloop</code></pre></li>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="meta">.equ</span> <span class="built_in">SREG</span>,<span class="number">0x3F</span></span><br><span class="line"><span class="meta">.org</span></span><br><span class="line"><span class="symbol">main:</span>   <span class="keyword">ldi</span> <span class="built_in">r16</span>,<span class="number">0</span></span><br><span class="line">        <span class="keyword">out</span> <span class="built_in">SREG</span>,<span class="built_in">r16</span></span><br><span class="line"><span class="symbol">mainloop:</span> <span class="keyword">rjmp</span> mainloop</span><br></pre></td></tr></table></figure></li>
 <li><p>indirect addressing mode时:</p>
 </li>
 <li><p>JnS:operates by storing the current PC value in the first address of the routine itself,then continue with the instruction following that.    Jump-and-store.<br> JumpI:return from the subroutine.</p>
@@ -649,8 +642,8 @@ list.remove(s);
 <li><p>benchmarking: </p>
 </li>
 <li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)指令集类型<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+<pre><code>simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code>complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
 </li>
 <li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
 <p>注意比较各种情况下的好坏</p>
@@ -841,7 +834,7 @@ list.remove(s);
 <li><p>trace: 迹sum of <strong>leading diagonal</strong>主对角线(左上右下)</p>
 </li>
 <li><p>A<sup>T</sup>: 手心手背 转置矩阵</p>
-<pre><code>   行列式和转置行列式**相等**</code></pre></li>
+<pre><code>行列式和转置行列式**相等**</code></pre></li>
 <li><p>minor:余子式,cofactor 代数余子式多一个-1的次方</p>
 </li>
 <li><p>adjoint:伴随矩阵 <strong><em>注意特性和公式</em></strong> 代数余子式组成</p>
@@ -858,9 +851,9 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li><p>Rank 秩 :最大线性无关的向量的个数  在ref形势下含非0的行数</p>
 </li>
 <li><p><strong>eigenvalue</strong>特征值</p>
-<pre><code> - characteristic polynomial(PPT72页),特征多项式characteristic equation of A特征方程
- - eigenvector特征向量
- - </code></pre></li>
+<pre><code>- characteristic polynomial(PPT72页),特征多项式characteristic equation of A特征方程
+- eigenvector特征向量
+- </code></pre></li>
 </ul>
 </li>
 <li><p>注意<strong>矩阵×标量</strong>与行列式×标量的区别: 矩阵式乘每个元素,行列式乘一行.</p>
@@ -888,18 +881,18 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 3. 去掉第一列,从新开始找pivot
 4. 在此基础上转化成**rref**: 找到非0首元,把其上的全变为0</code></pre></li>
 <li>find matrix <strong>rank</strong>:<pre><code>1. 矩阵的ref形式里含有非0行的数量 = 矩阵中independent vector(每一行就是一个vector)</code></pre></li>
-<li>eigenvalue: AX = aX<pre><code> - 已知A可求a
- - 已知A和a可求X(eigenvector) </code></pre></li>
+<li>eigenvalue: AX = aX<pre><code>- 已知A可求a
+- 已知A和a可求X(eigenvector) </code></pre></li>
 <li>矩阵加减:要同规模(与行列式不同,矩阵是每排,行列式不同的那一排(其余的每一排要对应相等))</li>
 <li>矩阵乘法:好比说AB,要求是A的列数等于B的行数, 那么得到的矩阵规模是A的行数B的列数<h2 id="二级结论"><a href="#二级结论" class="headerlink" title="二级结论"></a>二级结论</h2></li>
-<li><h3 id="上三角行列式"><a href="#上三角行列式" class="headerlink" title="上三角行列式"></a>上三角行列式</h3><pre><code>    的值D = 对角线元素乘积</code></pre></li>
-<li><h3 id="n阶行列式的性质"><a href="#n阶行列式的性质" class="headerlink" title="n阶行列式的性质"></a>n阶行列式的性质</h3><pre><code>    1. 行列式等于它的转置行列式
-    2. 互换行列式中的两行/列,行列式变号(**行列式是一个值数,与矩阵不同**),那矩阵换行呢**??**
-    3. 行列式有两行/列对应相等或者对应成比例,行列式 = 0或者行列式有一行全为0,行列式也为0
-    4. 行列式乘一个数,就乘一行,跟矩阵一样??
-    5. 最重要的来了: 把某一行/列元素的k倍加到另一行/列,行列式的值不变不变不变!
-    6. 可以用上述这些进行行列式的计算</code></pre></li>
-<li><h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><pre><code>    1. 一个特殊行列式: 范德蒙Vandermonde</code></pre></li>
+<li><h3 id="上三角行列式"><a href="#上三角行列式" class="headerlink" title="上三角行列式"></a>上三角行列式</h3><pre><code>的值D = 对角线元素乘积</code></pre></li>
+<li><h3 id="n阶行列式的性质"><a href="#n阶行列式的性质" class="headerlink" title="n阶行列式的性质"></a>n阶行列式的性质</h3><pre><code>1. 行列式等于它的转置行列式
+2. 互换行列式中的两行/列,行列式变号(**行列式是一个值数,与矩阵不同**),那矩阵换行呢**??**
+3. 行列式有两行/列对应相等或者对应成比例,行列式 = 0或者行列式有一行全为0,行列式也为0
+4. 行列式乘一个数,就乘一行,跟矩阵一样??
+5. 最重要的来了: 把某一行/列元素的k倍加到另一行/列,行列式的值不变不变不变!
+6. 可以用上述这些进行行列式的计算</code></pre></li>
+<li><h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><pre><code>1. 一个特殊行列式: 范德蒙Vandermonde</code></pre></li>
 <li>可交换矩阵commutable: 数量矩阵与同阶任何矩阵,A与单位阵,对角阵与对角阵</li>
 <li>方阵的幂</li>
 <li>矩阵的初等变换: 极其类似行列式的初等变换</li>

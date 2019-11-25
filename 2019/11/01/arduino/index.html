@@ -482,8 +482,8 @@
 </ol>
 <h3 id="arduino里几个概念"><a href="#arduino里几个概念" class="headerlink" title="arduino里几个概念"></a>arduino里几个概念</h3><ol>
 <li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
-<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
- 它们 连接着the external digital pins</code></pre><table>
+<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code>: an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
+它们 连接着the external digital pins</code></pre><table>
 <thead>
 <tr>
 <th>Atemega pin</th>
@@ -504,7 +504,7 @@
 </tr>
 </tbody></table>
 </li>
-<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)</code></pre></li>
+<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code>位于nona两周: I/O interface(HIGH/LOW)</code></pre></li>
 <li>CPU怎么链接PORTB: databus</li>
 <li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
 <li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.<h2 id="Lab3-portc-很好理解-读value"><a href="#Lab3-portc-很好理解-读value" class="headerlink" title="Lab3 portc 很好理解 读value"></a>Lab3 portc 很好理解 读value</h2></li>

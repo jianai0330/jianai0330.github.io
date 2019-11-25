@@ -510,11 +510,7 @@
 <li><p>Assemblers汇编器的工作流程:PPT!<br>  1st pass: symbol table<br>  2nd pass: the instructions are completed using the value from the <strong>symbol table</strong>.<br>  完成将汇编语言变成机器语言的过程</p>
 </li>
 <li><p>一个汇编语言程序:main和mainloop是address label.?? main&amp;mainloop的理解</p>
-<pre><code>   .equ SREG,0x3F
-   .org
-   main:   ldi r16,0
-           out SREG,r16
-   mainloop: rjmp mainloop</code></pre></li>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">.equ</span> <span class="built_in">SREG</span>,<span class="number">0x3F</span></span><br><span class="line"><span class="meta">.org</span></span><br><span class="line"><span class="symbol">main:</span>   <span class="keyword">ldi</span> <span class="built_in">r16</span>,<span class="number">0</span></span><br><span class="line">        <span class="keyword">out</span> <span class="built_in">SREG</span>,<span class="built_in">r16</span></span><br><span class="line"><span class="symbol">mainloop:</span> <span class="keyword">rjmp</span> mainloop</span><br></pre></td></tr></table></figure></li>
 <li><p>indirect addressing mode时:</p>
 </li>
 <li><p>JnS:operates by storing the current PC value in the first address of the routine itself,then continue with the instruction following that.    Jump-and-store.<br> JumpI:return from the subroutine.</p>
@@ -554,8 +550,8 @@
 <li><p>benchmarking: </p>
 </li>
 <li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)指令集类型<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code> simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code> complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+<pre><code>simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code>complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
 </li>
 <li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
 <p>注意比较各种情况下的好坏</p>
