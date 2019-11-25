@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Ajn">
 <meta property="og:description" content="week5">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T15:59:29.993Z">
+<meta property="og:updated_time" content="2019-11-25T16:12:24.733Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T15:59:29+00:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T16:12:24+00:00">
                 2019-11-25
               </time>
             
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  818
+                  853
                 </span>
               
 
@@ -586,8 +586,19 @@
 <li>array更改element的原理</li>
 <li>array literals</li>
 <li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
-<li>for-each loop: </li>
+<li>for-each loop: remove和add会导致error <pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>String s <span class="token operator">:</span> list<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">startWith</span><span class="token punctuation">(</span><span class="token string">"t"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//如果remove,会skip</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
 </ol>
+<ul>
+<li>为何呢</li>
+<li>用 for loop? ---也不好</li>
+<li>解决办法:<strong>Iterator</strong></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -841,7 +852,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.6k</span>
+    <span title="Site words total count">5.7k</span>
   
   
 </div>
@@ -864,7 +875,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了5.6k字</span>
+  <span class="post-count">共ha了5.7k字</span>
 </div>
 -->
 
