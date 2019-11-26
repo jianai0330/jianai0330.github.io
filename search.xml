@@ -43,6 +43,8 @@
 <li>4.3: 看电影和吃东西 :给我把握好</li>
 <li>4.4: ppa report要开始写了!</li>
 <li>4.5: 看电影完适当购物: 腌莴笋的用品!!!</li>
+<li>4.6: 睡前看PPA的回放</li>
+<li>4.7:cscscs!!!</li>
 </ul>
 <hr>
 <h2 id="心情好吗-有激情吗"><a href="#心情好吗-有激情吗" class="headerlink" title="心情好吗,有激情吗?"></a>心情好吗,有激情吗?</h2><ul>
@@ -443,6 +445,17 @@
 <ol start="2">
 <li>处理图片就是处理二维数组</li>
 </ol>
+</li>
+</ol>
+<h2 id="十-week10"><a href="#十-week10" class="headerlink" title="十 week10"></a>十 week10</h2><p>functional processing of collections</p>
+<h3 id="预习PPT提纲"><a href="#预习PPT提纲" class="headerlink" title="预习PPT提纲"></a>预习PPT提纲</h3><ol>
+<li><p>Lambdas</p>
+<ul>
+<li>code can be treated as data</li>
+<li>segments of code can be stored in variables,passed as para</li>
+</ul>
+</li>
+<li><p>Stream</p>
 </li>
 </ol>
 <h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
