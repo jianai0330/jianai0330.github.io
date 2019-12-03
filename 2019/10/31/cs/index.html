@@ -114,7 +114,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;wkretype.bdimg.com&#x2F;retype&#x2F;zoom&#x2F;6a64416127d3240c8447ef13?pn=7&amp;o=jpg_6&amp;md5sum=1830449c7405e4dd2a4f0bb2c1b9644e&amp;sign=df6cd0909c&amp;png=126611-139487&amp;jpg=805027-909057">
 <meta property="og:image" content="https:&#x2F;&#x2F;www.coursehero.com&#x2F;doc-asset&#x2F;bg&#x2F;d6bc39dcf48520faf6897593e05282dad7676ae0&#x2F;splits&#x2F;v9.frq.clean&#x2F;split-1-page-1-html-bg.jpg">
-<meta property="og:updated_time" content="2019-11-25T17:27:32.012Z">
+<meta property="og:updated_time" content="2019-12-03T22:04:38.252Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;wkretype.bdimg.com&#x2F;retype&#x2F;zoom&#x2F;6a64416127d3240c8447ef13?pn=7&amp;o=jpg_6&amp;md5sum=1830449c7405e4dd2a4f0bb2c1b9644e&amp;sign=df6cd0909c&amp;png=126611-139487&amp;jpg=805027-909057">
 
@@ -364,8 +364,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-11-25T17:27:32+00:00">
-                2019-11-25
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-03T22:04:38+00:00">
+                2019-12-03
               </time>
             
           </span>
@@ -436,7 +436,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.5k
+                  1.8k
                 </span>
               
 
@@ -452,7 +452,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  6
+                  8
                 </span>
               
             </div>
@@ -574,9 +574,9 @@
 </li>
 </ol>
 <h2 id="二进制运算法则"><a href="#二进制运算法则" class="headerlink" title="二进制运算法则"></a>二进制运算法则</h2><pre><code>1. 10转2:减权定位
-         除基取余(直到商为0):从最下面的余数开始!
+         除基取余(直到商为0):从最**下面**的余数开始!
    小数10转2:减权定位
-            乘基取整:从最上面的余数开始
+            乘基取整:从最上面的整数数开始
 2. 2转10: 按权相加(小数2转10同)
 3. 十转八:除基取余比较简单</code></pre><h1 id="八-binary-②"><a href="#八-binary-②" class="headerlink" title="八 binary ②"></a>八 binary ②</h1><h2 id="上课-PPT"><a href="#上课-PPT" class="headerlink" title="上课 PPT"></a>上课 PPT</h2><ol>
 <li><p>unsigned: </p>
@@ -643,21 +643,109 @@
 <li>sign的减法和乘除</li>
 </ol>
 <h1 id="九-floating-point-binary"><a href="#九-floating-point-binary" class="headerlink" title="九 floating-point binary"></a>九 floating-point binary</h1><h2 id="预习-回看"><a href="#预习-回看" class="headerlink" title="预习+回看"></a>预习+回看</h2><ol>
-<li><h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1></li>
-<li><p>Assembly 2 里 JnS </p>
+<li><p>Scientific notation</p>
+<ul>
+<li>two parts: <strong>significand</strong> &amp; <strong>exponent</strong></li>
+<li>exponent指数: 能表示negative, 所以有了<em>bias</em></li>
+<li>bias: single precision:<strong>127</strong> double precision:<u>1023</u></li>
+</ul>
 </li>
-<li><p>那么load store jump好像没区别啊? ---11.6</p>
+<li><p>IEEE: institute of Electrical and Electronics Engineers</p>
+<ul>
+<li>standard: single precision and double precision</li>
+<li>bias</li>
+<li>bias与two’s complement的比较<br>why use a bias instead of two’s complement补码<br>a bias allows the numetric ordering to be the same as the lexicographic ordering<br>没理解上面这句话</li>
+</ul>
 </li>
-<li><p>对于Assembly1作业中的第3题.醍醐灌顶:<br> A 1-bit address can address two words (0, 1).<br> A 2-bit address can address four words (00, 01, 10, 11).<br> A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br> but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></p>
+<li><p>significand:</p>
+<ul>
+<li>normalised 有一个implied的<code>1.</code></li>
+<li>why is the significand normalised?<br>an extra bit of preciison because of <code>1.</code><br>ensure a unique representation</li>
+</ul>
 </li>
-<li><p><strong>八---二进制2</strong>需要加强理解和动手去做的:1. <del>三种表示二进制数的转化自己去操作</del>. 2. 进制直接每种情况的转化去运算.   ---11.13</p>
+<li><p>converting from decimal</p>
 </li>
-<li><p><del>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?</del>  ---11.13八课上</p>
+<li><p>special value</p>
 </li>
-<li><p>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</p>
+<li><p>IEEE-754 format arithmetic</p>
+<ul>
+<li>addition</li>
+<li>multiplication</li>
+</ul>
 </li>
-<li><p>---11.13晚自习 二进制转八进制,万一位数除不尽3怎么办?</p>
+<li><p>Range , precision , accuracy</p>
 </li>
+<li><p>accuracy: related error</p>
+</li>
+</ol>
+<h2 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h2><ol>
+<li>十进制和IEEE754的相互转化</li>
+</ol>
+<h1 id="十-the-memory-hierarchy"><a href="#十-the-memory-hierarchy" class="headerlink" title="十 the memory hierarchy"></a>十 the memory hierarchy</h1><p><code>hierarchy</code>阶层</p>
+<h2 id="PPT提纲-2"><a href="#PPT提纲-2" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
+<li><p>memory addresses</p>
+<ol>
+<li>a word: smallest addressable unit</li>
+<li>blocks :</li>
+<li>two fields of a memory address:<ul>
+<li>block field</li>
+<li>offset field</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>记住一个二级结论: 2^n的二进制值用n位2进制数表示</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>Overview of the memory hierarchy</p>
+</li>
+<li><p>Caches : a type of memory that is smaller and faster than main memory</p>
+<ul>
+<li>usage patterns 3个<br>还有几个公式:<br>Hit ratio<br>Miss ratio<br>Hit ratio + Miss ratio = 1<br>EAT(effective access time)<br>reduce EAT as much as possible<br>can also be overlapped: parallel : EAT公式不同</li>
+<li>expected access times</li>
+</ul>
+</li>
+<li><p>Cache systems<br> search tags : different approaches : 三种</p>
+<ul>
+<li><p>direct-mapped</p>
+<ol>
+<li><code>Y = X mod N</code><br>Y:cache block<br>X:block of main memory<br>N:cahce总的blocks<br>取余</li>
+<li>tag field : 注意P20的例子</li>
+<li>tag+block field+offset field</li>
+</ol>
+</li>
+<li><p>full-associative</p>
+<ol>
+<li>tag+offset field</li>
+<li>directed-mapped vs fully-associative</li>
+</ol>
+</li>
+<li><p>set-associative</p>
+<ol>
+<li>n-way set-associative cache uses n direct-mapped caches in parallel<br>each direct-mapped cache is a set</li>
+<li>疑惑:PPT红线: directed在哪里??? </li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>replacement policies</p>
+<ol>
+<li>LRU</li>
+<li>FIFO</li>
+<li>Random<br><code>注意优缺点!</code></li>
+</ol>
+</li>
+</ol>
+<h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1><ol>
+<li>Assembly 2 里 JnS </li>
+<li>那么load store jump好像没区别啊? ---11.6</li>
+<li>对于Assembly1作业中的第3题.醍醐灌顶:<br> A 1-bit address can address two words (0, 1).<br> A 2-bit address can address four words (00, 01, 10, 11).<br> A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br> but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></li>
+<li><strong>八---二进制2</strong>需要加强理解和动手去做的:1. <del>三种表示二进制数的转化自己去操作</del>. 2. 进制直接每种情况的转化去运算.   ---11.13</li>
+<li><del>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?</del>  ---11.13八课上</li>
+<li>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</li>
+<li>---11.13晚自习 二进制转八进制,万一位数除不尽3怎么办?</li>
 </ol>
 <h1 id="作业tutorial-的总结"><a href="#作业tutorial-的总结" class="headerlink" title="作业tutorial 的总结"></a>作业tutorial 的总结</h1><ol>
 <li>---11.13晚,week7,binary1.<ul>
@@ -708,8 +796,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/31/assembly/" rel="next" title="CS_note">
-                <i class="fa fa-chevron-left"></i> CS_note
+              <a href="/2019/10/30/matlab/" rel="next" title="MatLab">
+                <i class="fa fa-chevron-left"></i> MatLab
               </a>
             
           </div>
@@ -718,8 +806,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/01/arduino/" rel="prev" title="Arduino与Assembly">
-                Arduino与Assembly <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/31/assembly/" rel="prev" title="CS_note">
+                CS_note <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -879,7 +967,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一"><span class="nav-number">1.</span> <span class="nav-text">一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冯诺依曼结构"><span class="nav-number">1.1.</span> <span class="nav-text">冯诺依曼结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-Assembly-1"><span class="nav-number">2.</span> <span class="nav-text">二 Assembly 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-Assembly-2"><span class="nav-number">3.</span> <span class="nav-text">三 Assembly 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-instruction-set-architectures-pipelines"><span class="nav-number">4.</span> <span class="nav-text">四 instruction set architectures/pipelines</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-performance-measurement-and-analysis"><span class="nav-number">5.</span> <span class="nav-text">五 performance measurement and analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT提纲"><span class="nav-number">5.1.</span> <span class="nav-text">PPT提纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课上和课后总结理解难点"><span class="nav-number">5.2.</span> <span class="nav-text">课上和课后总结理解难点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七-二进制①-JoshM"><span class="nav-number">6.</span> <span class="nav-text">七 二进制① JoshM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT提纲-1"><span class="nav-number">6.1.</span> <span class="nav-text">PPT提纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制运算法则"><span class="nav-number">6.2.</span> <span class="nav-text">二进制运算法则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八-binary-②"><span class="nav-number">7.</span> <span class="nav-text">八 binary ②</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#上课-PPT"><span class="nav-number">7.1.</span> <span class="nav-text">上课 PPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重难点解析"><span class="nav-number">7.2.</span> <span class="nav-text">重难点解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九-floating-point-binary"><span class="nav-number">8.</span> <span class="nav-text">九 floating-point binary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#预习-回看"><span class="nav-number">8.1.</span> <span class="nav-text">预习+回看</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#疑惑"><span class="nav-number">9.</span> <span class="nav-text">疑惑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业tutorial-的总结"><span class="nav-number">10.</span> <span class="nav-text">作业tutorial 的总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一"><span class="nav-number">1.</span> <span class="nav-text">一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冯诺依曼结构"><span class="nav-number">1.1.</span> <span class="nav-text">冯诺依曼结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-Assembly-1"><span class="nav-number">2.</span> <span class="nav-text">二 Assembly 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-Assembly-2"><span class="nav-number">3.</span> <span class="nav-text">三 Assembly 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-instruction-set-architectures-pipelines"><span class="nav-number">4.</span> <span class="nav-text">四 instruction set architectures/pipelines</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-performance-measurement-and-analysis"><span class="nav-number">5.</span> <span class="nav-text">五 performance measurement and analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT提纲"><span class="nav-number">5.1.</span> <span class="nav-text">PPT提纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课上和课后总结理解难点"><span class="nav-number">5.2.</span> <span class="nav-text">课上和课后总结理解难点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七-二进制①-JoshM"><span class="nav-number">6.</span> <span class="nav-text">七 二进制① JoshM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT提纲-1"><span class="nav-number">6.1.</span> <span class="nav-text">PPT提纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制运算法则"><span class="nav-number">6.2.</span> <span class="nav-text">二进制运算法则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八-binary-②"><span class="nav-number">7.</span> <span class="nav-text">八 binary ②</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#上课-PPT"><span class="nav-number">7.1.</span> <span class="nav-text">上课 PPT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重难点解析"><span class="nav-number">7.2.</span> <span class="nav-text">重难点解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九-floating-point-binary"><span class="nav-number">8.</span> <span class="nav-text">九 floating-point binary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#预习-回看"><span class="nav-number">8.1.</span> <span class="nav-text">预习+回看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题型"><span class="nav-number">8.2.</span> <span class="nav-text">题型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十-the-memory-hierarchy"><span class="nav-number">9.</span> <span class="nav-text">十 the memory hierarchy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT提纲-2"><span class="nav-number">9.1.</span> <span class="nav-text">PPT提纲</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#疑惑"><span class="nav-number">10.</span> <span class="nav-text">疑惑</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业tutorial-的总结"><span class="nav-number">11.</span> <span class="nav-text">作业tutorial 的总结</span></a></li></ol></div>
             
 
           </div>
@@ -925,7 +1013,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k</span>
+    <span title="Site words total count">6.8k</span>
   
   
 </div>
@@ -948,7 +1036,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了6.4k字</span>
+  <span class="post-count">共ha了6.8k字</span>
 </div>
 -->
 

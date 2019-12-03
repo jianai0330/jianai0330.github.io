@@ -492,6 +492,9 @@
 <li>Lambdas<ul>
 <li>code can be treated as data</li>
 <li>segments of code can be stored in variables,passed as para</li>
+<li>它是没有声明的方法，也即没有访问修饰符、返回值声明和名字。<br>你可以将其想做一种速记，在你需要使用某个方法的地方写上它</li>
+<li><code>(argument) -&gt; (body)</code></li>
+<li>每个 Lambda 表达式都能隐式地赋值给函数式接口</li>
 </ul>
 </li>
 <li>Method vs Lambdas</li>
@@ -578,6 +581,44 @@
       </categories>
       <tags>
         <tag>单片机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS_note</title>
+    <url>/2019/10/31/assembly/</url>
+    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a>
+<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
+<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
+</li>
+<li><p>benchmarking: </p>
+</li>
+<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
+<pre><code>simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code>complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+</li>
+<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
+<p>注意比较各种情况下的好坏</p>
+<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol>
+<li>flushing the pipeline: conditional branck instructions</li>
+<li>clock rate=machine cycles per second</li>
+<li></li>
+<li></li>
+</ol>
+</li>
+</ol>
+<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
+<li>CPU里clock cycle的理解</li>
+<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
+<li>byte-addressable &amp; word-addressable:<pre><code>byte..:every byte has its own address. (word:every word) </code></pre></li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>CS</category>
+      </categories>
+      <tags>
+        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -684,9 +725,9 @@
 </li>
 </ol>
 <h2 id="二进制运算法则"><a href="#二进制运算法则" class="headerlink" title="二进制运算法则"></a>二进制运算法则</h2><pre><code>1. 10转2:减权定位
-         除基取余(直到商为0):从最下面的余数开始!
+         除基取余(直到商为0):从最**下面**的余数开始!
    小数10转2:减权定位
-            乘基取整:从最上面的余数开始
+            乘基取整:从最上面的整数数开始
 2. 2转10: 按权相加(小数2转10同)
 3. 十转八:除基取余比较简单</code></pre><h1 id="八-binary-②"><a href="#八-binary-②" class="headerlink" title="八 binary ②"></a>八 binary ②</h1><h2 id="上课-PPT"><a href="#上课-PPT" class="headerlink" title="上课 PPT"></a>上课 PPT</h2><ol>
 <li><p>unsigned: </p>
@@ -753,21 +794,109 @@
 <li>sign的减法和乘除</li>
 </ol>
 <h1 id="九-floating-point-binary"><a href="#九-floating-point-binary" class="headerlink" title="九 floating-point binary"></a>九 floating-point binary</h1><h2 id="预习-回看"><a href="#预习-回看" class="headerlink" title="预习+回看"></a>预习+回看</h2><ol>
-<li><h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1></li>
-<li><p>Assembly 2 里 JnS </p>
+<li><p>Scientific notation</p>
+<ul>
+<li>two parts: <strong>significand</strong> &amp; <strong>exponent</strong></li>
+<li>exponent指数: 能表示negative, 所以有了<em>bias</em></li>
+<li>bias: single precision:<strong>127</strong> double precision:<u>1023</u></li>
+</ul>
 </li>
-<li><p>那么load store jump好像没区别啊? ---11.6</p>
+<li><p>IEEE: institute of Electrical and Electronics Engineers</p>
+<ul>
+<li>standard: single precision and double precision</li>
+<li>bias</li>
+<li>bias与two’s complement的比较<br>why use a bias instead of two’s complement补码<br>a bias allows the numetric ordering to be the same as the lexicographic ordering<br>没理解上面这句话</li>
+</ul>
 </li>
-<li><p>对于Assembly1作业中的第3题.醍醐灌顶:<br> A 1-bit address can address two words (0, 1).<br> A 2-bit address can address four words (00, 01, 10, 11).<br> A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br> but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></p>
+<li><p>significand:</p>
+<ul>
+<li>normalised 有一个implied的<code>1.</code></li>
+<li>why is the significand normalised?<br>an extra bit of preciison because of <code>1.</code><br>ensure a unique representation</li>
+</ul>
 </li>
-<li><p><strong>八---二进制2</strong>需要加强理解和动手去做的:1. <del>三种表示二进制数的转化自己去操作</del>. 2. 进制直接每种情况的转化去运算.   ---11.13</p>
+<li><p>converting from decimal</p>
 </li>
-<li><p><del>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?</del>  ---11.13八课上</p>
+<li><p>special value</p>
 </li>
-<li><p>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</p>
+<li><p>IEEE-754 format arithmetic</p>
+<ul>
+<li>addition</li>
+<li>multiplication</li>
+</ul>
 </li>
-<li><p>---11.13晚自习 二进制转八进制,万一位数除不尽3怎么办?</p>
+<li><p>Range , precision , accuracy</p>
 </li>
+<li><p>accuracy: related error</p>
+</li>
+</ol>
+<h2 id="题型"><a href="#题型" class="headerlink" title="题型"></a>题型</h2><ol>
+<li>十进制和IEEE754的相互转化</li>
+</ol>
+<h1 id="十-the-memory-hierarchy"><a href="#十-the-memory-hierarchy" class="headerlink" title="十 the memory hierarchy"></a>十 the memory hierarchy</h1><p><code>hierarchy</code>阶层</p>
+<h2 id="PPT提纲-2"><a href="#PPT提纲-2" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
+<li><p>memory addresses</p>
+<ol>
+<li>a word: smallest addressable unit</li>
+<li>blocks :</li>
+<li>two fields of a memory address:<ul>
+<li>block field</li>
+<li>offset field</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>记住一个二级结论: 2^n的二进制值用n位2进制数表示</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p>Overview of the memory hierarchy</p>
+</li>
+<li><p>Caches : a type of memory that is smaller and faster than main memory</p>
+<ul>
+<li>usage patterns 3个<br>还有几个公式:<br>Hit ratio<br>Miss ratio<br>Hit ratio + Miss ratio = 1<br>EAT(effective access time)<br>reduce EAT as much as possible<br>can also be overlapped: parallel : EAT公式不同</li>
+<li>expected access times</li>
+</ul>
+</li>
+<li><p>Cache systems<br> search tags : different approaches : 三种</p>
+<ul>
+<li><p>direct-mapped</p>
+<ol>
+<li><code>Y = X mod N</code><br>Y:cache block<br>X:block of main memory<br>N:cahce总的blocks<br>取余</li>
+<li>tag field : 注意P20的例子</li>
+<li>tag+block field+offset field</li>
+</ol>
+</li>
+<li><p>full-associative</p>
+<ol>
+<li>tag+offset field</li>
+<li>directed-mapped vs fully-associative</li>
+</ol>
+</li>
+<li><p>set-associative</p>
+<ol>
+<li>n-way set-associative cache uses n direct-mapped caches in parallel<br>each direct-mapped cache is a set</li>
+<li>疑惑:PPT红线: directed在哪里??? </li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>replacement policies</p>
+<ol>
+<li>LRU</li>
+<li>FIFO</li>
+<li>Random<br><code>注意优缺点!</code></li>
+</ol>
+</li>
+</ol>
+<h1 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h1><ol>
+<li>Assembly 2 里 JnS </li>
+<li>那么load store jump好像没区别啊? ---11.6</li>
+<li>对于Assembly1作业中的第3题.醍醐灌顶:<br> A 1-bit address can address two words (0, 1).<br> A 2-bit address can address four words (00, 01, 10, 11).<br> A 3-bit address can address eight words (000, 001, 010, 011, 100, 101, 110, 111).<br> but<img src="https://www.coursehero.com/doc-asset/bg/d6bc39dcf48520faf6897593e05282dad7676ae0/splits/v9.frq.clean/split-1-page-1-html-bg.jpg" alt="答案不一样"></li>
+<li><strong>八---二进制2</strong>需要加强理解和动手去做的:1. <del>三种表示二进制数的转化自己去操作</del>. 2. 进制直接每种情况的转化去运算.   ---11.13</li>
+<li><del>对于加了sign的源码,为什么不是额外加一位呢,不影响原本的真值吗?</del>  ---11.13八课上</li>
+<li>对于补码的运算,手机里的照片 理解和解惑. ---11.13八课上</li>
+<li>---11.13晚自习 二进制转八进制,万一位数除不尽3怎么办?</li>
 </ol>
 <h1 id="作业tutorial-的总结"><a href="#作业tutorial-的总结" class="headerlink" title="作业tutorial 的总结"></a>作业tutorial 的总结</h1><ol>
 <li>---11.13晚,week7,binary1.<ul>
@@ -787,44 +916,6 @@
 <li>一定要记住正数的反码和补码都是它,运算的时候一定要仔细1+1变为0</li>
 </ul>
 </li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>CS</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS_note</title>
-    <url>/2019/10/31/assembly/</url>
-    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a>
-<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
-<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
-</li>
-<li><p>benchmarking: </p>
-</li>
-<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code>simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code>complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
-</li>
-<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
-<p>注意比较各种情况下的好坏</p>
-<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol>
-<li>flushing the pipeline: conditional branck instructions</li>
-<li>clock rate=machine cycles per second</li>
-<li></li>
-<li></li>
-</ol>
-</li>
-</ol>
-<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
-<li>CPU里clock cycle的理解</li>
-<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
-<li>byte-addressable &amp; word-addressable:<pre><code>byte..:every byte has its own address. (word:every word) </code></pre></li>
 </ol>
 ]]></content>
       <categories>
