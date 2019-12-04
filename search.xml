@@ -353,7 +353,13 @@
 <ul>
 <li>directed multigraph<ul>
 <li>点：the states</li>
-<li>箭头线的标签：input<h1 id="九-DFAs-vs-languages"><a href="#九-DFAs-vs-languages" class="headerlink" title="九  DFAs vs. languages"></a>九  DFAs vs. languages</h1><h2 id="PPT提纲-12-3晚"><a href="#PPT提纲-12-3晚" class="headerlink" title="PPT提纲 ----12.3晚"></a>PPT提纲 ----12.3晚</h2><ol>
+<li>箭头线的标签：input</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="九-DFAs-vs-languages"><a href="#九-DFAs-vs-languages" class="headerlink" title="九  DFAs vs. languages"></a>九  DFAs vs. languages</h1><h2 id="PPT提纲-12-3晚"><a href="#PPT提纲-12-3晚" class="headerlink" title="PPT提纲 ----12.3晚"></a>PPT提纲 ----12.3晚</h2><ol>
 <li>how to determine the language of a DFA</li>
 <li>pattern matching</li>
 <li>combine 2 automata</li>
@@ -363,12 +369,6 @@
 <li>equivalence of DFAs and NFAs</li>
 <li>subset construction</li>
 </ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <h1 id="作业中易错点总结"><a href="#作业中易错点总结" class="headerlink" title="作业中易错点总结"></a>作业中易错点总结</h1><ol>
 <li>---11.14 五 概率<ol>
 <li>题型: 要运用贝叶斯定理的题目,1. 先画个<em>二叉树</em>帮助理解, 2. 计算时哪个包含哪个一定要搞清楚</li>
