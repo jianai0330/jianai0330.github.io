@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Ajn">
 <meta property="og:description" content="week5">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-04T21:05:56.691Z">
+<meta property="og:updated_time" content="2019-12-11T12:03:05.965Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,8 +360,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-12-04T21:05:56+00:00">
-                2019-12-04
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-11T12:03:05+00:00">
+                2019-12-11
               </time>
             
           </span>
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.1k
+                  1k
                 </span>
               
 
@@ -508,51 +508,75 @@
 </li>
 <li><p>2 important: coupling: loose coupling  : interface,change 1 do not need to change another.</p>
 </li>
-<li><p>周五上课---看的回放----11.18<br>  1.</p>
-<pre><code>- arraylist和hashmap等等里面不能有primitive types
-- primitive types(int,boolean等等)不是object
-- 引出wrapper class(Interger,Float...)
-- primitive-type values wrap in objects to be stored in a **collection**
-- autoboxing &amp; unboxing
-- [int和Integer的比较](https://blog.csdn.net/chenliguan/article/details/53888018 &quot;int和Integer&quot;)
-- [这个讲的更详细](https://blog.csdn.net/Teacher_Lee_ZZSXT/article/details/79230501 &quot;更详细的比较&quot;)</code></pre><ol start="2">
-<li><p>class variables</p>
+<li><p>周五上课---看的回放----11.18<br> 1.</p>
 <ul>
-<li>shared between all instances of the class.</li>
-<li>属于class, 独立于instances</li>
-<li>有keyword:<strong>static</strong></li>
-<li>用class的name在引用.前</li>
-<li>与fields的区别?:field属于class的对象里??</li>
-<li>用于:在一个class里不同的对象都需要用的变量</li>
-</ul>
+<li><p>arraylist和hashmap等等里面不能有primitive types</p>
 </li>
-<li><p>constant</p>
-<ul>
-<li><strong>final</strong></li>
-<li>不能change</li>
-<li>可以是public的</li>
-<li>static final : 经常的组合</li>
-<li>class constants:变量名大写</li>
-<li>疑惑:final,constant和fields…static的关系</li>
-<li>static和final得关系</li>
-<li>明确field,local variable…等等这些的关系</li>
-<li>constant 也可以不是final的,可以再更改它的值</li>
-</ul>
+<li><p>primitive types(int,boolean等等)不是object</p>
 </li>
-<li><p>class method</p>
-<ul>
-<li>static的方法都是class method</li>
-<li>可直接调用</li>
-<li>那存在的必要是什呢,跟其他的object method比<br>   ---不 depend于object</li>
-<li>limitations: instance method can call class method, but class method cannot call instance method and instance fields. 也就是说它只能用static fields,但object method 能用所有fields.</li>
-</ul>
+<li><p>引出wrapper class(Interger,Float…)</p>
 </li>
-<li><p>outside bluej</p>
-<ul>
-<li>public static void main(String[] arg)</li>
-</ul>
+<li><p>primitive-type values wrap in objects to be stored in a <strong>collection</strong></p>
 </li>
+<li><p>autoboxing &amp; unboxing</p>
+</li>
+<li><p><a href="https://blog.csdn.net/chenliguan/article/details/53888018" target="_blank" rel="noopener" title="int和Integer">int和Integer的比较</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/Teacher_Lee_ZZSXT/article/details/79230501" target="_blank" rel="noopener" title="更详细的比较">这个讲的更详细</a></p>
+<ol start="2">
+<li>class variables</li>
 </ol>
+</li>
+<li><p>shared between all instances of the class.</p>
+</li>
+<li><p>属于class, 独立于instances</p>
+</li>
+<li><p>有keyword:<strong>static</strong></p>
+</li>
+<li><p>用class的name在引用.前</p>
+</li>
+<li><p>与fields的区别?:field属于class的对象里??</p>
+</li>
+<li><p>用于:在一个class里不同的对象都需要用的变量</p>
+<ol start="3">
+<li>constant</li>
+</ol>
+</li>
+<li><p><strong>final</strong></p>
+</li>
+<li><p>不能change</p>
+</li>
+<li><p>可以是public的</p>
+</li>
+<li><p>static final : 经常的组合</p>
+</li>
+<li><p>class constants:变量名大写</p>
+</li>
+<li><p>疑惑:final,constant和fields…static的关系</p>
+</li>
+<li><p>static和final得关系</p>
+</li>
+<li><p>明确field,local variable…等等这些的关系</p>
+</li>
+<li><p>constant 也可以不是final的,可以再更改它的值</p>
+<ol start="4">
+<li>class method</li>
+</ol>
+</li>
+<li><p>static的方法都是class method</p>
+</li>
+<li><p>可直接调用</p>
+</li>
+<li><p>那存在的必要是什呢,跟其他的object method比</p>
+<pre><code>\-\-\-不 depend于object</code></pre></li>
+<li><p>limitations: instance method can call class method, but class method cannot call instance method and instance fields. 也就是说它只能用static fields,但object method 能用所有fields.</p>
+<ol start="5">
+<li>outside bluej</li>
+</ol>
+</li>
+<li><p>public static void main(String[] arg)</p>
+</li>
+</ul>
 </li>
 </ol>
 <h2 id="九-week9"><a href="#九-week9" class="headerlink" title="九 week9"></a>九 week9</h2><h3 id="Using-java-without-bluej"><a href="#Using-java-without-bluej" class="headerlink" title="Using java without bluej"></a>Using java without bluej</h3><ol>
