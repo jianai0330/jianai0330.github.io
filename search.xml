@@ -570,17 +570,21 @@
 <li>用 for loop? ---也不好</li>
 <li>解决办法:<strong>Iterator</strong>(用while)</li>
 <li>Iterator用for的话,最后一个counter不需要</li>
-<li><a href="https://blog.csdn.net/github_2011/article/details/54927531" target="_blank" rel="noopener" title="总结">遍历list删除元素的总结</a></li>
+<li><a href="https://blog.csdn.net/github_2011/article/details/54927531" target="_blank" rel="noopener" title="总结">遍历list删除元素的总结</a><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//遍历删除 iterator最基础的使用</span></span><br><span class="line">    Iterator&lt;Student&gt; iterator = list.iterator();</span><br><span class="line">    <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">        tudent student = iterator.next();</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">"male"</span>.equals(student.getGender())) &#123;</span><br><span class="line">            iterator.remove();<span class="comment">//使用迭代器的删除方法删除</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<ol start="2">
-<li>二维数组[][]<ol>
+<ol>
+<li><a href="https://blog.csdn.net/incyanggan/article/details/9819005" target="_blank" rel="noopener" title="二维数组理解">二维数组[][]</a><ol>
 <li>例子:brain</li>
 </ol>
 <ul>
 <li>Environment里面的setup好奇怪</li>
 </ul>
-<ol start="2">
-<li>处理图片就是处理二维数组</li>
+<ol>
+<li>处理图片就是处理二维数组<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//第一种方式：</span></span><br><span class="line"><span class="keyword">int</span> a[][]=&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;&#125;;</span><br><span class="line"><span class="comment">//第二种方式；</span></span><br><span class="line"><span class="keyword">int</span>[][] ints = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">4</span>][<span class="number">2</span>];</span><br><span class="line">ints[i][j] =__; <span class="comment">//分别赋值</span></span><br><span class="line"><span class="comment">//第三种方式：第二维的长度可以动态申请</span></span><br><span class="line"><span class="keyword">int</span>[][] arr3 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>][];<span class="comment">//五行的长度</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;arr3.length; ++i)&#123;</span><br><span class="line">    arr3[i]=<span class="keyword">new</span> <span class="keyword">int</span>[i+<span class="number">1</span>];   <span class="comment">//列的长度每次都变化。每次都要重新申请空间(长度)</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;arr3[i].length; ++j)</span><br><span class="line">        arr3[i][j]= i+j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
 </ol>
 </li>
 </ol>

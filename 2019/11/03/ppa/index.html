@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Ajn">
 <meta property="og:description" content="term 1 上课知识">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-11T20:53:03.658Z">
+<meta property="og:updated_time" content="2019-12-11T21:07:46.209Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-12-11T20:53:03+00:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-12-11T21:07:46+00:00">
                 2019-12-11
               </time>
             
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.5k
+                  1.6k
                 </span>
               
 
@@ -637,17 +637,21 @@
 <li>用 for loop? ---也不好</li>
 <li>解决办法:<strong>Iterator</strong>(用while)</li>
 <li>Iterator用for的话,最后一个counter不需要</li>
-<li><a href="https://blog.csdn.net/github_2011/article/details/54927531" target="_blank" rel="noopener" title="总结">遍历list删除元素的总结</a></li>
+<li><a href="https://blog.csdn.net/github_2011/article/details/54927531" target="_blank" rel="noopener" title="总结">遍历list删除元素的总结</a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遍历删除 iterator最基础的使用</span></span><br><span class="line">    Iterator&lt;Student&gt; iterator = list.iterator();</span><br><span class="line">    <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">        tudent student = iterator.next();</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">"male"</span>.equals(student.getGender())) &#123;</span><br><span class="line">            iterator.remove();<span class="comment">//使用迭代器的删除方法删除</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<ol start="2">
-<li>二维数组[][]<ol>
+<ol>
+<li><a href="https://blog.csdn.net/incyanggan/article/details/9819005" target="_blank" rel="noopener" title="二维数组理解">二维数组[][]</a><ol>
 <li>例子:brain</li>
 </ol>
 <ul>
 <li>Environment里面的setup好奇怪</li>
 </ul>
-<ol start="2">
-<li>处理图片就是处理二维数组</li>
+<ol>
+<li>处理图片就是处理二维数组<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种方式：</span></span><br><span class="line"><span class="keyword">int</span> a[][]=&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;,&#123;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;&#125;;</span><br><span class="line"><span class="comment">//第二种方式；</span></span><br><span class="line"><span class="keyword">int</span>[][] ints = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">4</span>][<span class="number">2</span>];</span><br><span class="line">ints[i][j] =__; <span class="comment">//分别赋值</span></span><br><span class="line"><span class="comment">//第三种方式：第二维的长度可以动态申请</span></span><br><span class="line"><span class="keyword">int</span>[][] arr3 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>][];<span class="comment">//五行的长度</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;arr3.length; ++i)&#123;</span><br><span class="line">    arr3[i]=<span class="keyword">new</span> <span class="keyword">int</span>[i+<span class="number">1</span>];   <span class="comment">//列的长度每次都变化。每次都要重新申请空间(长度)</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;arr3[i].length; ++j)</span><br><span class="line">        arr3[i][j]= i+j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
 </ol>
 </li>
 </ol>
@@ -938,7 +942,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.5k</span>
+    <span title="Site words total count">7.6k</span>
   
   
 </div>
@@ -961,7 +965,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共ha了7.5k字</span>
+  <span class="post-count">共ha了7.6k字</span>
 </div>
 -->
 
