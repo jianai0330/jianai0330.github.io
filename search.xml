@@ -402,7 +402,8 @@
   <entry>
     <title>PPA_notes</title>
     <url>/2019/11/03/ppa/</url>
-    <content><![CDATA[<h1 id="term-1-上课知识"><a href="#term-1-上课知识" class="headerlink" title="term 1 上课知识"></a>term 1 上课知识</h1><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ol>
+    <content><![CDATA[<h1 id="term-1-上课知识"><a href="#term-1-上课知识" class="headerlink" title="term 1 上课知识"></a>term 1 上课知识</h1><a id="more"></a>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ol>
 <li><a href="https://blog.csdn.net/haovip123/article/details/42890579" target="_blank" rel="noopener" title="变量&amp;数据类型">数据类型</a><ol>
 <li>基本数据类型占用内存及取值范围</li>
 </ol>
@@ -415,15 +416,27 @@
 <li>String <a href="https://www.cnblogs.com/xiaoxi/p/6036701.html" target="_blank" rel="noopener" title="String">对字符串的深入理解</a></li>
 <li></li>
 </ol>
-<h2 id="week5"><a href="#week5" class="headerlink" title="week5"></a>week5</h2><a id="more"></a>
-<h3 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h3><ol>
+<h2 id="一-二-week1-amp-2"><a href="#一-二-week1-amp-2" class="headerlink" title="一 二 week1&amp;2"></a>一 二 week1&amp;2</h2><ol>
+<li>state: 状态</li>
+<li>fields define the state of an object</li>
+<li>+:overloading:运算符/连接符</li>
+</ol>
+<h2 id="三"><a href="#三" class="headerlink" title="三"></a>三</h2><ol>
+<li>类图&amp;对象图</li>
+<li>modulo运算符</li>
+</ol>
+<h2 id="四-grouping"><a href="#四-grouping" class="headerlink" title="四 grouping"></a>四 grouping</h2><ol>
+<li><a href="https://www.runoob.com/java/java-collections.html" target="_blank" rel="noopener" title="collection">collection</a></li>
+<li></li>
+</ol>
+<h2 id="week5"><a href="#week5" class="headerlink" title="week5"></a>week5</h2><h3 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h3><ol>
 <li>wihle loop</li>
 <li>for-each</li>
 <li><h4 id="searching"><a href="#searching" class="headerlink" title="searching:"></a>searching:</h4>  loop condition: <em>index &lt; files.size() &amp;&amp; !found</em></li>
 <li>不要用input == “bye”比较两个string,一定要用只能用<p>input.equals(“bye”)</p></li>
 <li>Iterator与iterator():<br>   iterator()是collection有的一个method,return一个Iterator类的object,这个object可以用这几个Iterator类里的method:<strong>hasNext,next,remove</strong><br>   格式:<code>Iterator&lt;ElementType&gt; it = myCollection.iterator()</code></li>
 <li>Index vs Iterator:<strong>remove</strong>的时候用iterator,</li>
-<li>anonymous objects: ?啥玩意儿,不管了</li>
+<li>anonymous objects</li>
 </ol>
 <h2 id="week7-Chapter6"><a href="#week7-Chapter6" class="headerlink" title="week7 Chapter6"></a>week7 Chapter6</h2><h3 id="研读课本"><a href="#研读课本" class="headerlink" title="研读课本"></a>研读课本</h3><ol>
 <li>responsibility-driven design, cohesion, coupling, refactoring</li>
@@ -515,8 +528,8 @@
 </li>
 <li><p>那存在的必要是什呢,跟其他的object method比</p>
 <pre><code>\-\-\-不 depend于object</code></pre></li>
-<li><p>limitations: instance method can call class method, but class method cannot call instance method and instance fields. 也就是说它只能用static fields,但object method 能用所有fields.</p>
-<ol start="5">
+<li><p>limitations: instance method can call class method, but class method cannot call instance method and instance fields.<br>也就是说它只能用static fields,但object method 能用所有fields.</p>
+<ol>
 <li>outside bluej</li>
 </ol>
 </li>
@@ -545,13 +558,12 @@
 </ul>
 </li>
 <li>-最大size可以？？</li>
-<li>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</li>
+<li>与List的不同之处arrays可以store对象引用和基础数据类型</li>
 <li>例子project：weblog-analyzer</li>
 <li>array的语法</li>
-<li>mutator和accessor忘了</li>
 <li>array更改element的原理</li>
 <li>array literals</li>
-<li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
+<li>array length 是field<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
 <li>for-each loop: remove和add会导致error<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">"t"</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <ul>
@@ -589,12 +601,21 @@
 <li>Stream</li>
 <li>filter，map，reduce</li>
 <li>pipelines</li>
+<li><strong>::</strong>的四种使用</li>
 </ol>
-<h3 id="周五的recording"><a href="#周五的recording" class="headerlink" title="周五的recording"></a>周五的recording</h3><h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
+<h3 id="周五的recording"><a href="#周五的recording" class="headerlink" title="周五的recording"></a>周五的recording</h3><h2 id="十一-Junit-amp-amp-test"><a href="#十一-Junit-amp-amp-test" class="headerlink" title="十一 Junit&amp;&amp;test"></a>十一 Junit&amp;&amp;test</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ol>
+<li>Junit: a java test framework</li>
+<li>test cases: methods </li>
+<li>test classes: 用于assert expected method results</li>
+<li>fixtures: support multiple tests(一个起始状态,多个对象)</li>
+<li>test harness: </li>
+<li>test driven development</li>
+</ol>
+<h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
 <li>auction project的源代码 看 ---11.4早于lse</li>
 </ol>
 <h1 id="语法-amp-逻辑知识"><a href="#语法-amp-逻辑知识" class="headerlink" title="语法&amp;逻辑知识"></a>语法&amp;逻辑知识</h1><ol>
-<li><p>java的operator overloading:</p>
+<li><p>java的operator overloading: string的+</p>
 </li>
 <li><p><a href="https://www.runoob.com/java/java-inheritance.html" target="_blank" rel="noopener" title="extends">类的继承</a></p>
 </li>
@@ -675,44 +696,6 @@
       </categories>
       <tags>
         <tag>单片机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CS_note</title>
-    <url>/2019/10/31/assembly/</url>
-    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a>
-<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
-<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
-</li>
-<li><p>benchmarking: </p>
-</li>
-<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code>simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code>complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
-</li>
-<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
-<p>注意比较各种情况下的好坏</p>
-<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol>
-<li>flushing the pipeline: conditional branck instructions</li>
-<li>clock rate=machine cycles per second</li>
-<li></li>
-<li></li>
-</ol>
-</li>
-</ol>
-<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
-<li>CPU里clock cycle的理解</li>
-<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
-<li>byte-addressable &amp; word-addressable:<pre><code>byte..:every byte has its own address. (word:every word) </code></pre></li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>CS</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -1022,6 +1005,44 @@
 <li>一定要记住正数的反码和补码都是它,运算的时候一定要仔细1+1变为0</li>
 </ul>
 </li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>CS</category>
+      </categories>
+      <tags>
+        <tag>CS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS_note</title>
+    <url>/2019/10/31/assembly/</url>
+    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><a id="more"></a>
+<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
+<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
+</li>
+<li><p>benchmarking: </p>
+</li>
+<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
+<pre><code>simple instructions,few addressing mode</code></pre><p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code>complex instructions,many addressing modes</code></pre><p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+</li>
+<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
+<p>注意比较各种情况下的好坏</p>
+<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2><ol>
+<li>flushing the pipeline: conditional branck instructions</li>
+<li>clock rate=machine cycles per second</li>
+<li></li>
+<li></li>
+</ol>
+</li>
+</ol>
+<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
+<li>CPU里clock cycle的理解</li>
+<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
+<li>byte-addressable &amp; word-addressable:<pre><code>byte..:every byte has its own address. (word:every word) </code></pre></li>
 </ol>
 ]]></content>
       <categories>
