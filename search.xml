@@ -553,7 +553,7 @@
 <li>filter，map，reduce</li>
 <li>pipelines</li>
 </ol>
-<h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
+<h3 id="周五的recording"><a href="#周五的recording" class="headerlink" title="周五的recording"></a>周五的recording</h3><h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
 <li>auction project的源代码 看 ---11.4早于lse</li>
 </ol>
 <h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><h3 id="brain"><a href="#brain" class="headerlink" title="brain"></a>brain</h3><ol>
@@ -1061,7 +1061,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li><p><strong>eigenvalue</strong>特征值</p>
 <pre><code>- characteristic polynomial(PPT72页),特征多项式characteristic equation of A特征方程
 - eigenvector特征向量
-- </code></pre></li>
+-</code></pre></li>
 </ul>
 </li>
 <li><p>注意<strong>矩阵×标量</strong>与行列式×标量的区别: 矩阵式乘每个元素,行列式乘一行.</p>
@@ -1071,14 +1071,14 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li>eigenvalue的性质(PPT末尾)</li>
 <li><code>AA*=A*A=|A|E</code>  (*伴随矩阵)</li>
 <li>A<sup>-1</sup>=(1/|A|)<em>A</em>(可轻易有上一行结合AA<sup>-1</sup>=E推出)</li>
-<li>|A*|=|A|<sup>n-1</sup>  (可轻易有上上一行推出)   </li>
+<li>|A*|=|A|<sup>n-1</sup>  (可轻易有上上一行推出)</li>
 </ul>
 </li>
 <li><h3 id="矩阵运算-化简得基本步骤"><a href="#矩阵运算-化简得基本步骤" class="headerlink" title="矩阵运算,化简得基本步骤"></a>矩阵运算,化简得基本步骤</h3><ul>
-<li>Gaussian elimination<em>高斯消元法</em>: <ol>
+<li>Gaussian elimination<em>高斯消元法</em>:<ol>
 <li>最左上角变为1,依次用第一行的减-把剩下行的第一个数变0,这是第一遍,</li>
 <li>第二遍从第二行开始,把第二行第二列变1,依次用第二行减-使下面的行的第二个数变0,</li>
-<li>直到成为上三角.<pre><code>补充:线性方程组的**初等变换**: 
+<li>直到成为上三角.<pre><code>补充:线性方程组的**初等变换**:
       1. 交换两个方程的位置(就好比与换矩阵的行!理解了)
       2. 一个方程两端同乘不为0的数
       3. 同乘不为0的数后加到另一方程去</code></pre></li>
@@ -1090,7 +1090,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 4. 在此基础上转化成**rref**: 找到非0首元,把其上的全变为0</code></pre></li>
 <li>find matrix <strong>rank</strong>:<pre><code>1. 矩阵的ref形式里含有非0行的数量 = 矩阵中independent vector(每一行就是一个vector)</code></pre></li>
 <li>eigenvalue: AX = aX<pre><code>- 已知A可求a
-- 已知A和a可求X(eigenvector) </code></pre></li>
+- 已知A和a可求X(eigenvector)</code></pre></li>
 <li>矩阵加减:要同规模(与行列式不同,矩阵是每排,行列式不同的那一排(其余的每一排要对应相等))</li>
 <li>矩阵乘法:好比说AB,要求是A的列数等于B的行数, 那么得到的矩阵规模是A的行数B的列数<h2 id="二级结论"><a href="#二级结论" class="headerlink" title="二级结论"></a>二级结论</h2></li>
 <li><h3 id="上三角行列式"><a href="#上三角行列式" class="headerlink" title="上三角行列式"></a>上三角行列式</h3><pre><code>的值D = 对角线元素乘积</code></pre></li>
@@ -1110,7 +1110,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <h2 id="疑问疑惑不理解"><a href="#疑问疑惑不理解" class="headerlink" title="疑问疑惑不理解"></a>疑问疑惑不理解</h2><ol>
 <li>矩阵这么乘啊加啊,它行列式的值不会变吗,为什么可以这样</li>
 <li>转化成ref</li>
-<li>怎么用矩阵解三元一次方程(就像解eigenvector)  </li>
+<li>怎么用矩阵解三元一次方程(就像解eigenvector)</li>
 <li>我记得我总结过行列式与矩阵的不同??</li>
 <li>记得PPT最后的几个性质 PPT的例题----可以lab时候做---<em>于10.31</em></li>
 </ol>
@@ -1130,6 +1130,29 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li>复习去年学的导数那一章，注意肯定有很多题型（比如说微分什么的计算我记得）</li>
 <li>----11.18上matlab: 搞清楚几种极值,什么<strong>local maximum,absolute minimum</strong>对应的中文概念和此时函数的导数二次导数等等的特性.总结出来!</li>
 <li>在本周quiz中,出现了一个我竟然忘记的东西!! 那就是 函数此点可导的条件有两个,<strong>1此点连续,2左导数=右导数!!!!</strong></li>
+</ol>
+<h1 id="九-微分方程"><a href="#九-微分方程" class="headerlink" title="九 微分方程"></a>九 微分方程</h1><h2 id="ppt提纲"><a href="#ppt提纲" class="headerlink" title="ppt提纲"></a>ppt提纲</h2><ol>
+<li>first-order initial value problem</li>
+<li>slope fields</li>
+<li><strong>[Euler’s method]</strong>(<a href="https://zh.wikipedia.org/wiki/欧拉方法" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/欧拉方法</a> “欧拉法”)</li>
+<li>linear equation</li>
+<li>autonomous equation<ul>
+<li>equilibrium values or rest points</li>
+</ul>
+</li>
+<li>phase line</li>
+<li>systems of equations<ul>
+<li>autonomous</li>
+</ul>
+</li>
+<li>phase planes<ul>
+<li>trajectory</li>
+</ul>
+</li>
+</ol>
+<h1 id="十-12-10"><a href="#十-12-10" class="headerlink" title="十 ---12.10"></a>十 ---12.10</h1><h2 id="新概念"><a href="#新概念" class="headerlink" title="新概念"></a>新概念</h2><h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
+<li>函数可导和连续 概念的理解</li>
+<li></li>
 </ol>
 ]]></content>
       <categories>
