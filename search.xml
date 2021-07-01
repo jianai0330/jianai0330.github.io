@@ -45,70 +45,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Arduino与Assembly</title>
-    <url>/2019/11/01/arduino/</url>
-    <content><![CDATA[<h2 id="Lab–汇编语言初识-amp-语法结构"><a href="#Lab–汇编语言初识-amp-语法结构" class="headerlink" title="Lab–汇编语言初识&amp;语法结构"></a>Lab–汇编语言初识&amp;语法结构</h2><span id="more"></span>
-<h3 id="第一个程序的理解"><a href="#第一个程序的理解" class="headerlink" title="第一个程序的理解"></a>第一个程序的理解</h3><ol>
-<li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
-<li>.org 0     :the start address</li>
-<li>r16--r31,PPRB,PORTC等等在microprocessor’s CPU也就是Atmega328p里</li>
-</ol>
-<h2 id="lab2-portb-连led"><a href="#lab2-portb-连led" class="headerlink" title="lab2 portb 连led"></a>lab2 portb 连led</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
-<li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
-<li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li>
-</ol>
-<h3 id="arduino里几个概念"><a href="#arduino里几个概念" class="headerlink" title="arduino里几个概念"></a>arduino里几个概念</h3><ol>
-<li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
-<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
- 它们 连接着the external digital pins
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Atemega pin</th>
-<th>Nano digital pin</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PB0(在芯片的四周))</td>
-<td>D8(在nano的两周,可连接面包板的线)</td>
-</tr>
-<tr>
-<td>PB1</td>
-<td>D9</td>
-</tr>
-<tr>
-<td>….</td>
-<td>….</td>
-</tr>
-</tbody></table>
-</li>
-<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)
-</code></pre>
-</li>
-<li>CPU怎么链接PORTB: databus</li>
-<li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
-<li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.<h2 id="Lab3-portc-很好理解-读value"><a href="#Lab3-portc-很好理解-读value" class="headerlink" title="Lab3 portc 很好理解 读value"></a>Lab3 portc 很好理解 读value</h2></li>
-</ol>
-<h2 id="疑问疑惑"><a href="#疑问疑惑" class="headerlink" title="疑问疑惑"></a>疑问疑惑</h2><h3 id="程序内的语法"><a href="#程序内的语法" class="headerlink" title="程序内的语法:"></a>程序内的语法:</h3><ol>
-<li>main,mainloop的意思</li>
-<li>rjmp?</li>
-<li>brlo <strong>lessthan</strong>? 为什么是lessthan,brlo本身不就是当lower时吗</li>
-<li>.org 0,地址0 是跟0x06等等同一地位吗,那我在.equ里面最小的那个地址开始可以吗 --11.3<h3 id="led-on-s"><a href="#led-on-s" class="headerlink" title="led_on.s:"></a>led_on.s:</h3></li>
-<li>SREG的作用是什么,设置为0要干什么<h3 id="第三个程序-portc-lab3"><a href="#第三个程序-portc-lab3" class="headerlink" title="第三个程序:portc(lab3)"></a>第三个程序:portc(lab3)</h3></li>
-<li>从PINC中读取数据到PORTC,那pinc的数据从何而来?</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>Arduino</category>
-      </categories>
-      <tags>
-        <tag>单片机</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CMTE_note</title>
     <url>/2019/10/30/cmte-s-note/</url>
     <content><![CDATA[<h1 id="四-Vector-Algebra"><a href="#四-Vector-Algebra" class="headerlink" title="四 Vector  Algebra"></a>四 Vector  Algebra</h1><h2 id="空间直线-空间平面"><a href="#空间直线-空间平面" class="headerlink" title="空间直线,空间平面"></a>空间直线,空间平面</h2><span id="more"></span>
@@ -492,177 +428,6 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
       </tags>
   </entry>
   <entry>
-    <title>MatLab</title>
-    <url>/2019/10/30/matlab/</url>
-    <content><![CDATA[<h1 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h1><span id="more"></span>
-
-<h2 id="创建x轴的数组"><a href="#创建x轴的数组" class="headerlink" title="创建x轴的数组"></a>创建x轴的数组</h2><p>s = linspace()<br>与直接[ : : ]</p>
-<h2 id="绘制函数图象时"><a href="#绘制函数图象时" class="headerlink" title="绘制函数图象时"></a>绘制函数图象时</h2><p>syms变量–fplot<br>与直接设置x和y对应数组–plot</p>
-<h2 id="设置坐标轴范围时"><a href="#设置坐标轴范围时" class="headerlink" title="设置坐标轴范围时"></a>设置坐标轴范围时</h2><p>xlim(xmin ymin)和ylim()<br>与aixs[xmin xmax ymin ymax]<br>是一个道理</p>
-<h2 id="绘制图像的几个函数"><a href="#绘制图像的几个函数" class="headerlink" title="绘制图像的几个函数"></a>绘制图像的几个函数</h2><ul>
-<li>plot()</li>
-<li>line():画直线型</li>
-<li>polar():极坐标下绘曲线<h2 id="求函数一段范围内的极值"><a href="#求函数一段范围内的极值" class="headerlink" title="求函数一段范围内的极值"></a>求函数一段范围内的极值</h2></li>
-<li>lab7</li>
-<li>感觉有几种方法</li>
-<li>画分段函数的几种方法:正常拆分开;@x</li>
-</ul>
-<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="创建矩阵的方法"><a href="#创建矩阵的方法" class="headerlink" title="创建矩阵的方法"></a>创建矩阵的方法</h2><ol>
-<li>B=a:h:b;  其中a,b代表一维矩阵（向量）的区间，h为步宽</li>
-<li>zeros(行数,列数).ones,rand同.</li>
-<li></li>
-<li></li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>MatLab</category>
-      </categories>
-      <tags>
-        <tag>MatLab</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PPA_notes</title>
-    <url>/2019/11/03/ppa/</url>
-    <content><![CDATA[<h2 id="week5"><a href="#week5" class="headerlink" title="week5"></a>week5</h2><span id="more"></span>
-<h3 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h3><ol>
-<li>wihle loop</li>
-<li>for-each</li>
-<li><h4 id="searching"><a href="#searching" class="headerlink" title="searching:"></a>searching:</h4>  loop condition: <em>index &lt; files.size() &amp;&amp; !found</em></li>
-<li>不要用input == “bye”比较两个string,一定要用只能用<p>input.equals(“bye”)</p></li>
-<li>Iterator与iterator():<br>   iterator()是collection有的一个method,return一个Iterator类的object,这个object可以用这几个Iterator类里的method:<strong>hasNext,next,remove</strong><br>   格式:<code>Iterator&lt;ElementType&gt; it = myCollection.iterator()</code></li>
-<li>Index vs Iterator:<strong>remove</strong>的时候用iterator,</li>
-<li>anonymous objects: ?啥玩意儿,不管了</li>
-</ol>
-<h2 id="week7-Chapter6"><a href="#week7-Chapter6" class="headerlink" title="week7 Chapter6"></a>week7 Chapter6</h2><h3 id="研读课本"><a href="#研读课本" class="headerlink" title="研读课本"></a>研读课本</h3><ol>
-<li>responsibility-driven design, cohesion, coupling, refactoring</li>
-<li>intance method:invoked on an <strong>intance</strong> of a class, 注意class method和instance method不互通不能互相引用</li>
-<li>enum(enumerated types):枚举<pre><code> 枚举类型可以像类(class)类型一样，定义为一个单独的文件，当然也可以定义在其他类内部
-</code></pre>
-<h3 id="预习PPT-amp-提纲"><a href="#预习PPT-amp-提纲" class="headerlink" title="预习PPT&amp;提纲"></a>预习PPT&amp;提纲</h3></li>
-<li>几个class:random</li>
-<li>Set,Map<br>  hashSet,hashMap</li>
-<li>list,map和set的比较</li>
-<li>wrapper classes<br> int 和 Interger</li>
-<li>autoboxing and unboxing</li>
-<li>static</li>
-</ol>
-<h2 id="七"><a href="#七" class="headerlink" title="七"></a>七</h2><h3 id="yi"><a href="#yi" class="headerlink" title="yi"></a>yi</h3><ol>
-<li>为什么add（E e）返回的是boolean</li>
-<li>random的引用</li>
-<li>selecting random responses<ul>
-<li>responses的arraylist是怎么产生的</li>
-</ul>
-</li>
-</ol>
-<h2 id="八-Week-8"><a href="#八-Week-8" class="headerlink" title="八 Week 8"></a>八 Week 8</h2><h3 id="上课-ppt"><a href="#上课-ppt" class="headerlink" title="上课 ppt"></a>上课 ppt</h3><ol>
-<li><p>cohesion:  each unit is responsible for one single logical task<br>  unit: class, method<br>  关于hashmap的疑问</p>
-<ul>
-<li>是否要两个元素，前面的是key，后面的事value？<br>对于zuul： 每个class都有相应的作用。game类作为main与user和terminal交流，print东西，但是room就不能print东西。</li>
-</ul>
-</li>
-<li><p>2 important: coupling: loose coupling  : interface,change 1 do not need to change another.</p>
-</li>
-<li><p>周五上课---看的回放----11.18<br>  1.</p>
-<pre><code> - arraylist和hashmap等等里面不能有primitive types
- - primitive types(int,boolean等等)不是object
- - 引出wrapper class(Interger,Float...)
- - primitive-type values wrap in objects to be stored in a **collection**
- - autoboxing &amp; unboxing
- - [int和Integer的比较](https://blog.csdn.net/chenliguan/article/details/53888018 &quot;int和Integer&quot;)
- - [这个讲的更详细](https://blog.csdn.net/Teacher_Lee_ZZSXT/article/details/79230501 &quot;更详细的比较&quot;)
-</code></pre>
-<ol start="2">
-<li><p>class variables    - shared between all instances of the class.    - 属于class, 独立于instances    - 有keyword:<strong>static</strong>    - 用class的name在引用.前    - 与fields的区别?:field属于class的对象里??    - 用于:在一个class里不同的对象都需要用的变量</p>
-</li>
-<li><p>constant    - <strong>final</strong>    - 不能change    - 可以是public的    - static final : 经常的组合    - class constants:变量名大写    - 疑惑:final,constant和fields…static的关系    - static和final得关系    - 明确field,local variable…等等这些的关系    - constant 也可以不是final的,可以再更改它的值</p>
-</li>
-<li><p>class method    - static的方法都是class method    - 可直接调用    - 那存在的必要是什呢,跟其他的object method比</p>
-<pre><code> \-\-\-不 depend于object    - limitations: instance method can call class method, but class method cannot call instance method and instance fields. 也就是说它只能用static fields,但object method 能用所有fields.
-</code></pre>
-</li>
-<li><p>outside bluej</p>
-</li>
-</ol>
-<ul>
-<li>public static void main(String[] arg)</li>
-</ul>
-</li>
-</ol>
-<h2 id="九-week9"><a href="#九-week9" class="headerlink" title="九 week9"></a>九 week9</h2><h3 id="Using-java-without-bluej"><a href="#Using-java-without-bluej" class="headerlink" title="Using java without bluej"></a>Using java without bluej</h3><ol>
-<li>几个文件的后缀：java，class,txt..</li>
-<li>Javac :终端命令，是java编译器的名称？</li>
-<li>Javac 把.java变成.class</li>
-<li>Emacs命令</li>
-<li>java命令（后接类名无后缀）start JVM，开始执行程序</li>
-<li>  the edit-compile-execute cycle：理解JVM    - Editor---source file---compiler(javac)---class file---virtual machine(java)</li>
-<li>每个system都有其JVM</li>
-<li>main method应该做什么 ---PPT里<h3 id="Fixed-sized-collections"><a href="#Fixed-sized-collections" class="headerlink" title="Fixed-sized collections"></a>Fixed-sized collections</h3></li>
-<li>Arrays的特性<ul>
-<li>Fixed in length 他在讲什么memory之类的东西。。。</li>
-<li>Use a special syntax语法</li>
-<li>它的对象没有methods，methods从其他class而来</li>
-<li>methods都是static的</li>
-</ul>
-</li>
-<li>-最大size可以？？</li>
-<li>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</li>
-<li>例子project：weblog-analyzer</li>
-<li>array的语法</li>
-<li>mutator和accessor忘了</li>
-<li>array更改element的原理</li>
-<li>array literals</li>
-<li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
-<li>for-each loop: remove和add会导致error<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">&quot;t&quot;</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<ul>
-<li>为何呢</li>
-<li>用 for loop? ---也不好</li>
-<li>解决办法:<strong>Iterator</strong>(用while)</li>
-<li>Iterator用for的话,最后一个counter不需要</li>
-<li><a href="https://blog.csdn.net/github_2011/article/details/54927531" title="总结">遍历list删除元素的总结</a></li>
-</ul>
-<ol start="2">
-<li>二维数组[][]    1. 例子:brain    - Environment里面的setup好奇怪    2. 处理图片就是处理二维数组</li>
-</ol>
-<h2 id="十-week10"><a href="#十-week10" class="headerlink" title="十 week10"></a>十 week10</h2><p>functional processing of collections</p>
-<h3 id="预习PPT提纲"><a href="#预习PPT提纲" class="headerlink" title="预习PPT提纲"></a>预习PPT提纲</h3><ol>
-<li>Lambdas</li>
-</ol>
-<ul>
-<li>code can be treated as data</li>
-<li>segments of code can be stored in variables,passed as para</li>
-</ul>
-<ol start="2">
-<li>Method vs Lambdas</li>
-</ol>
-<ol start="2">
-<li>Stream</li>
-<li>filter，map，reduce</li>
-<li>pipelines</li>
-</ol>
-<h3 id="周五的recording"><a href="#周五的recording" class="headerlink" title="周五的recording"></a>周五的recording</h3><h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
-<li>auction project的源代码 看 ---11.4早于lse</li>
-</ol>
-<h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><h3 id="brain"><a href="#brain" class="headerlink" title="brain"></a>brain</h3><ol>
-<li>cells二维数组的初始化令人迷惑</li>
-</ol>
-<h2 id="网址干货收藏"><a href="#网址干货收藏" class="headerlink" title="网址干货收藏"></a>网址干货收藏</h2><ol>
-<li><a href="https://songlee24.github.io/2016/03/16/java-basic-note-1/" title="java基础知识">java基础博客</a></li>
-<li><a href="https://github.com/PKUanonym/REKCARC-TSC-UHT" title="清华大学课程">清华大学计算机系课程</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/31650418?utm_source=wechat_timeline&utm_medium=social&utm_oi=898106614555504640&from=timeline&isappinstalled=0" title="知乎AI入门">知乎人工智能入门</a></li>
-<li><a href="https://www.zhihu.com/question/23148377/answer/863990767" title="要掌握的算法">要掌握的算法</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>PPA</category>
-      </categories>
-  </entry>
-  <entry>
     <title>FC</title>
     <url>/2019/11/13/fc/</url>
     <content><![CDATA[<h1 id="六-graphs-7-1"><a href="#六-graphs-7-1" class="headerlink" title="六 graphs 7.1"></a>六 graphs 7.1</h1><span id="more"></span>
@@ -873,6 +638,177 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
       </categories>
   </entry>
   <entry>
+    <title>MatLab</title>
+    <url>/2019/10/30/matlab/</url>
+    <content><![CDATA[<h1 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h1><span id="more"></span>
+
+<h2 id="创建x轴的数组"><a href="#创建x轴的数组" class="headerlink" title="创建x轴的数组"></a>创建x轴的数组</h2><p>s = linspace()<br>与直接[ : : ]</p>
+<h2 id="绘制函数图象时"><a href="#绘制函数图象时" class="headerlink" title="绘制函数图象时"></a>绘制函数图象时</h2><p>syms变量–fplot<br>与直接设置x和y对应数组–plot</p>
+<h2 id="设置坐标轴范围时"><a href="#设置坐标轴范围时" class="headerlink" title="设置坐标轴范围时"></a>设置坐标轴范围时</h2><p>xlim(xmin ymin)和ylim()<br>与aixs[xmin xmax ymin ymax]<br>是一个道理</p>
+<h2 id="绘制图像的几个函数"><a href="#绘制图像的几个函数" class="headerlink" title="绘制图像的几个函数"></a>绘制图像的几个函数</h2><ul>
+<li>plot()</li>
+<li>line():画直线型</li>
+<li>polar():极坐标下绘曲线<h2 id="求函数一段范围内的极值"><a href="#求函数一段范围内的极值" class="headerlink" title="求函数一段范围内的极值"></a>求函数一段范围内的极值</h2></li>
+<li>lab7</li>
+<li>感觉有几种方法</li>
+<li>画分段函数的几种方法:正常拆分开;@x</li>
+</ul>
+<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="创建矩阵的方法"><a href="#创建矩阵的方法" class="headerlink" title="创建矩阵的方法"></a>创建矩阵的方法</h2><ol>
+<li>B=a:h:b;  其中a,b代表一维矩阵（向量）的区间，h为步宽</li>
+<li>zeros(行数,列数).ones,rand同.</li>
+<li></li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>MatLab</category>
+      </categories>
+      <tags>
+        <tag>MatLab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PPA_notes</title>
+    <url>/2019/11/03/ppa/</url>
+    <content><![CDATA[<h2 id="week5"><a href="#week5" class="headerlink" title="week5"></a>week5</h2><span id="more"></span>
+<h3 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h3><ol>
+<li>wihle loop</li>
+<li>for-each</li>
+<li><h4 id="searching"><a href="#searching" class="headerlink" title="searching:"></a>searching:</h4>  loop condition: <em>index &lt; files.size() &amp;&amp; !found</em></li>
+<li>不要用input == “bye”比较两个string,一定要用只能用<p>input.equals(“bye”)</p></li>
+<li>Iterator与iterator():<br>   iterator()是collection有的一个method,return一个Iterator类的object,这个object可以用这几个Iterator类里的method:<strong>hasNext,next,remove</strong><br>   格式:<code>Iterator&lt;ElementType&gt; it = myCollection.iterator()</code></li>
+<li>Index vs Iterator:<strong>remove</strong>的时候用iterator,</li>
+<li>anonymous objects: ?啥玩意儿,不管了</li>
+</ol>
+<h2 id="week7-Chapter6"><a href="#week7-Chapter6" class="headerlink" title="week7 Chapter6"></a>week7 Chapter6</h2><h3 id="研读课本"><a href="#研读课本" class="headerlink" title="研读课本"></a>研读课本</h3><ol>
+<li>responsibility-driven design, cohesion, coupling, refactoring</li>
+<li>intance method:invoked on an <strong>intance</strong> of a class, 注意class method和instance method不互通不能互相引用</li>
+<li>enum(enumerated types):枚举<pre><code> 枚举类型可以像类(class)类型一样，定义为一个单独的文件，当然也可以定义在其他类内部
+</code></pre>
+<h3 id="预习PPT-amp-提纲"><a href="#预习PPT-amp-提纲" class="headerlink" title="预习PPT&amp;提纲"></a>预习PPT&amp;提纲</h3></li>
+<li>几个class:random</li>
+<li>Set,Map<br>  hashSet,hashMap</li>
+<li>list,map和set的比较</li>
+<li>wrapper classes<br> int 和 Interger</li>
+<li>autoboxing and unboxing</li>
+<li>static</li>
+</ol>
+<h2 id="七"><a href="#七" class="headerlink" title="七"></a>七</h2><h3 id="yi"><a href="#yi" class="headerlink" title="yi"></a>yi</h3><ol>
+<li>为什么add（E e）返回的是boolean</li>
+<li>random的引用</li>
+<li>selecting random responses<ul>
+<li>responses的arraylist是怎么产生的</li>
+</ul>
+</li>
+</ol>
+<h2 id="八-Week-8"><a href="#八-Week-8" class="headerlink" title="八 Week 8"></a>八 Week 8</h2><h3 id="上课-ppt"><a href="#上课-ppt" class="headerlink" title="上课 ppt"></a>上课 ppt</h3><ol>
+<li><p>cohesion:  each unit is responsible for one single logical task<br>  unit: class, method<br>  关于hashmap的疑问</p>
+<ul>
+<li>是否要两个元素，前面的是key，后面的事value？<br>对于zuul： 每个class都有相应的作用。game类作为main与user和terminal交流，print东西，但是room就不能print东西。</li>
+</ul>
+</li>
+<li><p>2 important: coupling: loose coupling  : interface,change 1 do not need to change another.</p>
+</li>
+<li><p>周五上课---看的回放----11.18<br>  1.</p>
+<pre><code> - arraylist和hashmap等等里面不能有primitive types
+ - primitive types(int,boolean等等)不是object
+ - 引出wrapper class(Interger,Float...)
+ - primitive-type values wrap in objects to be stored in a **collection**
+ - autoboxing &amp; unboxing
+ - [int和Integer的比较](https://blog.csdn.net/chenliguan/article/details/53888018 &quot;int和Integer&quot;)
+ - [这个讲的更详细](https://blog.csdn.net/Teacher_Lee_ZZSXT/article/details/79230501 &quot;更详细的比较&quot;)
+</code></pre>
+<ol start="2">
+<li><p>class variables    - shared between all instances of the class.    - 属于class, 独立于instances    - 有keyword:<strong>static</strong>    - 用class的name在引用.前    - 与fields的区别?:field属于class的对象里??    - 用于:在一个class里不同的对象都需要用的变量</p>
+</li>
+<li><p>constant    - <strong>final</strong>    - 不能change    - 可以是public的    - static final : 经常的组合    - class constants:变量名大写    - 疑惑:final,constant和fields…static的关系    - static和final得关系    - 明确field,local variable…等等这些的关系    - constant 也可以不是final的,可以再更改它的值</p>
+</li>
+<li><p>class method    - static的方法都是class method    - 可直接调用    - 那存在的必要是什呢,跟其他的object method比</p>
+<pre><code> \-\-\-不 depend于object    - limitations: instance method can call class method, but class method cannot call instance method and instance fields. 也就是说它只能用static fields,但object method 能用所有fields.
+</code></pre>
+</li>
+<li><p>outside bluej</p>
+</li>
+</ol>
+<ul>
+<li>public static void main(String[] arg)</li>
+</ul>
+</li>
+</ol>
+<h2 id="九-week9"><a href="#九-week9" class="headerlink" title="九 week9"></a>九 week9</h2><h3 id="Using-java-without-bluej"><a href="#Using-java-without-bluej" class="headerlink" title="Using java without bluej"></a>Using java without bluej</h3><ol>
+<li>几个文件的后缀：java，class,txt..</li>
+<li>Javac :终端命令，是java编译器的名称？</li>
+<li>Javac 把.java变成.class</li>
+<li>Emacs命令</li>
+<li>java命令（后接类名无后缀）start JVM，开始执行程序</li>
+<li>  the edit-compile-execute cycle：理解JVM    - Editor---source file---compiler(javac)---class file---virtual machine(java)</li>
+<li>每个system都有其JVM</li>
+<li>main method应该做什么 ---PPT里<h3 id="Fixed-sized-collections"><a href="#Fixed-sized-collections" class="headerlink" title="Fixed-sized collections"></a>Fixed-sized collections</h3></li>
+<li>Arrays的特性<ul>
+<li>Fixed in length 他在讲什么memory之类的东西。。。</li>
+<li>Use a special syntax语法</li>
+<li>它的对象没有methods，methods从其他class而来</li>
+<li>methods都是static的</li>
+</ul>
+</li>
+<li>-最大size可以？？</li>
+<li>与List的不同之处arrays可以store对象引用和基础数据类型疑问又来了，List为何不可</li>
+<li>例子project：weblog-analyzer</li>
+<li>array的语法</li>
+<li>mutator和accessor忘了</li>
+<li>array更改element的原理</li>
+<li>array literals</li>
+<li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
+<li>for-each loop: remove和add会导致error<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">&quot;t&quot;</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>为何呢</li>
+<li>用 for loop? ---也不好</li>
+<li>解决办法:<strong>Iterator</strong>(用while)</li>
+<li>Iterator用for的话,最后一个counter不需要</li>
+<li><a href="https://blog.csdn.net/github_2011/article/details/54927531" title="总结">遍历list删除元素的总结</a></li>
+</ul>
+<ol start="2">
+<li>二维数组[][]    1. 例子:brain    - Environment里面的setup好奇怪    2. 处理图片就是处理二维数组</li>
+</ol>
+<h2 id="十-week10"><a href="#十-week10" class="headerlink" title="十 week10"></a>十 week10</h2><p>functional processing of collections</p>
+<h3 id="预习PPT提纲"><a href="#预习PPT提纲" class="headerlink" title="预习PPT提纲"></a>预习PPT提纲</h3><ol>
+<li>Lambdas</li>
+</ol>
+<ul>
+<li>code can be treated as data</li>
+<li>segments of code can be stored in variables,passed as para</li>
+</ul>
+<ol start="2">
+<li>Method vs Lambdas</li>
+</ol>
+<ol start="2">
+<li>Stream</li>
+<li>filter，map，reduce</li>
+<li>pipelines</li>
+</ol>
+<h3 id="周五的recording"><a href="#周五的recording" class="headerlink" title="周五的recording"></a>周五的recording</h3><h2 id="疑惑与计划"><a href="#疑惑与计划" class="headerlink" title="疑惑与计划"></a>疑惑与计划</h2><ol>
+<li>auction project的源代码 看 ---11.4早于lse</li>
+</ol>
+<h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><h3 id="brain"><a href="#brain" class="headerlink" title="brain"></a>brain</h3><ol>
+<li>cells二维数组的初始化令人迷惑</li>
+</ol>
+<h2 id="网址干货收藏"><a href="#网址干货收藏" class="headerlink" title="网址干货收藏"></a>网址干货收藏</h2><ol>
+<li><a href="https://songlee24.github.io/2016/03/16/java-basic-note-1/" title="java基础知识">java基础博客</a></li>
+<li><a href="https://github.com/PKUanonym/REKCARC-TSC-UHT" title="清华大学课程">清华大学计算机系课程</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/31650418?utm_source=wechat_timeline&utm_medium=social&utm_oi=898106614555504640&from=timeline&isappinstalled=0" title="知乎AI入门">知乎人工智能入门</a></li>
+<li><a href="https://www.zhihu.com/question/23148377/answer/863990767" title="要掌握的算法">要掌握的算法</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>PPA</category>
+      </categories>
+  </entry>
+  <entry>
     <title>每日总结</title>
     <url>/2019/11/25/mei-ri-zong-jie/</url>
     <content><![CDATA[<p>一切随缘好了,开心和积极向上是最重要的</p>
@@ -980,5 +916,69 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
         <category>life</category>
         <category>everynight</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Arduino与Assembly</title>
+    <url>/2019/11/01/arduino/</url>
+    <content><![CDATA[<h2 id="Lab–汇编语言初识-amp-语法结构"><a href="#Lab–汇编语言初识-amp-语法结构" class="headerlink" title="Lab–汇编语言初识&amp;语法结构"></a>Lab–汇编语言初识&amp;语法结构</h2><span id="more"></span>
+<h3 id="第一个程序的理解"><a href="#第一个程序的理解" class="headerlink" title="第一个程序的理解"></a>第一个程序的理解</h3><ol>
+<li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
+<li>.org 0     :the start address</li>
+<li>r16--r31,PPRB,PORTC等等在microprocessor’s CPU也就是Atmega328p里</li>
+</ol>
+<h2 id="lab2-portb-连led"><a href="#lab2-portb-连led" class="headerlink" title="lab2 portb 连led"></a>lab2 portb 连led</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
+<li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
+<li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li>
+</ol>
+<h3 id="arduino里几个概念"><a href="#arduino里几个概念" class="headerlink" title="arduino里几个概念"></a>arduino里几个概念</h3><ol>
+<li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
+<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
+ 它们 连接着the external digital pins
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Atemega pin</th>
+<th>Nano digital pin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PB0(在芯片的四周))</td>
+<td>D8(在nano的两周,可连接面包板的线)</td>
+</tr>
+<tr>
+<td>PB1</td>
+<td>D9</td>
+</tr>
+<tr>
+<td>….</td>
+<td>….</td>
+</tr>
+</tbody></table>
+</li>
+<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)
+</code></pre>
+</li>
+<li>CPU怎么链接PORTB: databus</li>
+<li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
+<li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.<h2 id="Lab3-portc-很好理解-读value"><a href="#Lab3-portc-很好理解-读value" class="headerlink" title="Lab3 portc 很好理解 读value"></a>Lab3 portc 很好理解 读value</h2></li>
+</ol>
+<h2 id="疑问疑惑"><a href="#疑问疑惑" class="headerlink" title="疑问疑惑"></a>疑问疑惑</h2><h3 id="程序内的语法"><a href="#程序内的语法" class="headerlink" title="程序内的语法:"></a>程序内的语法:</h3><ol>
+<li>main,mainloop的意思</li>
+<li>rjmp?</li>
+<li>brlo <strong>lessthan</strong>? 为什么是lessthan,brlo本身不就是当lower时吗</li>
+<li>.org 0,地址0 是跟0x06等等同一地位吗,那我在.equ里面最小的那个地址开始可以吗 --11.3<h3 id="led-on-s"><a href="#led-on-s" class="headerlink" title="led_on.s:"></a>led_on.s:</h3></li>
+<li>SREG的作用是什么,设置为0要干什么<h3 id="第三个程序-portc-lab3"><a href="#第三个程序-portc-lab3" class="headerlink" title="第三个程序:portc(lab3)"></a>第三个程序:portc(lab3)</h3></li>
+<li>从PINC中读取数据到PORTC,那pinc的数据从何而来?</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>Arduino</category>
+      </categories>
+      <tags>
+        <tag>单片机</tag>
+      </tags>
   </entry>
 </search>
