@@ -100,12 +100,12 @@ menu:
   schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
-  
+
 
 # Enable/Disable menu icons.
 menu_icons:
   enable: true
-  
+
 
 
 # ---------------------------------------------------------------
@@ -811,4 +811,3 @@ images: images
 
 # Theme version
 version: 5.1.4
-
