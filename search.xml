@@ -1,50 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CS_note</title>
-    <url>/2019/10/31/assembly/</url>
-    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><span id="more"></span>
-<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
-<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
-</li>
-<li><p>benchmarking: </p>
-</li>
-<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code> simple instructions,few addressing mode
-</code></pre>
-<p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code> complex instructions,many addressing modes
-</code></pre>
-<p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
-</li>
-<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
-<p>注意比较各种情况下的好坏</p>
-<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2></li>
-<li><p>flushing the pipeline: conditional branck instructions</p>
-</li>
-<li><p>clock rate=machine cycles per second</p>
-</li>
-<li></li>
-<li></li>
-</ol>
-<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
-<li>CPU里clock cycle的理解</li>
-<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
-<li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) 
-</code></pre>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>CS</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Arduino与Assembly</title>
     <url>/2019/11/01/arduino/</url>
     <content><![CDATA[<h2 id="Lab–汇编语言初识-amp-语法结构"><a href="#Lab–汇编语言初识-amp-语法结构" class="headerlink" title="Lab–汇编语言初识&amp;语法结构"></a>Lab–汇编语言初识&amp;语法结构</h2><span id="more"></span>
@@ -106,6 +62,50 @@
       </categories>
       <tags>
         <tag>单片机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CS_note</title>
+    <url>/2019/10/31/assembly/</url>
+    <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><span id="more"></span>
+<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
+<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
+</li>
+<li><p>benchmarking: </p>
+</li>
+<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
+<pre><code> simple instructions,few addressing mode
+</code></pre>
+<p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
+<pre><code> complex instructions,many addressing modes
+</code></pre>
+<p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
+</li>
+<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
+<p>注意比较各种情况下的好坏</p>
+<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2></li>
+<li><p>flushing the pipeline: conditional branck instructions</p>
+</li>
+<li><p>clock rate=machine cycles per second</p>
+</li>
+<li></li>
+<li></li>
+</ol>
+<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
+<li>CPU里clock cycle的理解</li>
+<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
+<li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) 
+</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>CS</category>
+      </categories>
+      <tags>
+        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -734,115 +734,6 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
       </tags>
   </entry>
   <entry>
-    <title>每日总结</title>
-    <url>/2019/11/25/mei-ri-zong-jie/</url>
-    <content><![CDATA[<p>一切随缘好了,开心和积极向上是最重要的</p>
-<span id="more"></span>
-<h1 id="11-25-周一-week10"><a href="#11-25-周一-week10" class="headerlink" title="11.25 周一 week10"></a>11.25 周一 week10</h1><h2 id="吃了什么"><a href="#吃了什么" class="headerlink" title="吃了什么"></a>吃了什么</h2><ul>
-<li>0.1:无</li>
-<li>0.2:两个cheese roll,一袋李子</li>
-<li>0.3:一个鸡蛋,半杯麦片,圣女果一袋</li>
-</ul>
-<hr>
-<h2 id="今天的运动"><a href="#今天的运动" class="headerlink" title="今天的运动"></a>今天的运动</h2><h2 id="没有…除了去Sainsbury…"><a href="#没有…除了去Sainsbury…" class="headerlink" title="没有…除了去Sainsbury…"></a>没有…除了去Sainsbury…</h2><h2 id="今天的支出和收入"><a href="#今天的支出和收入" class="headerlink" title="今天的支出和收入"></a>今天的支出和收入</h2><ul>
-<li>支出: 4.9</li>
-<li>收入: 0</li>
-</ul>
-<hr>
-<h2 id="今天的学习内容总结"><a href="#今天的学习内容总结" class="headerlink" title="今天的学习内容总结"></a>今天的学习内容总结</h2><ul>
-<li>1.1: 把cmte本周的所有任务完成了</li>
-<li>1.2: ppa做了很多,好的开展</li>
-<li>1.3:</li>
-<li>1.4:</li>
-</ul>
-<hr>
-<h2 id="所以收获了什么呢"><a href="#所以收获了什么呢" class="headerlink" title="所以收获了什么呢"></a>所以收获了什么呢</h2><ul>
-<li>2.1: 收获了快乐??还算不错</li>
-<li>2.2:</li>
-<li>2.3:</li>
-<li>2.3:</li>
-</ul>
-<hr>
-<h2 id="遗留的疑问是"><a href="#遗留的疑问是" class="headerlink" title="遗留的疑问是?"></a>遗留的疑问是?</h2><ul>
-<li>3.1:</li>
-<li>3.2:</li>
-<li>3.3:</li>
-<li>3.4:</li>
-</ul>
-<hr>
-<h2 id="明天的计划是什么呢-周二"><a href="#明天的计划是什么呢-周二" class="headerlink" title="明天的计划是什么呢 周二"></a>明天的计划是什么呢 周二</h2><ul>
-<li>4.1: 12点起床洗澡,用黄盒子带圣女果</li>
-<li>4.2: 回看和作业 CS的</li>
-<li>4.3: 看电影和吃东西 :给我把握好</li>
-<li>4.4: ppa report要开始写了!</li>
-<li>4.5: 看电影完适当购物: 腌莴笋的用品!!!</li>
-<li>4.6: 睡前看PPA的回放</li>
-<li>4.7:cscscs!!!</li>
-</ul>
-<hr>
-<h2 id="心情好吗-有激情吗"><a href="#心情好吗-有激情吗" class="headerlink" title="心情好吗,有激情吗?"></a>心情好吗,有激情吗?</h2><ul>
-<li>按照1---10打分</li>
-<li>7 没有食欲,学习欲望一般 ---17:18</li>
-<li>7 睡前</li>
-</ul>
-<hr>
-<h1 id="近期待办的事务"><a href="#近期待办的事务" class="headerlink" title="近期待办的事务"></a>近期待办的事务</h1><ul>
-<li>5.1: 黑五买两件大衣!</li>
-<li>5.2:</li>
-<li>5.3:</li>
-</ul>
-<hr>
-<h1 id="Temple-周-week"><a href="#Temple-周-week" class="headerlink" title="Temple 周  week"></a>Temple 周  week</h1><h2 id="吃了什么-1"><a href="#吃了什么-1" class="headerlink" title="吃了什么"></a>吃了什么</h2><ul>
-<li>0.1:</li>
-<li>0.2:</li>
-<li>0.3:</li>
-</ul>
-<hr>
-<h2 id="今天的运动-1"><a href="#今天的运动-1" class="headerlink" title="今天的运动"></a>今天的运动</h2><hr>
-<h2 id="今天的支出和收入-1"><a href="#今天的支出和收入-1" class="headerlink" title="今天的支出和收入"></a>今天的支出和收入</h2><ul>
-<li>支出:</li>
-<li>收入:</li>
-</ul>
-<hr>
-<h2 id="今天的学习内容总结-1"><a href="#今天的学习内容总结-1" class="headerlink" title="今天的学习内容总结"></a>今天的学习内容总结</h2><ul>
-<li>1.1:</li>
-<li>1.2:</li>
-<li>1.3:</li>
-<li>1.4:</li>
-</ul>
-<hr>
-<h2 id="所以收获了什么呢-1"><a href="#所以收获了什么呢-1" class="headerlink" title="所以收获了什么呢"></a>所以收获了什么呢</h2><ul>
-<li>2.1:</li>
-<li>2.2:</li>
-<li>2.3:</li>
-<li>2.3:</li>
-</ul>
-<hr>
-<h2 id="遗留的疑问是-1"><a href="#遗留的疑问是-1" class="headerlink" title="遗留的疑问是?"></a>遗留的疑问是?</h2><ul>
-<li>3.1:</li>
-<li>3.2:</li>
-<li>3.3:</li>
-<li>3.4:</li>
-</ul>
-<hr>
-<h2 id="明天的计划是什么呢"><a href="#明天的计划是什么呢" class="headerlink" title="明天的计划是什么呢"></a>明天的计划是什么呢</h2><ul>
-<li>4.1:</li>
-<li>4.2:</li>
-<li>4.3:</li>
-<li>4.4:</li>
-</ul>
-<hr>
-<h2 id="心情好吗-有激情吗-1"><a href="#心情好吗-有激情吗-1" class="headerlink" title="心情好吗,有激情吗?"></a>心情好吗,有激情吗?</h2><ul>
-<li>按照1---10打分</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>life</category>
-        <category>everynight</category>
-      </categories>
-  </entry>
-  <entry>
     <title>PPA_notes</title>
     <url>/2019/11/03/ppa/</url>
     <content><![CDATA[<h2 id="week5"><a href="#week5" class="headerlink" title="week5"></a>week5</h2><span id="more"></span>
@@ -979,6 +870,115 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
         <category>2019</category>
         <category>KCL</category>
         <category>PPA</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>每日总结</title>
+    <url>/2019/11/25/mei-ri-zong-jie/</url>
+    <content><![CDATA[<p>一切随缘好了,开心和积极向上是最重要的</p>
+<span id="more"></span>
+<h1 id="11-25-周一-week10"><a href="#11-25-周一-week10" class="headerlink" title="11.25 周一 week10"></a>11.25 周一 week10</h1><h2 id="吃了什么"><a href="#吃了什么" class="headerlink" title="吃了什么"></a>吃了什么</h2><ul>
+<li>0.1:无</li>
+<li>0.2:两个cheese roll,一袋李子</li>
+<li>0.3:一个鸡蛋,半杯麦片,圣女果一袋</li>
+</ul>
+<hr>
+<h2 id="今天的运动"><a href="#今天的运动" class="headerlink" title="今天的运动"></a>今天的运动</h2><h2 id="没有…除了去Sainsbury…"><a href="#没有…除了去Sainsbury…" class="headerlink" title="没有…除了去Sainsbury…"></a>没有…除了去Sainsbury…</h2><h2 id="今天的支出和收入"><a href="#今天的支出和收入" class="headerlink" title="今天的支出和收入"></a>今天的支出和收入</h2><ul>
+<li>支出: 4.9</li>
+<li>收入: 0</li>
+</ul>
+<hr>
+<h2 id="今天的学习内容总结"><a href="#今天的学习内容总结" class="headerlink" title="今天的学习内容总结"></a>今天的学习内容总结</h2><ul>
+<li>1.1: 把cmte本周的所有任务完成了</li>
+<li>1.2: ppa做了很多,好的开展</li>
+<li>1.3:</li>
+<li>1.4:</li>
+</ul>
+<hr>
+<h2 id="所以收获了什么呢"><a href="#所以收获了什么呢" class="headerlink" title="所以收获了什么呢"></a>所以收获了什么呢</h2><ul>
+<li>2.1: 收获了快乐??还算不错</li>
+<li>2.2:</li>
+<li>2.3:</li>
+<li>2.3:</li>
+</ul>
+<hr>
+<h2 id="遗留的疑问是"><a href="#遗留的疑问是" class="headerlink" title="遗留的疑问是?"></a>遗留的疑问是?</h2><ul>
+<li>3.1:</li>
+<li>3.2:</li>
+<li>3.3:</li>
+<li>3.4:</li>
+</ul>
+<hr>
+<h2 id="明天的计划是什么呢-周二"><a href="#明天的计划是什么呢-周二" class="headerlink" title="明天的计划是什么呢 周二"></a>明天的计划是什么呢 周二</h2><ul>
+<li>4.1: 12点起床洗澡,用黄盒子带圣女果</li>
+<li>4.2: 回看和作业 CS的</li>
+<li>4.3: 看电影和吃东西 :给我把握好</li>
+<li>4.4: ppa report要开始写了!</li>
+<li>4.5: 看电影完适当购物: 腌莴笋的用品!!!</li>
+<li>4.6: 睡前看PPA的回放</li>
+<li>4.7:cscscs!!!</li>
+</ul>
+<hr>
+<h2 id="心情好吗-有激情吗"><a href="#心情好吗-有激情吗" class="headerlink" title="心情好吗,有激情吗?"></a>心情好吗,有激情吗?</h2><ul>
+<li>按照1---10打分</li>
+<li>7 没有食欲,学习欲望一般 ---17:18</li>
+<li>7 睡前</li>
+</ul>
+<hr>
+<h1 id="近期待办的事务"><a href="#近期待办的事务" class="headerlink" title="近期待办的事务"></a>近期待办的事务</h1><ul>
+<li>5.1: 黑五买两件大衣!</li>
+<li>5.2:</li>
+<li>5.3:</li>
+</ul>
+<hr>
+<h1 id="Temple-周-week"><a href="#Temple-周-week" class="headerlink" title="Temple 周  week"></a>Temple 周  week</h1><h2 id="吃了什么-1"><a href="#吃了什么-1" class="headerlink" title="吃了什么"></a>吃了什么</h2><ul>
+<li>0.1:</li>
+<li>0.2:</li>
+<li>0.3:</li>
+</ul>
+<hr>
+<h2 id="今天的运动-1"><a href="#今天的运动-1" class="headerlink" title="今天的运动"></a>今天的运动</h2><hr>
+<h2 id="今天的支出和收入-1"><a href="#今天的支出和收入-1" class="headerlink" title="今天的支出和收入"></a>今天的支出和收入</h2><ul>
+<li>支出:</li>
+<li>收入:</li>
+</ul>
+<hr>
+<h2 id="今天的学习内容总结-1"><a href="#今天的学习内容总结-1" class="headerlink" title="今天的学习内容总结"></a>今天的学习内容总结</h2><ul>
+<li>1.1:</li>
+<li>1.2:</li>
+<li>1.3:</li>
+<li>1.4:</li>
+</ul>
+<hr>
+<h2 id="所以收获了什么呢-1"><a href="#所以收获了什么呢-1" class="headerlink" title="所以收获了什么呢"></a>所以收获了什么呢</h2><ul>
+<li>2.1:</li>
+<li>2.2:</li>
+<li>2.3:</li>
+<li>2.3:</li>
+</ul>
+<hr>
+<h2 id="遗留的疑问是-1"><a href="#遗留的疑问是-1" class="headerlink" title="遗留的疑问是?"></a>遗留的疑问是?</h2><ul>
+<li>3.1:</li>
+<li>3.2:</li>
+<li>3.3:</li>
+<li>3.4:</li>
+</ul>
+<hr>
+<h2 id="明天的计划是什么呢"><a href="#明天的计划是什么呢" class="headerlink" title="明天的计划是什么呢"></a>明天的计划是什么呢</h2><ul>
+<li>4.1:</li>
+<li>4.2:</li>
+<li>4.3:</li>
+<li>4.4:</li>
+</ul>
+<hr>
+<h2 id="心情好吗-有激情吗-1"><a href="#心情好吗-有激情吗-1" class="headerlink" title="心情好吗,有激情吗?"></a>心情好吗,有激情吗?</h2><ul>
+<li>按照1---10打分</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>life</category>
+        <category>everynight</category>
       </categories>
   </entry>
 </search>
