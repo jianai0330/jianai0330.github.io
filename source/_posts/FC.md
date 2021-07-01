@@ -10,7 +10,7 @@ password: password
 top:
 ---
 
-# 六 graphs
+# 六 graphs 7.1
 <!--more-->
 ## PPT提纲 \-\-\-11.13 拖延症...
 1. graph的种类:
@@ -39,7 +39,7 @@ top:
 9. connected graphs   , conneed component
 10. isomorphic同构 if isomorphism(保持结构的双射)  , invariant
 
-              
+    ​          
 
 
 # 七 tree
