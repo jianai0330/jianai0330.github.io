@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jianai0330.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="VAD- -Paper Kobe Japan的 概念上：VAD:话语激活检测  当用户的语音信号能量低于一定门限值时就认为是静默状态，也不发送语音分组。当检测到突发的活动声音时才生成语音信号，并加以传输。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VAD">
+<meta property="og:url" content="https://jianai0330.github.io/2021/07/05/vad/index.html">
+<meta property="og:site_name" content="Ajn">
+<meta property="og:description" content="VAD- -Paper Kobe Japan的 概念上：VAD:话语激活检测  当用户的语音信号能量低于一定门限值时就认为是静默状态，也不发送语音分组。当检测到突发的活动声音时才生成语音信号，并加以传输。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-05T01:05:13.000Z">
+<meta property="article:modified_time" content="2021-07-05T01:05:13.000Z">
+<meta property="article:author" content="A jian">
+<meta property="article:tag" content="语音识别">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://jianai0330.github.io/2021/07/05/vad/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>VAD | Ajn</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Ajn" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Ajn</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Cohen</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories<span class="badge">14</span></a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="calendar fa-fw"></i>Schedule</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://jianai0330.github.io/2021/07/05/vad/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="A jian">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ajn">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VAD
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-07-05 09:05:13" itemprop="dateCreated datePublished" datetime="2021-07-05T09:05:13+08:00">2021-07-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2021/" itemprop="url" rel="index"><span itemprop="name">2021</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2021/Summer/" itemprop="url" rel="index"><span itemprop="name">Summer</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2021/Summer/VAD/" itemprop="url" rel="index"><span itemprop="name">VAD</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="VAD-Paper"><a href="#VAD-Paper" class="headerlink" title="VAD- -Paper"></a>VAD- -Paper</h2><ol>
+<li><h3 id="Kobe-Japan的"><a href="#Kobe-Japan的" class="headerlink" title="Kobe Japan的"></a>Kobe Japan的</h3><ol>
+<li><p>概念上：VAD:话语激活检测</p>
+<ol>
+<li>当用户的语音信号能量低于一定门限值时就认为是静默状态，也不发送语音分组。当检测到突发的活动声音时才生成语音信号，并加以传输。<span id="more"></span></li>
+<li>从一段语音（纯净或带噪）信号中标识出语音片段与非语音片段</li>
+<li>ADC：模拟数字转换器，模拟信号转变为数字信号</li>
+<li>FPGA board： Field－Programmable Gate Array的缩写，即现场可编程门阵列。</li>
+<li>第一步就是提取噪音信息。通常的思路是通过VAD函数得到非语音片段，而非语音片段可以认为是纯噪音片段。从而可以从纯噪音信号中提取出有用信息，例如进行傅里叶变换得到噪音频谱等，再进而做下一步处理。例如谱减法，维纳滤波。</li>
+<li>zero cross counter (ZCC)： 过零率，一帧语音时域信号穿过0（时间轴）的次数。 语音片段ZCC较小，非语音片段ZCC较大</li>
+<li>STE：short time energy：短时能量</li>
+<li>我们通常使用麦克风进行音频录制的采样率为 16000Hz，一个采样点使用 16bit 来存储。</li>
+<li>ksps：单位，kilo Samples per Second ，即采样千次每秒，是转化速率的单位。</li>
+<li>dB：分贝</li>
+<li>S/N：信噪比（单位是分贝），信号与噪声的比例。设备的信噪比越高表明它产生的噪声越少。越高越好。</li>
+<li>d-flip flop：d触发器，两个稳定状态，即”0”和”1”</li>
+</ol>
+</li>
+<li><p>语音识别的特征提取</p>
+<ol>
+<li>(一篇知乎上的文章)[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/147386972]">https://zhuanlan.zhihu.com/p/147386972]</a> ：根据语音信号-&gt;预加重-&gt;分帧加窗-&gt;DFT-&gt;等等的流程来介绍</li>
+</ol>
+</li>
+<li><p>这篇文章：通过zero-crossing VAD algorithm判断speech或噪音，利用的原理就是把语音输入现转化为连续数字信号，再判断在某时刻该信号是否穿过x轴，如果这个input signal在该点的前一个峰值pass了设定的trigger line，那么它就是zero crossing，count相应+1.我们再根据某一段信号中zero crossing点出现的相对频率来判断这段信号到底是speech还是noise。用sum（用于记录zerocrossing数量的变量）/帧的长度来进行比较     （用中文做流程图）  。<br> 他们团队没有使用单片机，而是使用了FPGA芯片<br> 他们在陈述结果时，根据范围从-20—-20dB的信噪比的变化，用了Correct，False accptance和False rejection</p>
+</li>
+<li><p>好处坏处，改进的</p>
+<ul>
+<li>   ，，</li>
+<li>   没有关注人说了什么什么，只要人发出声音就会被识别</li>
+</ul>
+</li>
+<li><p>我得想法和思考</p>
+</li>
+<li><p>不懂的地方</p>
+</li>
+<li><p>结合看的相关其他文章</p>
+</li>
+</ol>
+</li>
+<li><h3 id="智能手表VADLite系统"><a href="#智能手表VADLite系统" class="headerlink" title="智能手表VADLite系统"></a>智能手表VADLite系统</h3><ol>
+<li>这个团队研发的开源系统，是在智能手表上可以安装下载的app。</li>
+<li>目的是结合他们以前有关于人体健康数据的智能产品，使得手表在用户呼叫的时候才会收集心率心跳等数据</li>
+<li>data preprocessing：他们收集了至少10个处于不同距离的不同的人对着手表讲话后的数据，一共3.5h。他们用了一个静默识别的算法来截取掉大部分安静的语音片段。 —–计算RMS（root mean square均方根），如果这个数值低于一个他们用离散点图确定下来的特定值，就标记为silence。  —》然后用SVM来识别人声和噪声—》分成25ms一帧，提取12 MFCC features—-》再用linear SVM来识别和分类。具体来说：</li>
+</ol>
+</li>
+<li><h3 id="Tiny-Voice"><a href="#Tiny-Voice" class="headerlink" title="Tiny Voice"></a>Tiny Voice</h3><ol>
+<li><p>，，</p>
+</li>
+<li><p>。。。</p>
+</li>
+<li><p>选择存储器：</p>
+<ol>
+<li>好处比较</li>
+</ol>
+</li>
+<li><p>interface 功能和规则 + 具体的用汇编语言写的软件： 结合起来用两张图放在一起，一起来说。</p>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>5. 我认为timer等一些想法或许我可以借鉴在我未来自己的设计中。它虽然很小，但并不是一个简单的系统。
+6. 不足：train的时候背景的噪音会对产生的template造成很大影响，从而影响recognize的效果。
+</code></pre>
+<ol start="4">
+<li><h3 id="pre-—-for以上三paper-—-结合以slide（稿件草稿版）"><a href="#pre-—-for以上三paper-—-结合以slide（稿件草稿版）" class="headerlink" title="pre —-for以上三paper —-结合以slide（稿件草稿版）"></a>pre —-for以上三paper —-结合以slide（稿件草稿版）</h3> 可能耽误大家几分钟的时间，我将对我上个周阅读的三篇关于语音识别的文章向大家做一个简单的介绍和汇报。首先我会分别按照这三篇文章的大概脉络来说一下对这三种里面的算法啊应用啊我的理解，然后在最后总结的时候，我会横向比较一下这三个，说一下我的理解和困惑<ol>
+<li>感觉这三篇都没有着重讲算法的实现和理论的公式，所以对于我来说比较好理解。 我首先会简单介绍文章中所提到的它们的背景，目的等，我可能要简单说一下硬件部分，着重讲一下我所理解的，他们实现VAD的方法。最后我会比较和总结一下这三种应用，说一下自己的思考和一些困惑。</li>
+<li>介绍第一篇论文：在一个智能通用传感器系统里，为了能够减少能耗，他们设计和应用了这个VAD模块。就是当vad没有识别到语音信号的时候，这个系统的其他电路都是没通电的。<ol>
+<li>。。。</li>
+<li>我不熟悉画这种图所以引用了一张原文的图片    着重的是这两点     这个帧长根据文中的描述应该是256</li>
+<li>不足：文章中也提到，相比于一些frequency domain algorithm ，我们的zero crossing算法作为基于时域的，在信噪比比较低的情况下准确率一般<ol start="2">
+<li>然后我可能对于这两条trigger line的确定方法不是很懂 –结尾</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>。。</li>
+<li>第二篇VADLite（手表）：<ol>
+<li>来自苏黎世联邦理工大学的开源项目</li>
+<li>设计初衷是希望与他们之前的智能人体健康数据产品相结合，使得在用户呼唤手表时，能够相应的测量和记录血压血样心率等等数据</li>
+<li>下面这个图简单描述了系统的框架，分为两个模块。他们用了pipeline。</li>
+<li>，，，</li>
+<li>在预处理过程中，计算RMS（root mean square均方根），如果这个数值低于一个临界值，就标记为silence。静默片段的这个阈值是根据所有声音片段的RMS生成的离散点图确认的。</li>
+<li>再到特征提取：他们团队使用了梅尔频率倒谱系数   —-并没有详细讲mfcc的基础知识，我只是简单了解了一下原理。（一组声音数据，分成很多帧，每一帧经过快速傅立叶变换FFT获得相应的频谱，然后再经过梅尔滤波器获得梅尔频谱，然后在梅尔频谱上进行倒谱分析–取第2-13个系数）</li>
+<li>在分类里，用了线性SVM。（一种监督学习的方法，我对SVM的理解就是篮球红球，棍子分开），</li>
+<li>用了网格搜索来调参–（常用的找最优超参数的算法）</li>
+<li>标准化：介绍的是减去均值再除以方差</li>
+</ol>
+</li>
+<li>。。。</li>
+<li>第三篇呢是一个期刊上对于产品的介绍。<ol>
+<li>，，，</li>
+<li>他这个处理器是没有数字电路转换器的，所以他用了一个集成电路板来把时域信号转化成单片机能够识别的信号</li>
+<li>tiny voice的语音识别运用的理论基础就是把声音信号分为两个不同频率范围的共振峰区</li>
+<li>high-pass filtered：高通滤波，过滤掉低频信号</li>
+<li>硬件上用了这个只读存储器，在这里先略过。</li>
+<li>对于</li>
+<li>简略的flowchart：<ul>
+<li>recognize按下后的模式里。。。。。在没有阅读相似的源码的情况下，我觉得我还完全没有知其所以然</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>可能前面几页不够直观清晰，这一页我把他们放在一起，，</li>
+<li></li>
+<li>然后比较这三篇文章三种应用的话，我觉得相对于像tiny voice一样用不带ADC的处理器或者像FPGA这种半定制电路/逻辑门array，对于我这种初学者可能刚开始用一些比较好上手的单片机更好。</li>
+<li>好像一些基本原理我都已经知其然了，但是具体的算法实现和理论基础（你比如说像MFCC和SVM）我还要加深理解才行，需要更多的阅读和实践</li>
+<li>然后文章里具体描述的一些数据，采样频率等等我需要在自己的实践中慢慢来体会。</li>
+</ol>
+</li>
+</ol>
+<h2 id="stm32F750"><a href="#stm32F750" class="headerlink" title="stm32F750"></a>stm32F750</h2><ol>
+<li><h3 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h3><ol>
+<li>公司：ARM；内核：Cortex-M3内核的32位闪存微控制器##  🌟VAD项目✨</li>
+</ol>
+</li>
+<li>30 ： stm32<br>周四7.1: 了解stm32 （I/O，串口）</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" rel="tag"># 语音识别</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/11/25/mei-ri-zong-jie/" rel="prev" title="每日总结">
+      <i class="fa fa-chevron-left"></i> 每日总结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/07/05/wuhannote/" rel="next" title="计算机体系结构note">
+      计算机体系结构note <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VAD-Paper"><span class="nav-number">1.</span> <span class="nav-text">VAD- -Paper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kobe-Japan%E7%9A%84"><span class="nav-number">1.1.</span> <span class="nav-text">Kobe Japan的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E6%89%8B%E8%A1%A8VADLite%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.</span> <span class="nav-text">智能手表VADLite系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tiny-Voice"><span class="nav-number">1.3.</span> <span class="nav-text">Tiny Voice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pre-%E2%80%94-for%E4%BB%A5%E4%B8%8A%E4%B8%89paper-%E2%80%94-%E7%BB%93%E5%90%88%E4%BB%A5slide%EF%BC%88%E7%A8%BF%E4%BB%B6%E8%8D%89%E7%A8%BF%E7%89%88%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">pre —-for以上三paper —-结合以slide（稿件草稿版）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stm32F750"><span class="nav-number">2.</span> <span class="nav-text">stm32F750</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">初识</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">A jian</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:aijian0330@gmail.com" title="E-Mail → mailto:aijian0330@gmail.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/aijian500" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;aijian500" rel="noopener" target="_blank"><i class="instagram fa-fw"></i>Instagram</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">A jian</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
