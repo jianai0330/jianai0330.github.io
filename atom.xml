@@ -6,7 +6,7 @@
   <link href="https://jianai0330.github.io/atom.xml" rel="self"/>
   
   <link href="https://jianai0330.github.io/"/>
-  <updated>2021-07-05T01:06:13.000Z</updated>
+  <updated>2021-07-05T01:19:13.000Z</updated>
   <id>https://jianai0330.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>系统们的更新日志</title>
+    <link href="https://jianai0330.github.io/2021/07/05/updateeveryday/"/>
+    <id>https://jianai0330.github.io/2021/07/05/updateeveryday/</id>
+    <published>2021-07-05T01:19:13.000Z</published>
+    <updated>2021-07-05T01:19:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="少出岔子-ok💢"><a href="#少出岔子-ok💢" class="headerlink" title="少出岔子 ok💢"></a>少出岔子 ok💢</h1><span id="more"></span><ol><li>21.7.5<ol><li><a href="https://blog.csdn.net/weixin_43074462/article/details/100716511">按e把splash后面的参数修改成了nomodeset</a><ul><li>但是是一次性的 不是一劳永逸</li></ul></li><li>所以进入系统后编辑<code>sudo vi /etc/default/grub </code>, 修改为<code>GRUB_CMDLINE_LINUX_DEFAULT=“quiet splash nomodeset”</code>，最后更新<code>sudo update-grub</code><ul><li>重启后顺利开机</li><li>但是，开机第一幕自动grub没解决</li></ul></li><li>解决自动进入grub<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo update-grub</span><br><span class="line">sudo grub-install <span class="regexp">/dev/</span>sda</span><br></pre></td></tr></table></figure></li></ol></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;少出岔子-ok💢&quot;&gt;&lt;a href=&quot;#少出岔子-ok💢&quot; class=&quot;headerlink&quot; title=&quot;少出岔子 ok💢&quot;&gt;&lt;/a&gt;少出岔子 ok💢&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="UbuntuRecovery" scheme="https://jianai0330.github.io/categories/UbuntuRecovery/"/>
+    
+    
+    <category term="ubuntu" scheme="https://jianai0330.github.io/tags/ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机体系结构note</title>
