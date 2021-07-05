@@ -1,8 +1,8 @@
 ---
 title: 系统们的更新日志
-date: 2021-07-05 09:19:13
+date: 2021-07-05 09:44:13
 tag:
-- ubuntu
+- ubuntu系统问题
 categories:
 - UbuntuRecovery
 password: password
