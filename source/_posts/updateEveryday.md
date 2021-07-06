@@ -24,3 +24,7 @@ top: 50
 sudo update-grub
 sudo grub-install /dev/sda
 ```
+
+2. ## 写个博客更新日志
+    1. 21.7.6 改了背景颜色（就在source里_data）[颜色](https://www.sioe.cn/yingyong/yanse-rgb-16/)
+        - [前人经验](https://marmalade.vip/nextthemebeautify3.html)

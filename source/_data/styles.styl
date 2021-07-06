@@ -1,0 +1,95 @@
+body {
+    position: relative;
+    font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    color: #555;
+    background: #a5b8cc;
+}
+
+
+.post {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 25px;
+    -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, .5);
+    -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
+}
+
+/*更好的侧边滚动条*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-button:start:increment,::-webkit-scrollbar-button:end:decrement {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: block;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0,0,0,.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 8px;
+  background-color: rgba(0,0,0,.5);
+}
+::-webkit-scrollbar-track,::-webkit-scrollbar-thumb {
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+}
+::-webkit-scrollbar-track:hover {
+  background-color: rgba(0,0,0,.15);
+}
+::-webkit-scrollbar-button:start {
+  width: 10px;
+  height: 10px;
+  /*background: url(../images/scrollbar_arrow.png) no-repeat 0 0;*/  /*可以添加滚动条样式*/
+}
+
+
+// 自定义的文章置顶样式
+.post-sticky-flag {
+    font-size: inherit;
+    float: left;
+    color: rgb(0, 0, 0);
+    cursor: help;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+.post-sticky-flag:hover {
+    color: #07b39b;
+}
+
+//主标题颜色
+.brand{
+    color: #390044
+}
+
+//副标题颜色
+.site-subtitle {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+//修改不蒜子数据颜色
+.busuanzi-value {
+  color: #1890ff;
+}
+
+
+* {
+  color: #35405B;
+}
+
+//字体颜色
+#sidebar {
+           p,span,a {color: #bf1f2f;}
+}
