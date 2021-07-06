@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Arduino与Assembly</title>
-    <url>/2019/11/01/arduino/</url>
+    <url>/2019/11/01/Arduino/</url>
     <content><![CDATA[<h2 id="Lab–汇编语言初识-amp-语法结构"><a href="#Lab–汇编语言初识-amp-语法结构" class="headerlink" title="Lab–汇编语言初识&amp;语法结构"></a>Lab–汇编语言初识&amp;语法结构</h2><span id="more"></span>
 <h3 id="第一个程序的理解"><a href="#第一个程序的理解" class="headerlink" title="第一个程序的理解"></a>第一个程序的理解</h3><ol>
 <li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
@@ -66,7 +66,7 @@
   </entry>
   <entry>
     <title>CS_note</title>
-    <url>/2019/10/31/assembly/</url>
+    <url>/2019/10/31/Assembly/</url>
     <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><span id="more"></span>
 <h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
 <li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
@@ -110,7 +110,7 @@
   </entry>
   <entry>
     <title>CMTE_note</title>
-    <url>/2019/10/30/cmte-s-note/</url>
+    <url>/2019/10/30/CMTE-s-note/</url>
     <content><![CDATA[<h1 id="四-Vector-Algebra"><a href="#四-Vector-Algebra" class="headerlink" title="四 Vector  Algebra"></a>四 Vector  Algebra</h1><h2 id="空间直线-空间平面"><a href="#空间直线-空间平面" class="headerlink" title="空间直线,空间平面"></a>空间直线,空间平面</h2><span id="more"></span>
 <h3 id="空间直线几个形式的方程-空间平面的方程"><a href="#空间直线几个形式的方程-空间平面的方程" class="headerlink" title="空间直线几个形式的方程,空间平面的方程."></a>空间直线几个形式的方程,空间平面的方程.</h3><p>Ax +By +Cz + D = 0</p>
 <p>其中n = (A, B, C)是平面的法向量，D是将平面平移到坐标原点所需距离（所以D=0时，平面过原点）</p>
@@ -282,7 +282,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
   </entry>
   <entry>
     <title>CS</title>
-    <url>/2019/10/31/cs/</url>
+    <url>/2019/10/31/CS/</url>
     <content><![CDATA[<h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><h2 id="冯诺依曼结构"><a href="#冯诺依曼结构" class="headerlink" title="冯诺依曼结构"></a>冯诺依曼结构</h2><span id="more"></span>
 <h1 id="二-Assembly-1"><a href="#二-Assembly-1" class="headerlink" title="二 Assembly 1"></a>二 Assembly 1</h1><ol>
 <li><p>CPU<br> registers<br> ALU<br> control unit<br> data bus</p>
@@ -493,7 +493,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
   </entry>
   <entry>
     <title>FC</title>
-    <url>/2019/11/13/fc/</url>
+    <url>/2019/11/13/FC/</url>
     <content><![CDATA[<h1 id="六-graphs-7-1"><a href="#六-graphs-7-1" class="headerlink" title="六 graphs 7.1"></a>六 graphs 7.1</h1><span id="more"></span>
 <h2 id="PPT提纲-11-13-拖延症…"><a href="#PPT提纲-11-13-拖延症…" class="headerlink" title="PPT提纲 ---11.13 拖延症…"></a>PPT提纲 ---11.13 拖延症…</h2><ol>
 <li>graph的种类:</li>
@@ -703,7 +703,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
   </entry>
   <entry>
     <title>MatLab</title>
-    <url>/2019/10/30/matlab/</url>
+    <url>/2019/10/30/MatLab/</url>
     <content><![CDATA[<h1 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h1><span id="more"></span>
 
 <h2 id="创建x轴的数组"><a href="#创建x轴的数组" class="headerlink" title="创建x轴的数组"></a>创建x轴的数组</h2><p>s = linspace()<br>与直接[ : : ]</p>
@@ -735,7 +735,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
   </entry>
   <entry>
     <title>PPA_notes</title>
-    <url>/2019/11/03/ppa/</url>
+    <url>/2019/11/03/PPA/</url>
     <content><![CDATA[<h2 id="week5"><a href="#week5" class="headerlink" title="week5"></a>week5</h2><span id="more"></span>
 <h3 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h3><ol>
 <li>wihle loop</li>
@@ -874,7 +874,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
   </entry>
   <entry>
     <title>VAD</title>
-    <url>/2021/07/05/vad/</url>
+    <url>/2021/07/05/VAD/</url>
     <content><![CDATA[<h2 id="VAD-Paper"><a href="#VAD-Paper" class="headerlink" title="VAD- -Paper"></a>VAD- -Paper</h2><span id="more"></span>
 <ol>
 <li><h3 id="Kobe-Japan的"><a href="#Kobe-Japan的" class="headerlink" title="Kobe Japan的"></a>Kobe Japan的</h3><ol>
@@ -1085,10 +1085,18 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li><p>外设 的概念</p>
 <ol>
 <li>还有外设的使能，失能，复位</li>
+<li>7未完待续</li>
+</ol>
+</li>
+<li><p>固件库与寄存器</p>
+<ol>
+<li>固件库就是函数的集合（API），把寄存器操作封装起来</li>
 </ol>
 </li>
 </ol>
 </li>
+</ol>
+<ol start="2">
 <li><h2 id="实验-源码-上手"><a href="#实验-源码-上手" class="headerlink" title="实验 源码 上手"></a>实验 源码 上手</h2><ol>
 <li>跑马灯 HAL库 源码<ol>
 <li>7.6周二下午 成功 –结合开发手册，需要着重理解的是<code>GPIO</code>和<code>LED0（1）LED1（0）</code>(led.h文件里的IO输出电平取反操作)</li>
@@ -1112,7 +1120,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
   </entry>
   <entry>
     <title>系统们的更新日志</title>
-    <url>/2021/07/05/updateeveryday/</url>
+    <url>/2021/07/05/updateEveryday/</url>
     <content><![CDATA[<h1 id="少出岔子-ok💢"><a href="#少出岔子-ok💢" class="headerlink" title="少出岔子 ok💢"></a>少出岔子 ok💢</h1><span id="more"></span>
 
 <ol>
@@ -1145,6 +1153,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li>密码不管用了</li>
 <li>标题和菜单颜色</li>
 </ol>
+<p> npm update y18n –depth 4</p>
 ]]></content>
       <categories>
         <category>UbuntuRecovery</category>
@@ -1155,7 +1164,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
   </entry>
   <entry>
     <title>每日总结</title>
-    <url>/2019/11/25/mei-ri-zong-jie/</url>
+    <url>/2019/11/25/%E6%AF%8F%E6%97%A5%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>一切随缘好了,开心和积极向上是最重要的</p>
 <span id="more"></span>
 <h1 id="11-25-周一-week10"><a href="#11-25-周一-week10" class="headerlink" title="11.25 周一 week10"></a>11.25 周一 week10</h1><h2 id="吃了什么"><a href="#吃了什么" class="headerlink" title="吃了什么"></a>吃了什么</h2><ul>
@@ -1264,7 +1273,7 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
   </entry>
   <entry>
     <title>计算机体系结构note</title>
-    <url>/2021/07/05/wuhannote/</url>
+    <url>/2021/07/05/WuhanNote/</url>
     <content><![CDATA[<h1 id="Summer-Intern-21年6-8月"><a href="#Summer-Intern-21年6-8月" class="headerlink" title="Summer Intern 21年6-8月"></a>Summer Intern 21年6-8月</h1><h1 id="计算机体系结构"><a href="#计算机体系结构" class="headerlink" title="计算机体系结构"></a>计算机体系结构</h1><h2 id="国防科大公开课"><a href="#国防科大公开课" class="headerlink" title="国防科大公开课"></a>国防科大公开课</h2><p><a href="https://www.bilibili.com/video/BV1aJ411g7LM?p=2">计算机体系结构国防科大35讲</a></p>
 <span id="more"></span>
 <ol>
