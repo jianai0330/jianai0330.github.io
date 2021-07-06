@@ -475,11 +475,7 @@
 <li><h3 id="指令系统"><a href="#指令系统" class="headerlink" title="指令系统"></a>指令系统</h3><ol>
 <li><p>指令集结构概述</p>
 <ol>
-<li>每条指令都是直接由cpu硬件执行<ul>
-<li>CPU插播：进入工厂的原料(程序指令)，经过物资分配部门(控制单元)的调度分配，被送往生产线(逻辑运算单元)，生产出成品(处理后的数据)后，再存储在仓库(储存单元)中，最后等着拿到市场上去卖(交由应用程序使用)</li>
-<li>cpu是通过引脚与外围交流的，所有的数据都会通过引脚输入或者输出</li>
-</ul>
-</li>
+<li>每条指令都是直接由cpu硬件执行<br> CPU插播：进入工厂的原料(程序指令)，经过物资分配部门(控制单元)的调度分配，被送往生产线(逻辑运算单元)，生产出成品(处理后的数据)后，再存储在仓库(储存单元)中，最后等着拿到市场上去卖(交由应用程序使用)</li>
 <li>指令的表示：二进制格式…</li>
 <li>指令的操作非常简单，其操作由操作码编码表示，每个操作需要的操作数个数为0-3个不等   –操作数是一些<code>存储单元</code>的地址(典型的存储单元：主存，寄存器，堆栈和累加器)</li>
 <li><code>指令集与计算机的性能</code> T<ul>
@@ -689,9 +685,6 @@
 <li>存储器地址（Memory address）是存储器中存储单元的编号。 –32位操作系统存储器地址字节为4个字节，64位操作系统存储器地址字节为8个字节<ul>
 <li>一个字节（byte）就是8bit</li>
 <li><strong>1kb是1024byte</strong>，1024*8位数字</li>
-<li>一个字（word）是32位，32bits，也就是4个字节（byte）</li>
-<li>1 kb == 1024 byte == 1024*8 bit</li>
-<li>1024b(字节)=1kb=512个汉字</li>
 </ul>
 </li>
 </ul>
@@ -722,8 +715,7 @@
 制造工艺用特征尺寸来衡量，即一个晶体管或一条连线在x/y的最小尺寸
 </code></pre>
 <ol start="3">
-<li><p>晶圆 晶片 集成电路 芯片 核 cpu 主板 内存 等等的关系：</p>
-<ol>
+<li>晶圆 晶片 集成电路 芯片 核 cpu 主板 内存 等等的关系：<ol>
 <li>硅晶圆尺寸越大越好，因为这样每块晶圆能生产更多的芯片。<ul>
 <li>无法随心所欲地增大晶圆尺寸： 生产过程中，离晶圆中心越远就越容易出现坏点</li>
 <li>晶体管在处理器上集成，晶体管与晶体管之间用金属线路连接（金属线路的容量直接影响信息传送的速度）</li>
@@ -748,31 +740,13 @@
 <li>晶体管相当于开关，控制着电流的方向（一个针头上就能放下大约3000万个晶体管）。</li>
 </ol>
 </li>
-<li><p>线程进程程序：</p>
-<ol>
+<li>线程进程程序：<ol>
 <li>一个程序包含着若干个进程，一个进程包含着若干个线程。</li>
 </ol>
 </li>
-<li><p>SRAM DRAM 一个静态一个动态</p>
-<ul>
-<li>所谓的“静态”，是指这种存储器只要保持通电，里面储存的数据就可以恒常保持。相对之下，动态随机存取存储器（DRAM）里面所储存的数据就需要周期性地更新。然而，当电力供应停止时，SRAM储存的数据还是会消失（被称为volatile memory），这与在断电后还能储存资料的ROM或闪存是不同的。</li>
-</ul>
-</li>
-<li><p>some原理：</p>
-<ol>
-<li>DMA（Direct Memory Access直接存储器访问）： 在DMA控制器的管理下，外设和存储器直接进行数据交换，而不需CPU干预</li>
 </ol>
-</li>
-<li><p>一些简写概念的总结</p>
-<ul>
-<li>JTAG： <a target="_blank" rel="noopener" href="https://www.cnblogs.com/TaigaCon/archive/2012/12/20/2826941.html">joint test action group</a></li>
-<li>LQFP： Low-profile Quad Flat Package 薄 方 扁平封装 （BGA封装： Ball Grid Array Package）</li>
-<li>PCB ： printed circuit board 印刷电路板</li>
-<li>SPI： serial peripheral interface 串行外设接口</li>
-</ul>
-</li>
-<li><p><kbd>这是什么</kbd></p>
-<table>
+<ol start="10">
+<li><kbd>这是什么</kbd><table>
 <tr>
     <th rowspan="2">真实情况</th>
     <th colspan="2">预测结果</th>
