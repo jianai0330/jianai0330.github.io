@@ -6,7 +6,7 @@ body {
     color: #555;
     background: #a5b8cc;
 }
-
+//背景颜色
 
 .post {
     margin-top: 60px;
@@ -69,7 +69,7 @@ body {
 
 //主标题颜色
 .brand{
-    color: #390044
+    color: #FF6A6A
 }
 
 //副标题颜色
@@ -84,12 +84,30 @@ body {
   color: #1890ff;
 }
 
-
+//这是网页大部分主体字体的颜色
 * {
   color: #35405B;
 }
 
 //字体颜色
-#sidebar {
-           p,span,a {color: #bf1f2f;}
+//#sidebar {
+//           p,span,a {color: #bf1f2f;}
+//}
+
+
+.site-meta {
+  margin: 0;
+  text-align: $site-meta-text-align;
+
+  +mobile() { text-align: center; }
+}
+
+.brand {
+  position: relative;
+  display: inline-block;
+  padding: 0 40px;
+  color: #FF6A6A;
+  background: $brand-bg;
+  border-bottom: none;
+  &:hover { color: $brand-hover-color; }
 }
