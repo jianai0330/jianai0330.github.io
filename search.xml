@@ -492,38 +492,6 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
       </tags>
   </entry>
   <entry>
-    <title>MatLab</title>
-    <url>/2019/10/30/matlab/</url>
-    <content><![CDATA[<h1 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h1><span id="more"></span>
-
-<h2 id="创建x轴的数组"><a href="#创建x轴的数组" class="headerlink" title="创建x轴的数组"></a>创建x轴的数组</h2><p>s = linspace()<br>与直接[ : : ]</p>
-<h2 id="绘制函数图象时"><a href="#绘制函数图象时" class="headerlink" title="绘制函数图象时"></a>绘制函数图象时</h2><p>syms变量–fplot<br>与直接设置x和y对应数组–plot</p>
-<h2 id="设置坐标轴范围时"><a href="#设置坐标轴范围时" class="headerlink" title="设置坐标轴范围时"></a>设置坐标轴范围时</h2><p>xlim(xmin ymin)和ylim()<br>与aixs[xmin xmax ymin ymax]<br>是一个道理</p>
-<h2 id="绘制图像的几个函数"><a href="#绘制图像的几个函数" class="headerlink" title="绘制图像的几个函数"></a>绘制图像的几个函数</h2><ul>
-<li>plot()</li>
-<li>line():画直线型</li>
-<li>polar():极坐标下绘曲线<h2 id="求函数一段范围内的极值"><a href="#求函数一段范围内的极值" class="headerlink" title="求函数一段范围内的极值"></a>求函数一段范围内的极值</h2></li>
-<li>lab7</li>
-<li>感觉有几种方法</li>
-<li>画分段函数的几种方法:正常拆分开;@x</li>
-</ul>
-<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="创建矩阵的方法"><a href="#创建矩阵的方法" class="headerlink" title="创建矩阵的方法"></a>创建矩阵的方法</h2><ol>
-<li>B=a:h:b;  其中a,b代表一维矩阵（向量）的区间，h为步宽</li>
-<li>zeros(行数,列数).ones,rand同.</li>
-<li></li>
-<li></li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>MatLab</category>
-      </categories>
-      <tags>
-        <tag>MatLab</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>FC</title>
     <url>/2019/11/13/fc/</url>
     <content><![CDATA[<h1 id="六-graphs-7-1"><a href="#六-graphs-7-1" class="headerlink" title="六 graphs 7.1"></a>六 graphs 7.1</h1><span id="more"></span>
@@ -732,6 +700,38 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
         <category>KCL</category>
         <category>FC</category>
       </categories>
+  </entry>
+  <entry>
+    <title>MatLab</title>
+    <url>/2019/10/30/matlab/</url>
+    <content><![CDATA[<h1 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h1><span id="more"></span>
+
+<h2 id="创建x轴的数组"><a href="#创建x轴的数组" class="headerlink" title="创建x轴的数组"></a>创建x轴的数组</h2><p>s = linspace()<br>与直接[ : : ]</p>
+<h2 id="绘制函数图象时"><a href="#绘制函数图象时" class="headerlink" title="绘制函数图象时"></a>绘制函数图象时</h2><p>syms变量–fplot<br>与直接设置x和y对应数组–plot</p>
+<h2 id="设置坐标轴范围时"><a href="#设置坐标轴范围时" class="headerlink" title="设置坐标轴范围时"></a>设置坐标轴范围时</h2><p>xlim(xmin ymin)和ylim()<br>与aixs[xmin xmax ymin ymax]<br>是一个道理</p>
+<h2 id="绘制图像的几个函数"><a href="#绘制图像的几个函数" class="headerlink" title="绘制图像的几个函数"></a>绘制图像的几个函数</h2><ul>
+<li>plot()</li>
+<li>line():画直线型</li>
+<li>polar():极坐标下绘曲线<h2 id="求函数一段范围内的极值"><a href="#求函数一段范围内的极值" class="headerlink" title="求函数一段范围内的极值"></a>求函数一段范围内的极值</h2></li>
+<li>lab7</li>
+<li>感觉有几种方法</li>
+<li>画分段函数的几种方法:正常拆分开;@x</li>
+</ul>
+<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><h2 id="创建矩阵的方法"><a href="#创建矩阵的方法" class="headerlink" title="创建矩阵的方法"></a>创建矩阵的方法</h2><ol>
+<li>B=a:h:b;  其中a,b代表一维矩阵（向量）的区间，h为步宽</li>
+<li>zeros(行数,列数).ones,rand同.</li>
+<li></li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>MatLab</category>
+      </categories>
+      <tags>
+        <tag>MatLab</tag>
+      </tags>
   </entry>
   <entry>
     <title>PPA_notes</title>
@@ -1137,6 +1137,13 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 </li>
 </ol>
 </li>
+</ol>
+<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">├── .github            <span class="comment">#git信息</span></span><br><span class="line">├── languages          <span class="comment">#多语言</span></span><br><span class="line">|<span class="string">   ├── default.yml    #默认语言</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── zh-Hans.yml      #简体中文</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── zh-tw.yml      #繁体中文</span></span><br><span class="line"><span class="string">├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _custom        #可以自己修改的模板，覆盖原有模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _header.swig    #头部样式</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _sidebar.swig   #侧边栏样式</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _macro        #可以自己修改的模板，覆盖原有模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── post.swig    #文章模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── reward.swig    #打赏模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── sidebar.swig   #侧边栏模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _partial       #局部的布局</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── head       #头部模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── search     #搜索模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── share      #分享模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _script        #局部的布局</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _third-party   #第三方模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _layout.swig   #主页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── index.swig     #主页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── page           #页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── tag.swig       #tag模板</span></span><br><span class="line"><span class="string">├── scripts            #script源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── tags           #tags的script源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── marge.js       #页面模板</span></span><br><span class="line"><span class="string">├── source             #源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── css            #css源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _common    #*.styl基础css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _custom    #*.styl局部css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   └── _mixins    #mixins的css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── fonts          #字体</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── images         #图片</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── uploads        #添加的文件</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── js             #javascript源代码</span></span><br><span class="line"><span class="string">├── _config.yml        #主题配置文件</span></span><br><span class="line"><span class="string">└── README.md          #用GitHub的都知道</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>search功能还不行</li>
+<li>进度条正中央的不见了</li>
+<li>密码不管用了</li>
+<li>标题和菜单颜色</li>
 </ol>
 ]]></content>
       <categories>
