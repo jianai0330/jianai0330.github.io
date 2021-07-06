@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"jianai0330.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="VAD- -Paper Kobe Japan的 概念上：VAD:话语激活检测  当用户的语音信号能量低于一定门限值时就认为是静默状态，也不发送语音分组。当检测到突发的活动声音时才生成语音信号，并加以传输。">
+  <meta name="description" content="VAD- -Paper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VAD">
 <meta property="og:url" content="https://jianai0330.github.io/2021/07/05/vad/index.html">
 <meta property="og:site_name" content="Ajn">
-<meta property="og:description" content="VAD- -Paper Kobe Japan的 概念上：VAD:话语激活检测  当用户的语音信号能量低于一定门限值时就认为是静默状态，也不发送语音分组。当检测到突发的活动声音时才生成语音信号，并加以传输。">
+<meta property="og:description" content="VAD- -Paper">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-05T01:05:13.000Z">
 <meta property="article:modified_time" content="2021-07-05T01:05:13.000Z">
@@ -217,22 +217,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="VAD-Paper"><a href="#VAD-Paper" class="headerlink" title="VAD- -Paper"></a>VAD- -Paper</h2><ol>
+        <h2 id="VAD-Paper"><a href="#VAD-Paper" class="headerlink" title="VAD- -Paper"></a>VAD- -Paper</h2><span id="more"></span>
+<ol>
 <li><h3 id="Kobe-Japan的"><a href="#Kobe-Japan的" class="headerlink" title="Kobe Japan的"></a>Kobe Japan的</h3><ol>
 <li><p>概念上：VAD:话语激活检测</p>
 <ol>
-<li>当用户的语音信号能量低于一定门限值时就认为是静默状态，也不发送语音分组。当检测到突发的活动声音时才生成语音信号，并加以传输。<span id="more"></span></li>
-<li>从一段语音（纯净或带噪）信号中标识出语音片段与非语音片段</li>
-<li>ADC：模拟数字转换器，模拟信号转变为数字信号</li>
-<li>FPGA board： Field－Programmable Gate Array的缩写，即现场可编程门阵列。</li>
-<li>第一步就是提取噪音信息。通常的思路是通过VAD函数得到非语音片段，而非语音片段可以认为是纯噪音片段。从而可以从纯噪音信号中提取出有用信息，例如进行傅里叶变换得到噪音频谱等，再进而做下一步处理。例如谱减法，维纳滤波。</li>
-<li>zero cross counter (ZCC)： 过零率，一帧语音时域信号穿过0（时间轴）的次数。 语音片段ZCC较小，非语音片段ZCC较大</li>
-<li>STE：short time energy：短时能量</li>
-<li>我们通常使用麦克风进行音频录制的采样率为 16000Hz，一个采样点使用 16bit 来存储。</li>
-<li>ksps：单位，kilo Samples per Second ，即采样千次每秒，是转化速率的单位。</li>
-<li>dB：分贝</li>
-<li>S/N：信噪比（单位是分贝），信号与噪声的比例。设备的信噪比越高表明它产生的噪声越少。越高越好。</li>
-<li>d-flip flop：d触发器，两个稳定状态，即”0”和”1”</li>
+<li><p>当用户的语音信号能量低于一定门限值时就认为是静默状态，也不发送语音分组。当检测到突发的活动声音时才生成语音信号，并加以传输。</p>
+</li>
+<li><p>从一段语音（纯净或带噪）信号中标识出语音片段与非语音片段</p>
+</li>
+<li><p>ADC：模拟数字转换器，模拟信号转变为数字信号</p>
+</li>
+<li><p>FPGA board： Field－Programmable Gate Array的缩写，即现场可编程门阵列。</p>
+</li>
+<li><p>第一步就是提取噪音信息。通常的思路是通过VAD函数得到非语音片段，而非语音片段可以认为是纯噪音片段。从而可以从纯噪音信号中提取出有用信息，例如进行傅里叶变换得到噪音频谱等，再进而做下一步处理。例如谱减法，维纳滤波。</p>
+</li>
+<li><p>zero cross counter (ZCC)： 过零率，一帧语音时域信号穿过0（时间轴）的次数。 语音片段ZCC较小，非语音片段ZCC较大</p>
+</li>
+<li><p>STE：short time energy：短时能量</p>
+</li>
+<li><p>我们通常使用麦克风进行音频录制的采样率为 16000Hz，一个采样点使用 16bit 来存储。</p>
+</li>
+<li><p>ksps：单位，kilo Samples per Second ，即采样千次每秒，是转化速率的单位。</p>
+</li>
+<li><p>dB：分贝</p>
+</li>
+<li><p>S/N：信噪比（单位是分贝），信号与噪声的比例。设备的信噪比越高表明它产生的噪声越少。越高越好。</p>
+</li>
+<li><p>d-flip flop：d触发器，两个稳定状态，即”0”和”1”</p>
+</li>
 </ol>
 </li>
 <li><p>语音识别的特征提取</p>
@@ -327,12 +340,106 @@
 </ol>
 </li>
 </ol>
-<h2 id="stm32F750"><a href="#stm32F750" class="headerlink" title="stm32F750"></a>stm32F750</h2><ol>
+<h2 id="stm32F750-🌟VAD项目✨"><a href="#stm32F750-🌟VAD项目✨" class="headerlink" title="stm32F750 🌟VAD项目✨"></a>stm32F750 🌟VAD项目✨</h2><ol>
 <li><h3 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h3><ol>
-<li>公司：ARM；内核：Cortex-M3内核的32位闪存微控制器##  🌟VAD项目✨</li>
+<li>公司：ARM；内核：Cortex-M3内核的32位闪存微控制器</li>
+<li>电压范围2–3.6v I/O电压容限为5V</li>
+<li>N8H6：<ul>
+<li>8是<code>64k字节</code>的的闪存存储器</li>
+<li>H：封装的类型：BGA（BGA封装： Ball Grid Array Package）</li>
+<li>6: -40–85摄氏度</li>
+</ul>
+</li>
 </ol>
 </li>
-<li>30 ： stm32<br>周四7.1: 了解stm32 （I/O，串口）</li>
+<li><p>30 ： stm32<br>周四7.1: 了解stm32 （I/O，串口）</p>
+</li>
+<li><p>5 周一：阅读资料</p>
+<ol start="2">
+<li><p>stm32系统<code>时钟</code>控制： 3种不同时钟源</p>
+<ol>
+<li>HSE振荡器时钟：<ol>
+<li>高速外部时钟信号<ol>
+<li>HSE外部<code>晶体</code>/陶瓷谐振器</li>
+<li>HSE用户<code>外部</code>时钟</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>HSI振荡器时钟<ol>
+<li>由<code>内部</code>8MHz的RC振荡器产生，直接作为系统时钟信号</li>
+<li>与HSE相比，不需要任何外部器件，启动时间短，但精度差。备用</li>
+</ol>
+</li>
+<li>PLL时钟: 内部 倍频<ul>
+<li>如使用usb，PLL必须被配置为输出48/72MHz时钟，用于提供48MHz的USBCLK时钟</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>中断系统：支持的中断84个（16个内核+68个外部）</p>
+</li>
+<li><p>固件函数库从：24个库（flash，lib，nvic中断，rcc时钟（Reset &amp;  clock control），gpio管脚绝大部分程序都涉及）</p>
+</li>
+<li><p>软件配置：通过设置flash菜单下的选项，选择目标芯片和型号，flash和RAM的存储起始地址和大小，选择仿真调试工具，闪存空间等</p>
+</li>
+<li><p>模块化编程：</p>
+<ol>
+<li>添加启动文件（cortexm3_marco.s和stm32f10x_vertor.s）</li>
+<li>添加对应外设的固件函数库（stm32f10x_xxx.c）</li>
+<li>添加中断服务程序模块（stm32f10x_it.c）</li>
+<li>编写外设配置（初始化）模块代码<ol>
+<li>开时钟RCC</li>
+<li>自身初始化</li>
+<li>相关管脚配置（GPIO）</li>
+<li>是否使用中断（NVIC）</li>
+<li>编写main函数中的应用程序及其子程序（一定要将<code>#include stm32f10x_lib.h</code>文件包含在其中）</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>NVIC（nested vector interrupt controller嵌套向量中断控制器）</p>
+<ol>
+<li>控制异常，设置各个异常的优先等级并对异常进行处理<ul>
+<li>所有异常都在处理器模式中处理 –handler mode</li>
+</ul>
+</li>
+<li>抢占 （产生嵌套，咬尾，晚到）</li>
+<li>NVIC支持优先级分组机制</li>
+</ol>
+</li>
+<li><p>IO由软件配置–8种模式：</p>
+<ol>
+<li>推挽输出：输出高，低电平，连接数字器件 两个三极管（参数相同），各负责正负半周的波形放大任务</li>
+<li>等等</li>
+<li>IO配置常用的8个寄存器：<ol>
+<li>MODER寄存器：GPIO端口模式控制寄存器 每两位配置一个IO口的I/O方向</li>
+<li>OTYPER寄存器：控制GPIO的<code>输出</code>类型  每一位配置一个I/O口的输出类型（推挽0/开漏1）</li>
+<li>OSPEEDR寄存器：GPIOs的输出速度 每两位</li>
+<li>ODR: 控制<code>输出</code>电平（高/低）</li>
+<li>BSRR: 复位</li>
+<li>IDR：读取GPIOx的输入数据</li>
+<li>两个32位复用功能选择寄存器AFRH+AFRL</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>外设 的概念</p>
+<ol>
+<li>还有外设的使能，失能，复位</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h2 id="实验-源码-上手"><a href="#实验-源码-上手" class="headerlink" title="实验 源码 上手"></a>实验 源码 上手</h2><ol>
+<li>跑马灯 HAL库 源码<ol>
+<li>7.6周二下午 成功 –结合开发手册，需要着重理解的是<code>GPIO</code>和<code>LED0（1）LED1（0）</code>(led.h文件里的IO输出电平取反操作)</li>
+<li>初识了一个project的全过程 –注意有HARDWARE文件夹的创建，LED加入path等等基本过程</li>
+<li>LED亮灭：引脚输出高低电</li>
+</ol>
+</li>
+</ol>
+</li>
 </ol>
 
     </div>
@@ -417,7 +524,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VAD-Paper"><span class="nav-number">1.</span> <span class="nav-text">VAD- -Paper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kobe-Japan%E7%9A%84"><span class="nav-number">1.1.</span> <span class="nav-text">Kobe Japan的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E6%89%8B%E8%A1%A8VADLite%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.</span> <span class="nav-text">智能手表VADLite系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tiny-Voice"><span class="nav-number">1.3.</span> <span class="nav-text">Tiny Voice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pre-%E2%80%94-for%E4%BB%A5%E4%B8%8A%E4%B8%89paper-%E2%80%94-%E7%BB%93%E5%90%88%E4%BB%A5slide%EF%BC%88%E7%A8%BF%E4%BB%B6%E8%8D%89%E7%A8%BF%E7%89%88%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">pre —-for以上三paper —-结合以slide（稿件草稿版）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stm32F750"><span class="nav-number">2.</span> <span class="nav-text">stm32F750</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">初识</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VAD-Paper"><span class="nav-number">1.</span> <span class="nav-text">VAD- -Paper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kobe-Japan%E7%9A%84"><span class="nav-number">1.1.</span> <span class="nav-text">Kobe Japan的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E6%89%8B%E8%A1%A8VADLite%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.</span> <span class="nav-text">智能手表VADLite系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tiny-Voice"><span class="nav-number">1.3.</span> <span class="nav-text">Tiny Voice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pre-%E2%80%94-for%E4%BB%A5%E4%B8%8A%E4%B8%89paper-%E2%80%94-%E7%BB%93%E5%90%88%E4%BB%A5slide%EF%BC%88%E7%A8%BF%E4%BB%B6%E8%8D%89%E7%A8%BF%E7%89%88%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">pre —-for以上三paper —-结合以slide（稿件草稿版）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#stm32F750-%F0%9F%8C%9FVAD%E9%A1%B9%E7%9B%AE%E2%9C%A8"><span class="nav-number">2.</span> <span class="nav-text">stm32F750 🌟VAD项目✨</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">初识</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C-%E6%BA%90%E7%A0%81-%E4%B8%8A%E6%89%8B"><span class="nav-number">3.</span> <span class="nav-text">实验 源码 上手</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
