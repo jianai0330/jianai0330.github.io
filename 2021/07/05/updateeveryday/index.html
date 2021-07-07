@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"jianai0330.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="少出岔子 ok💢">
+  <meta name="description" content="有东西被加密了，请输入密码查看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="系统们的更新日志">
 <meta property="og:url" content="https://jianai0330.github.io/2021/07/05/updateEveryday/index.html">
 <meta property="og:site_name" content="Ajn">
-<meta property="og:description" content="少出岔子 ok💢">
+<meta property="og:description" content="有东西被加密了，请输入密码查看">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-05T01:44:13.000Z">
 <meta property="article:modified_time" content="2021-07-05T01:44:13.000Z">
@@ -247,84 +247,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="少出岔子-ok💢"><a href="#少出岔子-ok💢" class="headerlink" title="少出岔子 ok💢"></a>少出岔子 ok💢</h1><span id="more"></span>
-
-<ol>
-<li><p>21.7.5</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43074462/article/details/100716511">按e把splash后面的参数修改成了nomodeset</a><ul>
-<li>但是是一次性的 不是一劳永逸</li>
-</ul>
-</li>
-<li>所以进入系统后编辑<code>sudo vi /etc/default/grub </code>, 修改为<code>GRUB_CMDLINE_LINUX_DEFAULT=“quiet splash nomodeset”</code>，最后更新<code>sudo update-grub</code><ul>
-<li>重启后顺利开机</li>
-<li>但是，开机第一幕自动grub没解决</li>
-</ul>
-</li>
-<li>解决自动进入grub<pre><code>sudo update-grub
-sudo grub-install /dev/sda
-</code></pre>
-</li>
-</ol>
-</li>
-<li><h2 id="写个博客更新日志"><a href="#写个博客更新日志" class="headerlink" title="写个博客更新日志"></a>写个博客更新日志</h2><ol>
-<li>21.7.6 改了背景颜色（就在source里_data）<a target="_blank" rel="noopener" href="https://www.sioe.cn/yingyong/yanse-rgb-16/">颜色</a><ul>
-<li><a target="_blank" rel="noopener" href="https://marmalade.vip/nextthemebeautify3.html">前人经验</a></li>
-</ul>
-</li>
-<li>7.7一早： 昨晚删掉的hexo-prism-plugin还是一装上就各种warn和err，所以还是uninstall了。。。<ul>
-<li>为什么点不进去博客了 点进去就404</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<pre><code>├── .github            #git信息
-├── languages          #多语言
-|   ├── default.yml    #默认语言
-|   └── zh-Hans.yml      #简体中文
-|   └── zh-tw.yml      #繁体中文
-├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制
-|   ├── _custom        #可以自己修改的模板，覆盖原有模板
-|   |   ├── _header.swig    #头部样式
-|   |   ├── _sidebar.swig   #侧边栏样式
-|   ├── _macro        #可以自己修改的模板，覆盖原有模板
-|   |   ├── post.swig    #文章模板
-|   |   ├── reward.swig    #打赏模板
-|   |   ├── sidebar.swig   #侧边栏模板
-|   ├── _partial       #局部的布局
-|   |   ├── head       #头部模板
-|   |   ├── search     #搜索模板
-|   |   ├── share      #分享模板
-|   ├── _script        #局部的布局
-|   ├── _third-party   #第三方模板
-|   ├── _layout.swig   #主页面模板
-|   ├── index.swig     #主页面模板
-|   ├── page           #页面模板
-|   └── tag.swig       #tag模板
-├── scripts            #script源码
-|   ├── tags           #tags的script源码
-|   ├── marge.js       #页面模板
-├── source             #源码
-|   ├── css            #css源码
-|   |   ├── _common    #*.styl基础css
-|   |   ├── _custom    #*.styl局部css
-|   |   └── _mixins    #mixins的css
-|   ├── fonts          #字体
-|   ├── images         #图片
-|   ├── uploads        #添加的文件
-|   └── js             #javascript源代码
-├── _config.yml        #主题配置文件
-└── README.md          #用GitHub的都知道
-</code></pre>
-<ol>
-<li>search功能还不行</li>
-<li>进度条正中央的不见了</li>
-<li>密码不管用了</li>
-<li>标题和菜单颜色</li>
-</ol>
-<p> npm update y18n –depth 4</p>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="166e6549f92f3de87f02c24e0087f0ecf3819edeab790cfe70232e2e727639b6">22064b17c03cb0c0e58c99349b6889d0b31470871e725085fde7c8feed9af7efbb7c921e2f3fc2479495cca9c6b1554850ce1c38d3b4f7313dce687727baeb2bec64289381830943f0229edf6c37ce1ffc3183bb7e93054483735ef7b02636d08203b6141867df4f7c37d9a7a21a17fa873b2cf0449fa9660d19d724209de69eb9e711e521d3281e37ec1398b6be7940defdd59434c789603eeaa69c2bc0464c5d581d5500fe1ac70d469770b7a138ebc563cd60542f9edf141ac13b393ebc8504fe7d4678ef34542ef2d117ae7ec80eaca499711358bd59ddb742c09abf5570d08f3075fa169d0f028fc787656c2accff83eea31a14cbb5af610eefcda7fe0d838245cada9a306551779e6f1dff9afdde35eaf8dfd5d5753b42303a041fd33ce8bad294e5afca41ad1b7f37d885699b71081c0c54a279f1404a03965af56041962c7296322e4bcb1e8b8ae78677aee29638a371ad12d8b2564ce3ca655a4a59855e64e09c40558096dbeb8378ca840e973773b36cb2fdf51afab463c5b6962c5e5376420efdeba1e0cfd5862f32180568f70e68dcca06378a29734758527ed03889b414fea978d2bc47cc0f6b9a74484fc3f364cce787930d087c7f5b03ca4bb81172a84151560fe6336c53e898a2f2bbf56de235e1f81770169abb092e2876f0387e6592f26c21cc2b2d3b1d1235152cf5fe3ca9e2e5d6842a609c5998b3fcbe441dea7696f6ea706c82048528aa4a4fd8a2c0e0a8fe6662e9161a82ffd48d3db066ba6ca4adfd5d84cf8747ff6738c63b2a6d4716894b16303891ce9d0c04a91aa268bcb16512e28bb4870455975b6e22344c0da42b3d9ebfca627aa2e9d8212e013c75b354f5bd23d86cc1fbb6d671702369019369c7ce67164ab3aa82aa56def4897432c35c3498c7fc14eff1a01f88d42d85cf58e9592c28eb8333c32202cce484fe165f108a521208c0beb087d6104e8d36a7388af72e27044f197bfe267a9d93bd3549b0e79516d6697433666877f71bb435fd95b4e7707e95c38a3326c824f6b9caf152cb14c649a27dbc20d261bd2206c187e743e838f7520d9a12bfd9f6f214f176e82904af15f8174503546671f73d62b6c95e99abfb4d51c9ea57b3d73c6f0448c2f4ee146bb2a781ea56a319d0f901d41f100419ccef9733775f96bb2181456a5721d0ba5899272bfc8c40ffded5fba31a1dd3334a1cc89cf0c37c12728348441dd4a85608239eb948de392ebbfe0e4e4529932dac1d84257750dd039b3911ec660c16fc7c1578756fec45a2f25eb268faed272ae4994f66a361cd2912e90dc58759d4ddf461130d460a89b73a13abdab373d8cbb4a75d54d04ec4ed37310dabb7fbd819d1045eb05dedcf7a53510cd4d23605f83f0a93472d78841854d6a2cb8d30591db90f8fe7ed811d4976875ac5d8ce391733d3559083b25f1d9de31f0c58af22faac8fa38f8fc5632a41e8c18ccce1156f6132351575750e161718743f497f7fc0cf98c920a3d54d3c5e8c90c883de910b495d8d0134a57ab247df4364d6e8949f118f5f1ebd5f20efea291cbdd54da6aa05318f1dd8f6a16e533a2d5edba2037a1e2feeffd6c32ae75cdc1d553bf834fb9876ed90bce5fe1c029b219d7ac5951c890e9132b4501a260b7e2b0fc349af870efe1c6bb45821c40734d44a54f94e0abed06e2d26436da979d41435b5500487fa47bfaa93de73d17dbef6e88ba3ceec23a5e52b7c4695fb7c85482fd89c5ec2614071bef19a5734027ee479085a0fe906a5cd385c9ef907b4a849a5e044df3c35265a850b136f65aa8e4bdd609cbd481bb03ddba71974e78ec27054ad3c78376a5ce6b4291c78884f9934e81313cdc822da4600fa152a1eeffcda7a129de8f9413aae8dea437c25ccf2da68a3ed8923be67ef7f4f5a0d34e80e6952c33d30d7e94e64ff6a95f3948befce73a02d7634ed3d8ec636502e27bd3d80dc7fbf87d1bcf7e31267996f60cedd2d366c29f022d9c5259c9df3a7c196ae55a0728cfd08c3bfa87db5933d4628b3cef9426caa1672da3ab294d099efde5ac41064493464bd36bf82633a8574a7118e849bf9e7533080d2f5952b6640a0e34f1cd2168a330badf57e58c74708ad66bdd2f6a498f225210a885d218b83f4aed942efc5037e9ffbda7c6799bc1637759f3e87855f90252109f1ec2cdc6f4b3937f0f8ba8fbcea45633955516a2187681e35270beac9d1be5bbde79021da28afa74de785969ef3b682758ac45f12c399100d2d8e24e19407db6c3583f022d0c1bb6b30d6e803f3f2dc398ec112c22a8b6c6c36ed1f303eb7de33e23c117bdc10afcb059af9aa1abe8688c127be546b9524797e2f0d5d439919a091c81ccfd79e5a071bba42c150863b217c70866fe45638ed6559ae4350fffa799f245537d953b71765b31865be3e8239e5308ad681c529b2001fa7b818df3220635011c5b0f77dbc7ff7022c1be7f46258933e11c7c381a29445aaa6ca3b890fa872593e8b5363e10a8c3ac75df48f636e219769304d4021c4ce80399036395d65b3b267c24e0be0dfa61485c9bf6d2ba959a9bea09931d70e9383e844f926f0a0b57410177fd1a8a245518fc5bbe870e1272b69051f970f35957c498d8dfa4060abbf5880fa57456a07a24a8a2219e33fbc4370f19cf3d4677d6a376b70465c443a1e965ad636fe9ea107155db33e6ce4f52431d6123947b8341a7edc4a73d17a4168b295c471b3070310ac2565840df70f01851698bca274fe40fda78308571ce216a41380984282ecfa732deeedefe28f56d5458ee747b187b7154e408c17a293d01b4669831345f7b99916c29bfd2c2b52be46ada24fb4358d355d980576486adaeab96d1456d058df9abbf1611a2db846231a7cf1eee3d75d30f166c51c54b08d2e04efb9dff800c191b49f0e16ff1a666d267f88af2e89b463882ffb1b8c1e3dc7d20584d7a20a367e5e9d73ca9084c78d8af168b110a092422f3ee309c619cc8b7f8cfe41576c38b8654310a5c4e17415fe20bbac4bcf517b39fced4f404148c0ae787a304a10d7ac04802b88c3b681f9a7dceac9f7bb4550d2e53f62b9d3e2d6a917a9dead87884bed2bdb496cb5451ed95b0a5aaf72206af14437ebbb0db1ba631c040f64b66d75b7f0cbaf9baba95025fdfb8328dd4b5232cfda8064689d3acdf11c5eb978cf2845f3409877c01770021f77bdb2d3d08fc6e326a5e70481a654b19cf20929655314ecb4dc84af3ab3d4e2cfd6d4f8d0f04712d40d5df23538ff59abd676d12d3b97fd0194e5d91a6eb0fccec3fcff0b6838cd47868adc3ffe84e80f25525a88fd650a91aa21cce9813597d80c1e9cc774bd8d17fd94393ec2414575b1e4e4cf40cef9810ced51b2afd1848707ac0d82501c85cb5cddcd4e81f80e0877fee19f4d3e09b777b9d2aec9ab01d07195383b928aaccaee28af94bd1d31be737238e183235f17bc058103633738116a6134b495f9773a8db0875710ada2acb0094eb47009c0f92d56235f8af35520976be7647c23f87d99d60ccc647c5e28217a3fe3e7df3e8b192e06bed8fc8100979937235fc72f236af36bf62f6bb2a90f6879368c5c5d375ea45a721b9c99a67a0d141b8af458aefe77b7d6eab53ed6016c69eacb0789b7b6543ed760a32a0da01c6e23377c920e5535c0a109dc1afd22af079e31e8590254ca6a5e118d47ffa5ca65dfc8082535e6946772e2204b7a07ad67b0832b377ede74bd25d1f1e31f069841e44d42815d525e0667d4ace3a3a2a52b3589b4ba72ed5fc2147c110c498dcc38859b7f38b7ff2b79dfe7e267ebbe8ad565210cb65d89c2406af847fc87654b4b40e1b26411eb8d2a9f8237034dff2aed494b40616f23c19eeaa8ccb485454dd01c21d0d681e5dd356c55add4b7471b470e24341e8182026253b71708dbd99d0ae8d8f797be621eba2b532b3c1fded0e215a985bce78ce6bd733430bef61df55b1dfd441ab8acc7b6fb4c179679437392a47c612150c918b279ff7b1a8aaed7db99f0ab572ed0dd891d594403d8e72e3e7435581d2e6b73e2e9bdfc5730238d98297bbd24a9c4c91a48a603534161fa1ec2319d8466e961aca4da02422ebd8cd154933f29c57abaa01851a701c029bf62e331379290512b0475663a25596e05aab1cf9879a5c85b3c49ca8aa456c94d19fbae5c3be66bb6b603e641cb7b5e71681464747689209eff6a6222e492d644ab6257f9ed26e68a4201bdd3edff72ef7e54c2236531e88cadbcc8d7fff2cc21a86c19cc09b788a4c814350e2b484817beac1d15f314dd976f7a46bed301cc99b812bd40482a7595becfc720248ad6bb6c1055eb275b273221e7edbba4b37e9d94b0ab1e79df8b81f28e4362f6ef252615d1524119f096ecc1bd9edecd335e3e68a2f9a163c0e91a2a780abed0cc169ff129b6ebab0ed1f3a515507c188f73dbe166215846cf7c6fde9726bc549cb6a672e16695da2cb699f502000b3adacffcca8d2b37251b4cd96f01ff107e3b3efdde9ff06e55e408df1651acaeb2b24c815f723f4c2a75db479f05a8b08fe2a76cdd0f9fa087878751b09aa76b3250c30b7bb5cf2ac109069a186534ec13bd39ed75d79b0d8e3f0f41ab0facdbdf6e4a34bcb9a1c60f5c7ddcc67c22a62bcdcd65fe34f39665d4547be4623242a9f042058fcc12afe6dc67f39e9b6e300da3bb81ca95f84d36c6764ccf20a181e09d32ef5f4da342d2e83dcde69719385bd824fa4a226abb8e5a244bbcbf83208033908f66114b280faf7247d812192193a18b64c517da5220434d65f8d67a873387dc0e4d11ad52bd3e42296f0692470bc25589d4c141f667a2ad8d7a4ba289bb3f3dc96c4784b4b3aab7cce06892b623b839e7db2335124ba5a1718b23fb13d116a9150dc927a78fc562c4ff37c974c9e3dc8ab9db2d62bbe8c1b2f152dbf3a26b7393cea837da9fc2450b9f7076aaefadbd28323241a3d9ffb6dc</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -404,7 +338,6 @@ sudo grub-install /dev/sda
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%91%E5%87%BA%E5%B2%94%E5%AD%90-ok%F0%9F%92%A2"><span class="nav-number">1.</span> <span class="nav-text">少出岔子 ok💢</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%B8%AA%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="nav-number">1.1.</span> <span class="nav-text">写个博客更新日志</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

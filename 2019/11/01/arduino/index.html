@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"jianai0330.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Lab–汇编语言初识&amp;语法结构">
+  <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Arduino与Assembly">
 <meta property="og:url" content="https://jianai0330.github.io/2019/11/01/Arduino/index.html">
 <meta property="og:site_name" content="Ajn">
-<meta property="og:description" content="Lab–汇编语言初识&amp;语法结构">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-11-01T08:22:08.000Z">
 <meta property="article:modified_time" content="2019-11-01T08:22:08.000Z">
@@ -255,58 +255,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Lab–汇编语言初识-amp-语法结构"><a href="#Lab–汇编语言初识-amp-语法结构" class="headerlink" title="Lab–汇编语言初识&amp;语法结构"></a>Lab–汇编语言初识&amp;语法结构</h2><span id="more"></span>
-<h3 id="第一个程序的理解"><a href="#第一个程序的理解" class="headerlink" title="第一个程序的理解"></a>第一个程序的理解</h3><ol>
-<li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
-<li>.org 0     :the start address</li>
-<li>r16--r31,PPRB,PORTC等等在microprocessor’s CPU也就是Atmega328p里</li>
-</ol>
-<h2 id="lab2-portb-连led"><a href="#lab2-portb-连led" class="headerlink" title="lab2 portb 连led"></a>lab2 portb 连led</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
-<li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
-<li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li>
-</ol>
-<h3 id="arduino里几个概念"><a href="#arduino里几个概念" class="headerlink" title="arduino里几个概念"></a>arduino里几个概念</h3><ol>
-<li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
-<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
- 它们 连接着the external digital pins
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Atemega pin</th>
-<th>Nano digital pin</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PB0(在芯片的四周))</td>
-<td>D8(在nano的两周,可连接面包板的线)</td>
-</tr>
-<tr>
-<td>PB1</td>
-<td>D9</td>
-</tr>
-<tr>
-<td>….</td>
-<td>….</td>
-</tr>
-</tbody></table>
-</li>
-<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)
-</code></pre>
-</li>
-<li>CPU怎么链接PORTB: databus</li>
-<li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
-<li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.<h2 id="Lab3-portc-很好理解-读value"><a href="#Lab3-portc-很好理解-读value" class="headerlink" title="Lab3 portc 很好理解 读value"></a>Lab3 portc 很好理解 读value</h2></li>
-</ol>
-<h2 id="疑问疑惑"><a href="#疑问疑惑" class="headerlink" title="疑问疑惑"></a>疑问疑惑</h2><h3 id="程序内的语法"><a href="#程序内的语法" class="headerlink" title="程序内的语法:"></a>程序内的语法:</h3><ol>
-<li>main,mainloop的意思</li>
-<li>rjmp?</li>
-<li>brlo <strong>lessthan</strong>? 为什么是lessthan,brlo本身不就是当lower时吗</li>
-<li>.org 0,地址0 是跟0x06等等同一地位吗,那我在.equ里面最小的那个地址开始可以吗 --11.3<h3 id="led-on-s"><a href="#led-on-s" class="headerlink" title="led_on.s:"></a>led_on.s:</h3></li>
-<li>SREG的作用是什么,设置为0要干什么<h3 id="第三个程序-portc-lab3"><a href="#第三个程序-portc-lab3" class="headerlink" title="第三个程序:portc(lab3)"></a>第三个程序:portc(lab3)</h3></li>
-<li>从PINC中读取数据到PORTC,那pinc的数据从何而来?</li>
-</ol>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="a228d097dd04e194f876191d263f1fdc1aa2c98a73ef37492e8112ceadd144c5">22064b17c03cb0c0e58c99349b6889d04da46185588523f900d7c5ae54c146cc098307235e01354e59e5deda1934f97b29ebe01bc00a09648483c460b080e62b7617063568e4dffed27d44d61d5f09926a79946bfb9a122fd52ea3bc641cb5ca36b7efddafa6c54247a225ec9973ac3cc6d302a681e5eef82b6df9628d3f784ac216b440c2589caa7c1ee698c70709746c2f2cd8c7d11ac2855d0ce1317267d2aa14a44686fb3eeeca28cac091d2d022f263b79a47698a9143274fdcfcb5ebd7ab8af71db18e3302d4606489fd4d2ca64eeda5dd9367bdba08c8135bf423983c9adc07188a168598736039cc838ebd788f41caf0b0dfc057179963c698e62ba78bcbc6de397774cb39a3d6fd40387604977c34d6a686b530460fd4ca96ef499d1a516041a809fd29c255e688bb7d76816e3d8935435301ad0e1a6f27651058024277555a84845de5e01314c12313fb0b44bbc2b2b5776b2fba860ce819a8bdd5a708427fe63376c713ad2e5da278e80f103c087c13e6b41b01a945568ff8c31ab47fdc731e0aa07e97fa8ee76f79e062d3c34994d303143d573d148b00b5a6bd804e0b0e721e4f559e6edc5aab29132495fee77ee17d6509a0ae00bc2af947000d287924084d708665ca863c7026da893bc3a7f358f0fb9c8fb0bd9aa9c3f07df761c0cad0870d6ca05d0bcc9c143aad1bd8b4ab3cbcf653a7ded64575c8e0db79a494af5fec11857e4e6a7307f033b76866391bd5d69e9fb616b567a2aa40d80c59eedc0174f5f3b9700c23693689be1ed8189e3c1180db018d880b27262ce7ccb37d83c497285bd2821123790b7bb6238bc0910f0b8d16503620077330f36dc3fd8c736569ea5cd4bcc6e469d909ee4161b669ac08c8be0e2e7387b2160b972afb9a3e1f3fe3dae91dffe0b2b54b9ec1f752e44e8c8a52d7dfc11a2f7768222b9e15ea89fdaa314b719b767d9c2c5be3f166e526f754f6d245456309b5a47053649fdd341ab3cfa035bd18f0854c6b7d01596f21a28f14d2d2035531b5819be5b1e6569b8c2ec86bda931336f678ac91a32b4c86c085b1fee38751d125205926c26815ea4b1af66a1f6ee4bd0e8389d1a482669ab312c6a48433f7c50162eb744fae58c79a74ee54a796cf0d3861442a69581c6ef2abfe70cfd4548077ca8839c0d67f4167d1f3d0bd73ff383c546bff073eca2e417adc95d2f44ef909fdb8db4de59c57fd0742dbc81c7326fd86bf0856e57f56fc1aba85f06c769357d9bb1138e4fde1371d0d9fe4d5671876326718b3e5fa5ea38d94bd040ba637a4e01d14801fc37430ec27a24f374e985cd2887a1f36e787a9c6bd59863b58aceee809de40eac2016841f48d960ee0fa7367e02d6220ba57cf2274404f4eb765178715ba05772ca95970646fb34591ee3120c96d20ef0f9f4dbd381ca7d6711ed15a524160284b15cc38ec9d4a2e9e809af8eb9cc480c88ca3b31fb8df14951da27046c660bb0d9f16b53e9be5d5a606460b8eeab84985c0285e9c7fe9d7d093f73f361edb27d4a11755d144d468f7fb21dfe467e0faee29c3bb60e20b2d4edd31d7fce7440d5706c96882e3c0c95f0e7aef06319395b8b31fc48cc527c8461ded89d084b9275ceb0bdeb996ed2409959490dd46222d306dfbcfbec4308c399b444b7ca45d509d62dfdc9045556243c1f93051cf622504478b580b1ef8739b7af210846ee0ac23105e0ad00bb4e88ed16b505713a7a26f3417ba41999e7c14a86f2816c1d2f03ba78f179261d84ca3d0f407ac6febffe72d9f9df2fe6b5f298e62df939ab49578d5928b844e8579a95a4d3234afa95c383241b270e3291c4044f76b418c7681e757d2a0733a7bb19b57284c5b5947916d53b1818b08d8c8bf8529a12f1d38922f14e4c814eb68977e30edebbc3dd44cecb10454f182fc02920797d4ed799ecac2fe0f1b598e1236e4f9491322b35ef88dce7475dbe0e8a4c7df8a7c0faab0b77a9cc7aaf774096028bbd3f014ee4e0ca46110dd98e1c5a3aceef098f4944822585324d4b9aa50ad860c58d0251677c13dd70cac57141e6cbcf696e81ee54ecb168c0babe7ad8e3c8389b7471823022b6a44f3f4c9e076315a24a7287be7e364cd48759bc894b4417707c40c41f7e21f50ef2dc55f72bed5327c26f2cc9d45afecca4b617c301c8d1e832b0a1903767dc3b3c8e474f8f7a80a6b949b35bd0cc5b25a4d7e88824acb3cb1c04d81d4dfb8814026126b6090aa5cb7b2c8882323f370f6d0012b1fdec2158a2e1fc1d2c3da3b30ee7fe538a8060cef261d8db70598681d995a4c658819883c2c0a687ad398bfc5c38f419f03468e2aef9a0a86e6146979ba6d700d88d6a50b409149ce45247ebfa992345171650f17b224c3dfb26e9ebcba70c7e68551a18665b24a91681c0a41b58449a24e8963d3c7af8192033e8dd5089d48b4bc67a0ca31aa0347a36aa9000f09483953d0f11a9cd625a21860889445e68a425a1d866cc9caa4017b45088c9ccffb115ea0c20123a4bf8dd9e8c1d410bcfcba9244bf21fe4ce8f5bc58c38a3c3eae53074382a1debb7dce645cbe4d3c59bc6883d059c60f5d2f5d481403e84527c2e9d782a830496d0a4c5d5a23bf53f4ca62039a7ed79df0f157e7ba53ee328eb011c936373da6a4e255c8455a87f12799306aa41fd8ebeec727b5dc8c2ffcf9da0d10b94e99ca194990d7089954d353019853bfbcba1135014ffaa1a9599c07dd8e39ee0b8ce6c367b9eaeb12c94f2fa0cb03bf269a43034689dd80ca9f4563ced17e8792f7aadbcb81a317d16701f8ac65f347b0197afabeaeb67dee5fd76a37b421158fdbe88a123231dacfa6635601787c5c737d0425e51c3456c46be25ed4c4f16eac92b9c2807ced5ee5639cc627ee6f5a2917b570d52f8c5a5603f512aa7cf8f2f0fee4e1af322aedd6f4efadd160d5a8e837ddfdafdb7d04d781fd22ab174d68a7df7d7b44ba6757f47b5e42e0fb0ffdd32c536759113eede132092a502c6167cb132c8320645899b03a664510d33476bde0ab22746f552dbc198fb24aa06a8240ac51de2bfde4af191e1769a70d377f6b71fea5a4eb5878acb1e261e1f4dba53c2e01034cda9baee89453cfc61b422743c88ffc5c45de1fe900db82daaf1f1c9baee123430688bbbe2d6e43c9ad6e3c48afa38bcecb9c84cc52d8dda7bdd0453efd913cb80decd0b7bad8ef2177e0c4e036d3a35015c1557b7ca60a15390598837f4cfd149ebea413fd98b79fac8f0b97a58ed2593b4ca0362ac81f7478433c486ff17572ed93f385cce2c667f8d6601e0a2bdbd2ad1e18787d98f26e8c1a2dcb9f9c93eb5a181f8ec2b7fe0bb0f7ea03d73c279ce1bdd79ae3e501f5663bf61d41754953ffd562a3a48c7685ba786c752450d78ca40ef783279342ff45c8345e020969304df05a46a1e785c1c99225364536e274967593e2bf0e96ca5361f90dbb4be1b54bea3fc36a5c2584b7c1158470b16060df7eb558a0d5fb8d5dcad5d47604af7877678a1e4a7d5de924aea8247b305abedd6150248ba9290802cdecede2de87b64bd95a5e5c89bb9a302d093f091e47abe9c95b479e05eb09214a0476314c0da5679cbb2243a76727b12b70246090bddbd4489f2c4b0923feb640e112d936e4b098ad2c04975645fee4a87c66134becd6a662ba8a6135a9e745f6aea410c4d51dc1def85f9edaae289b3fd1b819e713efa67cebc53ccc32d04b9bed9fe8cabf47d6359e37627fafee903927bfb3430ece974674783272a58928b64e12d09abdf5739f71963c9298f64beb9e9b05e1a674898a3f580dae39a79eab7f3c312686ada8077912654107bc58ff7f295f30f568c51855a18bfda043d7fc451afa879938162e2a87e26376c40733a040f5cbf1be224bcf09777372da645e40454440ac3838583c6263e10eaf1efaaee91ad2469333c2b3c0aa3b4e0e764da73e567f1ce031f8bb3066a96f85d611d5f8958acf68f384b81c50ed9a144ebd4e8cceaf8bbce2f2f389926c72bec9cbf0cd3623cb17054a42506fe68688911377d4301e311dcfa556a69c20ec7e5a338ecc4fa8766b973b816f991621f0a22f0c68f202f54fdb828b20e2d4d432a6ace125a247d999bb67540fa75f71ba38b137394e53f38ff57243281322d9b3ca1b3446ed0c24112ec53953c22deba938db086097150894e01862877bbe8d202589cf1bf45b90da6ad34a0b50fbc938807b31649989a18e1b307978990d4411186da729f7f9051496bd39f9491b4c38a6e49dcdd4e15ed3ba81f21e1926415cbc2127bc068b1dd502a6854ba5d76d69e496918bae6c77baffe0f6dab5dea683a0721f3e1f358e57b298d90420f67920b73e04c1348e9e31c3805a0bbd5da1d9d0fd1efde20ce5fd0ebf49c600bc22db0c2d2ea55185723d2caf9322fa9b3a4a81e22b44261d885105db1f15f5e8c5fa2842678a4cfed570c39162c2db16c5dc2796191c889c0c0c6c409012dd0558102085decd877d12b047794a5d12e28cbc71621d8b8be87621f9c6227d4a2caefbe7c89c9ff036adaf8333bc7c1f4955bb56e02dcc9cca31c29e031284ab4dd2d1466cc6cfe343cf64b12058c3ca9c7452322ec3fd1653f6156b69c413727e17d34c245afb5686398933b06d48748ae3d89d9e919a945b826aeb9b9d4ca45ab7dc287a91eb5027998a45617e360aacbaf8c979470b05faa5aa2fb28dcca3290aa96c3fe1fe841f90ffabd718790a2810116e6bc1e3891a7f18d9aa2284192b89e7f9a41591ca52038e41e2c8c7228e32109aa7ecf93f959ab290b8dc61a0481290b17d2a8d50fee9c9c28f06e0762ef12f5515c1d5681e2627bea38e80a3f9fc59ffb54489d6dc4dc5e11460a4d6d0133465de186ba9c76f122c56ae172876112bc1a186290675cd620b2d11ca25e718645b5ccf22a96d87deabadee4cd14fabdd48c494c8ba5e2a49569c78bbc7c4dd7bd594b949e4fb5e2d21b880fa6537599f19072f841732a7d8bb6ee53deb704acd44695311c9c982bd6d4b38eb9334b0f7b3277705a7b0c886a3cc1933d6a7e0b7039ef93a7ae695a36116ecbf3c5cbc99b01b755d8d80c5f8ff34e3a1d0e433e532792b1a883c58bfbd9efbccb35ca3c5341a93eb9a2247784f949356c5dc8ea70b76abc2afbe82f5f6e617ebcbe042893584d290ef691669aad711f792cf3aef40a0c7f7ab599cdd90bddac88d592fe23dc68fb5ef44750bd10331e6cc0a9146c9e478173ffcb191c8704d0fba3b89591b0f7eba6c132a2dd11537992fefde395544112e170f72186f06f684d32106405b6da06c0ea99c33345cf534bfe83f5cb7a81c80bc8540126ad35bf2b5f62fbc3c7975132c0b051cd99d8aaddd615b424c89bb1f803aad7c304c15839a759536ebff8a3243099fa475e46e410759d6c300f46c95e8f5179f</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -389,7 +349,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab%E2%80%93%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%88%9D%E8%AF%86-amp-%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">Lab–汇编语言初识&amp;语法结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.1.</span> <span class="nav-text">第一个程序的理解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lab2-portb-%E8%BF%9Eled"><span class="nav-number">2.</span> <span class="nav-text">lab2 portb 连led</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%A9%E5%86%99"><span class="nav-number">2.1.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SREG-status-register"><span class="nav-number">2.1.1.</span> <span class="nav-text">SREG : status register</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rd-Destination-register-in-the-register-file"><span class="nav-number">2.1.2.</span> <span class="nav-text">Rd : Destination register in the register file</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arduino%E9%87%8C%E5%87%A0%E4%B8%AA%E6%A6%82%E5%BF%B5"><span class="nav-number">2.2.</span> <span class="nav-text">arduino里几个概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ATmega%E6%98%AFArduino%E9%87%8C%E9%9D%A2%E7%9A%84%E6%AD%A3%E6%96%B9%E5%BD%A2%E8%8A%AF%E7%89%87-microcontroller"><span class="nav-number">2.2.1.</span> <span class="nav-text">ATmega是Arduino里面的正方形芯片,microcontroller</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PORTB"><span class="nav-number">2.2.2.</span> <span class="nav-text">PORTB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#digital-pin"><span class="nav-number">2.2.3.</span> <span class="nav-text">digital pin:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lab3-portc-%E5%BE%88%E5%A5%BD%E7%90%86%E8%A7%A3-%E8%AF%BBvalue"><span class="nav-number">3.</span> <span class="nav-text">Lab3 portc 很好理解 读value</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%96%91%E9%97%AE%E7%96%91%E6%83%91"><span class="nav-number">4.</span> <span class="nav-text">疑问疑惑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E5%86%85%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">4.1.</span> <span class="nav-text">程序内的语法:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#led-on-s"><span class="nav-number">4.2.</span> <span class="nav-text">led_on.s:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E4%B8%AA%E7%A8%8B%E5%BA%8F-portc-lab3"><span class="nav-number">4.3.</span> <span class="nav-text">第三个程序:portc(lab3)</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

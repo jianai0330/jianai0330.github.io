@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"jianai0330.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="五 performance measurement and analysis">
+  <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CS_note">
 <meta property="og:url" content="https://jianai0330.github.io/2019/10/31/Assembly/index.html">
 <meta property="og:site_name" content="Ajn">
-<meta property="og:description" content="五 performance measurement and analysis">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-31T05:24:07.000Z">
 <meta property="article:modified_time" content="2019-10-31T05:24:07.000Z">
@@ -255,38 +255,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><span id="more"></span>
-<h2 id="PPT提纲"><a href="#PPT提纲" class="headerlink" title="PPT提纲"></a>PPT提纲</h2><ol>
-<li><p>性能equation : 1. CPU time 2. Amdahl’s law</p>
-</li>
-<li><p>benchmarking: </p>
-</li>
-<li><p>性能optimisation:<br>RISA&amp;CISC(the two main kinds of ISA design)<br>  <strong>RISC</strong>:reduced instruction set computers   <strong>shorten time by reducing clock cycle</strong></p>
-<pre><code> simple instructions,few addressing mode
-</code></pre>
-<p>  <strong>CISC</strong>:complex isc <strong>reduce the number of instructions per program</strong></p>
-<pre><code> complex instructions,many addressing modes
-</code></pre>
-<p>Branch optimisation: pipeline hazards<br>delayed branching<br>Branch prediction</p>
-</li>
-<li><p>disk性能: 概念: utilisation U<sub>d</sub>=r<sub>req</sub> / r<sub>srv</sub><br>FCFS: first-come,first served<br>SSTF:shortest seek time first(出现starvation的概念)<br>SCAN:not an acronym<br>C-SCAN:circular SCAN<br>LOOK/C-LOOK</p>
-<p>注意比较各种情况下的好坏</p>
-<h2 id="课上和课后总结理解难点"><a href="#课上和课后总结理解难点" class="headerlink" title="课上和课后总结理解难点"></a>课上和课后总结理解难点</h2></li>
-<li><p>flushing the pipeline: conditional branck instructions</p>
-</li>
-<li><p>clock rate=machine cycles per second</p>
-</li>
-<li></li>
-<li></li>
-</ol>
-<h2 id="疑惑"><a href="#疑惑" class="headerlink" title="疑惑"></a>疑惑</h2><ol>
-<li>CPU里clock cycle的理解</li>
-<li>对于RAM里的两种memory ports: 1. 32-bits for data/address 2. 8-bit for OPCODE,<br> 是说每个横格长都是40bit吗,每一个data前面都有8bit的OPCODE吗,那怎么行得通呢</li>
-<li>byte-addressable &amp; word-addressable:<pre><code> byte..:every byte has its own address. (word:every word) 
-</code></pre>
-</li>
-</ol>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="6d6457c2a9df49537cafe79c087ddefae773b7a76dc68bae1bd7b8f495ae30c6">22064b17c03cb0c0e58c99349b6889d0b31470871e725085fde7c8feed9af7ef36b5530c5eb1fd9894d4c8b0e010a67763e300e31ef78939ac29e4dc505de1b894434df4b446b7bc2989d36e2f66a232ebd97006935ccfdde4f56ca40d8cdc8ce539d07a2de73ef89deaa640eeb1ecaa594a00043c16c41272b87e3bd78c4b6cfa209725cffe5bbce8a3cb6bd6a6c0e00e0dadd3666c52aed1e979da57fc235775bfd90270f0f6d0a46169f48d73a08f89f13f7b140ce3bb9ade6494f108359e7d731ee47dd72ff7810d8af05d02a6c2e2808ef65e6654d2b3ab9c25ae5ac3c560dbf6ab4fc30797a623cf811de88c9ea666783f7b6b5c9c032bb5882fc2f9d5a966ee38cb22f0b383d5f77241f156f31a426f3e09e515088017eba52ea5501f3838b313332451fecbca3285dfecbc0261f59cab3eb68b7df82531d9d62cf3ac103c9c300ca787673eda37b79106720f51f2a4a8f07b08786d5e1766b016dfdcb68c4a7c9428919520f9eda8385d9acdf62b55ac082b146371689044467ca35acb09f5fb29e40519c71dcfcae145d7304f33fd07b4234d2881f515e6e2c3842126027ead9b76a52d06890cb91752202c298e969e17a828e901b2f2afa195df143865e43133587081e8791e9ef867ec05bb6e62f398784de6180087f396bead5b7a4199b2b1428b4152613dcf8cd1aa9269cc2de9bb1ef459bab254203c06d80a0846ebf88c2da541ab6e870b98e5b4ef8ca574f8954f9bdf3251e04344c97a81747948b89f31a4b830f4ab7fb6da693de52f65c74e4f952046bdd47175122f70575962b40b116c0c0930e72cf27fcdaffe9ab54b31319fb4ba414f017f0497b712591809678c53b1960bfcae200fbfdb6163f556dc67cd22c91c06fc9f2ab754a9151c97ec08ef6874df0723822f5bdd5cf0d0b26047fd4ca6fa395cc60034ebd0f8323be3bd855fa942b315f6680bb7e41bcd1a6b74ea806d3f3839859b245840999fc3df430e6f3df857e0ba32a4a226b946106725a6961e0085d2ebf6243fe1937792d16201c0a8b17edfddb22ee353b6f03cc447db7dc924a17887b24b6a945b12e9e3bb0f8853fe0b892ea150ef69418a4d4256066ab8d538bc41208820590a216acc1c455633ffdbc883183dced959109ccb721623c79f06f14d5c8675a2dd94f989726f526cf1b8fafc4688506e86245c8e41751afa1529d1fe3337ad060f2984b5abbf48827a6252cbbb0049c92b16fecfd129da0997dcbc590029a7240f4216e438ca32b6ba394412506de7b724918dcf0522f1b8dd36f4c3585696bbf55cb55e8a3c8337cad80e7e15906ef5181fd1ea94ea848b307097ca929580a05cca5a164b9cb9deb48a0a772d680d3dc4f00978f271e2cd51a8ab6b95f7be3b4bb9f4ee73552ca7d3875d9037dc4eeb12030c40f9277bc3120168ae18d9122fd94a51555365ece96dd0ee8b10635db04f0d53ecc65fd561eccc21eb8564397c96ddab8610c818bf209b8f3ab4c489bdb88a54d370901c3fdb3d6ca947d531a1e16b0a0732a0a3769a245e561494ad63bd6aef8a456ce8b2e6815370baf5b784b18b37e71b7cf291b3a28da84349df2b37c6a2e01ea040f751841fd30904eb539ec75dd3401b67b4d72eea58e6adc964a1fd1681403ffa83acd9707893a6e41b76d30026ed444caf0b5c9e5d0a916515e99e72d2a1beef980c42ff2aebb32bd5af3a4d4b8300c9d2058baebf3d57cb4853764eb475d7bac77252f637fa3beb166abbb3d8aaeb6f7996c7e8c2d638368544c6b19f97fc7401383d29710ae3142df1364467a9ee7bdef7b38a08b8648449f4ffeddcae79f6f8b16b59e518dcad1f863c5ac9031bc5580d9a078f488e31e0e4f75251de0bb802873e91edf006a100771a344d31e7c813f1b5f668ec1cf7f9bc1724a21b02eeec820e3ee1af6ded2f31c18bbfa98800bfabd6fe60c500f69c1c1e20cedf0360b242ea4f9f71c1da3adc0223f6d8e4ecec57900d64afa8731a84ad42face1cce670d9d6ea93b91caf87e357150ee5bb572fdaea120babaad1a3b1c986202d26ed5c4ae5fecd79ec9762e9c5dbde846df9fde7ad196b8d10803c9a903f810af1420ece6a517d48206ebbc5fea21f58a38d0d61f6c4aa009c816efd8c5dbd4690327f77ad1417966999f7fa8f29d579a66742bc40088a86dc46082ce6a7aca0146417be63d9976e71c9453e717e14a5875ef1ec1cd4dd403c09bcbff59a814d0cdeff8bd9c089ea1327b238ce0e05c3e48a93f83f0d1c16acd1e22c9c73fbdaac1e1f77b632bf710e243f39e26012fb9124784f5028eea328619dd37aa7de9b4fe4c5f2db8075bb0817ec0f0e1d50be76e651cf834ccec3e88f3e172440ed4041dd21d76586344e7989b772d4de55a8a0c223bdb80a45688ed65a27d1b5cd23eef2e847869c57bf0ea92f55c8d7a0ffaae84533b031d23380102c3c701d495b904f9a82ef7307c6521efb837d4bf4ba1f67f7e243ba8a26922639b4d6311038d674ac834764c7fbbc5daf74132ec14be5f2688bc6bd85a7bdfce32a94444211fcf08ededae20a5391c7e1ac829515c6c07faf8bff16c2bbe89a83837f006ad3d679c710223ec2f800386bc31a50328592d5d30ee93c7a2d1215191d7e8703268de4e53da794c4c1ae311a81437888de488ae6efa1944c7ee626de451215d65dff53295287cda01027a6fd3fe7cc7319cb648e8ccde73c5a162890d56fb2d8c920fc1e462a3d90d18337d71163a0b86b48d140390a6173c6d8028cb1baa7125dc35025206c87262d411d81742dae241044ed561b8eb23b5f324987500aeec14fd3c6cf2d705d9671df0b71df943a834f17aa277bdf8da770c4e72030e288bdf86dbfb493d7c52647806dc6677a3f8daa97138259a1b3fc3edd74cdb33c54b2ee69c623dd16305ce6cfea096b6d120c0c4641110339c7929ffbf85e7ef9401f6f38970bbf6cecea77500</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -369,7 +349,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94-performance-measurement-and-analysis"><span class="nav-number">1.</span> <span class="nav-text">五 performance measurement and analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT%E6%8F%90%E7%BA%B2"><span class="nav-number">1.1.</span> <span class="nav-text">PPT提纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E4%B8%8A%E5%92%8C%E8%AF%BE%E5%90%8E%E6%80%BB%E7%BB%93%E7%90%86%E8%A7%A3%E9%9A%BE%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">课上和课后总结理解难点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%96%91%E6%83%91"><span class="nav-number">1.3.</span> <span class="nav-text">疑惑</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

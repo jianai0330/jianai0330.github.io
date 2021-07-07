@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"jianai0330.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="六 graphs 7.1">
+  <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FC">
 <meta property="og:url" content="https://jianai0330.github.io/2019/11/13/FC/index.html">
 <meta property="og:site_name" content="Ajn">
-<meta property="og:description" content="六 graphs 7.1">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-11-13T06:15:59.000Z">
 <meta property="article:modified_time" content="2019-11-13T06:15:59.000Z">
@@ -254,207 +254,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="六-graphs-7-1"><a href="#六-graphs-7-1" class="headerlink" title="六 graphs 7.1"></a>六 graphs 7.1</h1><span id="more"></span>
-<h2 id="PPT提纲-11-13-拖延症…"><a href="#PPT提纲-11-13-拖延症…" class="headerlink" title="PPT提纲 ---11.13 拖延症…"></a>PPT提纲 ---11.13 拖延症…</h2><ol>
-<li>graph的种类:</li>
-</ol>
-<ul>
-<li>simple(e.g.Niche overlap graphs in ecology): --------没方向undirected,没multiple edges,没loop edges</li>
-<li>multigraph(e.g.Road networks):----------------没方向undirected,有multiple edges,有loop</li>
-<li>directed graph(e.g.representing binary relations前几章学的):--有方向directed,没multiple edges,有loop</li>
-<li>!开头比较三者的表格理解!</li>
-</ul>
-<ol start="2">
-<li><p>undirected graphs概念<br> 一些概念: 两个点相连 它们adjacent,此线edge incident with 两个点<br> degree:此点含线edge的条数<br>  由此有:isolated孤家寡人 &amp; pendant(一条,degree 1,垂饰很好理解)<br> Handshaking theorem:<strong>edge的条数=点们的degree的和/2</strong></p>
-</li>
-<li><p>directed graph的一些概念(它有方向!)<br> 起点is the initial or start vertex of 线,终点 is the terminal or end vertex of 线<br> in-degree:此点含作为终点的线的条数<br> out-degree:此点含作为起点的线的条数(注意loop一个圈的话是in和out都要算进去的)<br> 公式:线的条数=in/out</p>
-</li>
-<li><p>adjacency matrix</p>
-</li>
-<li><p>Path</p>
-<ul>
-<li>length:所包含edge的条数</li>
-<li>Simple:doesnt contain the same <strong>edge</strong> twice</li>
-<li>Hamiltonian path: 在simple的基础上passing every <strong>vertex 一次</strong></li>
-</ul>
-</li>
-<li><p>cycle(可与path类比)</p>
-</li>
-<li><p>complete graph (n-clique)   n-cycle</p>
-</li>
-<li><p>subgraph</p>
-</li>
-<li><p>connected graphs   , conneed component</p>
-</li>
-<li><p>isomorphic同构 if isomorphism(保持结构的双射)  , invariant</p>
-<p>​          </p>
-</li>
-</ol>
-<h1 id="七-tree"><a href="#七-tree" class="headerlink" title="七 tree"></a>七 tree</h1><h2 id="PPT提纲预习-11-13"><a href="#PPT提纲预习-11-13" class="headerlink" title="PPT提纲预习 ----11.13"></a>PPT提纲<code>预习</code> ----11.13</h2><ol>
-<li>定义: vertices,root,edge</li>
-<li>edge是一条线,vertix是点 ?</li>
-<li>rooted tree</li>
-<li>parent,child,siblings. leaf,internal(vertices with at least one child)<br>ancestors(以上线上的所有),descendants</li>
-<li>应用: binanry search trees &amp; decomposition trees</li>
-<li>概念:level,height,balanced,subtree</li>
-<li>m-ary tree, full m-ary tree,full binary tree</li>
-<li>有几个二级结论:<ul>
-<li>对于full binary tree :n internal vertices ------<strong>2n+1</strong> vertices</li>
-<li>对于full m-ary  tree: n internal vertices ------<strong>m*n+1</strong> vertices</li>
-</ul>
-</li>
-<li>逻辑式可以用二叉树</li>
-<li>binary search trees : sorting linearly ordered list</li>
-<li>tree traversal: preoder,inorder,postorder</li>
-</ol>
-<h2 id="课上-提纲"><a href="#课上-提纲" class="headerlink" title="课上 | 提纲"></a>课上 | 提纲</h2><ol>
-<li>概念和定义<br> 什么是TREE</li>
-</ol>
-<ul>
-<li><strong>simple</strong> graph with no simple cycles(有cycle就不是tree,必须要是connected的)</li>
-<li>a unique simple path between任意两点</li>
-<li>如果加一条edge，会产生cycle</li>
-<li>如果减一条edge，会disconnected</li>
-</ul>
-<ol start="2">
-<li>rooted tree</li>
-</ol>
-<ul>
-<li><p>特性是其中一个vertex被当作root（放在top）</p>
-</li>
-<li><p>两个rooted trees are <strong>isomorphic</strong> -----bijection</p>
-<ul>
-<li>root to rooted</li>
-<li>edges to edges</li>
-<li>non-edges to non-edges<br>  ？</li>
-</ul>
-</li>
-<li><p>basic terminology</p>
-<ul>
-<li>特别注意internal vertices 和 leaves，一个有children，一个没有children。</li>
-<li>leaves没children，是垂饰in graph？</li>
-<li>level： 从root的0开始</li>
-<li>height： 也要从0开始算！ height=层数-1！</li>
-<li>balanced的概念理解过来就是每一个分支的长都要等于height或者height-1。</li>
-<li></li>
-</ul>
-</li>
-</ul>
-<ol start="3">
-<li><p>几个特殊的tree和二级结论：</p>
-<ul>
-<li><p>m-ary treeM</p>
-<ul>
-<li>每一个internal的children不超过m</li>
-</ul>
-</li>
-<li><p>full m-ary tree</p>
-<ul>
-<li>每一个internal的children等于m</li>
-<li>不明白 这怎么可能？！</li>
-</ul>
-</li>
-<li><p>full binary tree</p>
-<ul>
-<li>每一个internal 有2children</li>
-</ul>
-</li>
-<li><p>m*n+1</p>
-</li>
-<li><p>logic formula</p>
-</li>
-</ul>
-</li>
-<li><p>BST</p>
-<ul>
-<li>注意linear order, partial order的概念</li>
-<li>lexicographical order</li>
-</ul>
-</li>
-<li><p>traversal遍历 三种</p>
-</li>
-</ol>
-<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
-<li>graph和tree里edgetoedge和nonedge到底是什么意思 怎么用</li>
-</ol>
-<h1 id="八-fc-11-17周日"><a href="#八-fc-11-17周日" class="headerlink" title="八 fc ---11.17周日"></a>八 fc ---11.17周日</h1><p>finite automata : finite-state machines</p>
-<ol>
-<li>preliminaries:alphabets and words</li>
-</ol>
-<ul>
-<li>length</li>
-<li>concatenation</li>
-<li>prefix,suffix</li>
-<li>language</li>
-</ul>
-<p>2.finite automation:a theoretical model for programs using a constant amount of memory regardless of the input form.</p>
-<ul>
-<li><p>finite <strong>control device</strong>:in any moment it can be in one of its <strong>states</strong>. it is hard-wired how it changes from one state to another.</p>
-</li>
-<li><p>states:(initial states,favourable states)</p>
-</li>
-<li><p>input tape:divied into cells</p>
-</li>
-<li><p>how it starts:</p>
-<ul>
-<li>the finite control device is in its unique initial state.<br>这句话是什么意思？？</li>
-<li>the reminder</li>
-</ul>
-</li>
-<li><p>how it works:</p>
-<ul>
-<li><p>moves the reading head</p>
-</li>
-<li><p>choose the next state of its control device???<br>这句话什么意思？？</p>
-</li>
-<li><p>the control device is hard-wired------the next state depends on</p>
-<ul>
-<li>the previous state</li>
-<li>the character read from the tape</li>
-</ul>
-</li>
-<li><p>ending:</p>
-<ul>
-<li>if control device is in a favourable state: the input word is accepted</li>
-<li>otherwise: rejected</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>state transition diagrams</strong></p>
-<ul>
-<li>directed multigraph<ul>
-<li>点：the states</li>
-<li>箭头线的标签：input</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="作业中易错点总结"><a href="#作业中易错点总结" class="headerlink" title="作业中易错点总结"></a>作业中易错点总结</h1><ol>
-<li>---11.14 五 概率<ol>
-<li>题型: 要运用贝叶斯定理的题目,1. 先画个<em>二叉树</em>帮助理解, 2. 计算时哪个包含哪个一定要搞清楚</li>
-<li>判断indenpent: 三个公式</li>
-</ol>
-</li>
-<li>---11.14 Small六<ul>
-<li>六个工作分给五个人的答案没理解</li>
-</ul>
-</li>
-<li>---11.14 六 graph<ul>
-<li>isomorphic: f是bijection(one-to-one&amp;onto)</li>
-<li>invariant</li>
-<li>题型:判断一句话是否是invariant: 与onto和one-to-one结合为题目服务(例题好好理解)</li>
-<li>题型:根据题干描述画graph时,注意看清楚给出的要求的类型!</li>
-<li>题型:证明两个graph是isomorphic的: 画出图,再一一f对应</li>
-<li>Largetutorial最后一题:只能说思维要开阔了…</li>
-</ul>
-</li>
-</ol>
-<h1 id="疑问-1"><a href="#疑问-1" class="headerlink" title="疑问"></a>疑问</h1><ol>
-<li>---11.13 六graph里directed graph的计算edge的公式,一个点可以同时有in和out,且数量不同,那怎么算?</li>
-</ol>
-
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="2f09bc56be2aea113d5d8f8eae247bdb03456c65b708b78da90a3dff2f0332c1">22064b17c03cb0c0e58c99349b6889d0b31470871e725085fde7c8feed9af7efe33f4739a9a92ae99622e2018bb70a8099e5ab0baf3b5218fada0b658f36286506552a6c7ac3be5cf9209cad32c7a8aeb3770b7a96f3b448fc3cacefc2eb7a06409f0fbb2ed5026dac8146c19fb9d9dda337bddcbe94becb09bd61cdf808f35e84f8b354e556ef52358321d985d2ac47ab6439dd771002d549c2c2c7a5c5b182751039a777d2db1b32658946b2314f35863de44c26223cb930e4ce4d654b3bf3867136461c0a1baa7876213b5d669760a52dde24a589343f788b101d9b142481bdfa4611854b7d3860f0b985e5769b39051e96cd517bb966bf2d21227b9c04a3c1443dffaca06aba8a23213a0f3337195db9dafc0c8ccf90e89266b78a268d4efba8072d2b65a08a2aff5287e90838ef300e52574b68ba95d29405f8b013246a62cc741c1c158fbb138a2704fdb72c51da021c01f4e3a3e682d51a29bf32e5fb829c8e8029a31a466df3f1d4e10cef89e59ca0f6450e33fd0d450c86360c4d4856b1020cc9fc8a74bd7c152cb4c0deb2c082c6761f10452d90d3d9db43299a93511b352643a0701452d5d054c92461cd0a7bda6d6daa1c7884edd21d04917129153e964da2bb56dd238b9f67f9b221281c23971e28bf42cd6348070f845413241edb5d0c17aea559d2d5d1a4b3587ca5dd8e3312c16bb9327c801767b2384c96abf69ece6de60a20fe6ede0afb06f0dda91c55205b739275f656e8cc4553539bccc46a13731062c06976d8ef36dd42258500dceab196c9bc9638fee388adac7640990ab2db87630ae4703a6cb42dbbb04be25f20af75e10717b266a399772a948f3772166483bed0e7f74f1051b99ea6a086fd14e8ba55cf09f7a92aec2630c95eab4cd1d5c35fa472d4d19f5f617bc103635bcd10eabe114b7eaf35b61ab8e342c250016ce88384df0999d9fb15a044758d6112655a6b2cf7bac0e6c48d075ee2cda2b171f3af92460291f9f69952e2f428cca62d0888f27b625dd94b89d9c8f03fbed2bd37ef0899e52b951c8186ce938f30c72ebd802bf621ff4c391949ee733c915bc9a6b62df1a2bb877b9638d6838a450d7751059c6be911d756764a0f43b4bd8a173c8dea260e894c8f8ba8c9c87d27ff797f4f63aae5c693abefd2b73e162be3d6dc1355cd96e9c7b62ccda31a40bb9497427848d3666ab67eca4910b4c42c07d7772a36ded0c5504257bdd8a986722271c493aff99d668ced1b524b273adc4c62e7f87237253879d8cb470e0e3aa204db5f8e670103db60aad7145b4d52d1b3f13d2b7120b527df6ae39f7474a872f51d62e048cc1dd59436b9f85787bd42a9b52dbc9af255a4a1c91537348518b96cd4348e2905b23e1188ed6aba9b3e6783822bacc4a1901c43d7f58d70961659f8820f68cb3b91307d20530e5b3d61dae692f4fc17fcb6639de7dff0b2b5dd6682d433782d260337ddcbdd7240bb846ec5443aa9dda2b81a67c61485b5213b3edcfb7b08f7c601e7f6c7ba5931f05f9bf9541daeb257ca6e1c24b08048c8d4e6dc3ed963fe855fa9344c50b4b5d4829df0ce89399e35d09d395534452f57c4fbf5417710ad7118507e36fafdeadb742f8e4e41fa594b0a123c264cf2ed5c5f5a75a3426453b629cb7f1708cced0d76a1937ebcae4581e1863ba53b86116b271f1141f0cfa989e4aa61f5e162698f5bd5d4a8630d97b30e839761ba2eab407c23c49d4206bd3e19cbe4927e55bdb9ea07fe650ada1cea9cb09283e3f494d798b5bdd8128a82c170b5c537f0460bceafce7cdd424b5029c012d384757c48ecf291867fb49dbefad70bab8bdfce5f7261e21ac67cb7506b6324ddcc659147ebbf7c70e1422d539c29c406cd605959d8db4fedbb1f96c0551863e37e0c88a1863a6efd4c062f20426c3c90df5dcd1aac023398d0f130ee95bd8e6ecf70e6b9072cda57cd350ea5ff26d366715ac735d7f818efe97cc8dfe57f655001bcd4cedbe7997c75f72ba727a4dffb4eb838d2ed9e8f06c78edee7fbd4ffa846ea84d2bd8001d5b645e309ce7fa1e360513080615c7c4d3ca8e79a11a2e05e1925f51f1d86da29c95c22c68e8e0078b9303cafdad9bf33371dd6a3febff0c79db1e945b1add51642f3a37426ad667f1d3ce5eee0c1e794123da8774b4cd964a713e02184c103d1fd68a277bedcaccc2dc821a90921664e1bb1692aa5b0c34a4f34c4698fef03be6cb06ae96a12fa9fc538302ebc4259cf8e029559144db21a0d901ff35f184389abfcc8ca2e4b1147e0f29c5b1fbe9790864c89393d57ae699b61d00bc93b3fabb9cadcf5ed5602193c2e4dc5a5e1c6e01afaa7e4ca0aa02be29d33b1c2f4684a9eeaaf81e51f44e676428091c9fe531936c9e48131c0bdaeceefb10ec73b0cc3f1d36d2c6a928b7885a6f9f4600fa1d50c674a39130f8a82db88054ceb67ac12bfa382d60d89d6878b9041561d3c2509cd9ac3a549b0ecf90b7d56359dfe006200f9dabc7fe2646ce374c844ca09abd04a677e1f6f72f384df172e958f9485487c47ee27d970b7ce9c99064a090ad4711a3b038e7c011edc1c1794efeae750596d94f5fc74ecbf802cb50e3939b58d007262910647c2c51a8590912c40d16da27c38022aa0b37d0e4d54b7881c21f1134445346fad2238616eb1b1d973f15862e486dce175a6da901cbb382a644fd77dcaa1acd6d873e3439fbd6c4a88e5702741f6e66ef4eda057a196fd1e2d18cf4503f1f335b50472b15b876e6d6ba0d4fb78e2cc518c1a2e51766dca71717a44f9920901a23b31258d7039c5c1875ad4af9878df7dd603a5aec402b6982702a8d77c55ba69f9a9e10c2ebdbf07c438e94811afc9bb81c58bb667c1c271ca470afd33484bc2e3cd58a6ae822e0e9afa34c92f85f9cc25fb03f069b8030749701b55a6111e7a4fcfa7b06e49540a4ca0dd2821aaf0633ae03a9a6ff850453eacbe3a39ac6226cc495d2a093f4c80e8bc3e09bacf14486c4ffd6395c3383c61c4a8ccee98a19e5587be6c70e95a579e65ad594280315828eec03b27f1808e3169f07cc164d182e7ff9737eec98ee7581155990b920a99851bb517a6e0ede8ea5d4e6381f2aa49edee621caf29d75d19d29b689679f91912e156f6c3d2eb1c8bb308090ce849eabfed599823b089c9122fe9aa0762317a423faa76c5f17215b56372fec0a30b323444609769db8e53cba24ab0c4d9df7d3b9c90041f40837c40abc348525789a719a1d04edb8a07707e5d56fa90dde2fe90a46060a79ab11f8469819f8ef59e3c2f777a65c88e0f80bd10ffc9eca4894a1078734d2d4ba1cf6dddf0926324f5c7657e82325991602f337be102e53bd027b09f360a257f39c43bafc50a7a4b00e49baa74f0ba5c2aab2d2348d892530e69f8187ba0ab6c2207f661941425f42fd2c1fc41eec6126df0af18995877136d33b50b404306dc9c6a12a68aff9b7b2b1fc9afab881473a65fbf1540cb86d6e618b697298ee274f5a365f0d22da5858e64b8f362375937915a29063f5777309aa8bde80b60696513dc084eca08ffce64ce177930f5bd71542d95befbb59c6bfb1f4aedf5b88caac5788bf21ab5120c8bc1afad483cc65a1a0795ea0afe799fdab4da19fc2463e97799af5ba659d761c7227546d0c39b74714379567e1148c26268d9f1e36583cfe14920b3557929fd9dc4c8c362f669e5ec4265cb53edaa3542be73093013e5a08336588dc09a37b409b6191fce9e4b7aa09565be19e7be3b202fc031890a302b63542bc765673a6319af15be4309eeb12e30b9ad9c11178e5571cb3b04fd9b7ed314ebfa07979befb2cb2bbe56faf67105de57db968600009d8e0a99fca388d0534eed84e1dda0823e6d6082fbd58e0f30323726208f23a01581457076d7c6606dc6f515e37d7c77cd455fd360a7b8af741e67db608097ba310f607a54b0304aecbcd8ed60c1f09028c3a8c3a2ee20ed9101a20236d7d2dfb597dfbcc2436418699ec01f812989af33da55511a8778495bdbcde527dc59b49a55b1869cebf1870908292416aeff1094a9912bcf080c7f7aa132ff9abc9b1900c1190ab4eaf58054962aae90630e1e45c7167c43eb08d735fd685dcdbd6ec93973d5b023234e909a9274c388e7ccab8574c06cde6292196b1bba79c00811b96357f49107d073bc695277a2bde266b5945c6fb823f078c835fe73d3ca78dc07ddce23daebdb43222f34c2228b8bfe996b741c41bf591215489a14904989b7b1f79be3512326920c80b53e90793e6ab76b20dd1e1752cd9e37eb12c9d2da04ec8ec9f020e2d88cd600351ae98e6ce2b4e221d8c1d0131f82f1958eab9fb23beb24fd1d48c38a87b1cc237b3d97da048dda58d9aaaeaae9572f14a0e24cdb6974b40179a18caed4a2aa4795f5819f4c2bd1cbde112157174e4b991807ab4d181cbb6a6c572de2e8ad51672427ece52fe78b5957c29d4464a000a0f4f9c0ca0196be8a42a536a50b05469fb7b043f5ab281429634c741a88175960ab19d9daddbd63d8bc1aa1419f04e8f82e7f133f8db6bafed590c850a13cbdac585800619e9cd8493b298a847eb599661fba6e5043efef3fdc38cfa3147637a0ef3069555228c9353ff9fb967fbe6feb57c492b0d1b2665db9ed40980eecea69acd6981969b8abb64e2bf1ca3db71aa9bce174a977d3a098ac1b2c36aef8af37b3ba8d22a16dea2fe10ca8ae478763451051ade5e9367a588cdb90723cff79ed0e0c8c3473758aad94ed12842052ab10262184d5b9babce8bda443196d5c8946ac565ec724c1545c767d9ea9c3a5449571db66f721a0d136e55537f1b79080e2d81dd9567f021044da868e9deecdc52010f82ff7c4423168c6ba4adb455b5aaa895126466e0edd35bf7eb40092f2c1ddb1c503e1615afb88241ed92c32c05d9f1a9bc7f4765df3f28b38ce04e967dbd481540e4c7086a3438721e8d935449c75d8ce9a5570bcceb18b9c1be84bc65bce38f2a8a9aa0221b0182f2915d0b3dfed27d458c53a6cbae525d0e9c210ef78a13ad8ab2db861eff67c5ccd49c8e05985bfc30225ef221a0ba76b725ef1f14474954874a3978f11002feec9ec86407497eb89dbf8439e9ea2d355872c5c99bb6cff7baf526f9f2476fc22a9b45ca4159e29037962fd601b4bd72492f1fb29d798451c396207f0759b4a86d62e934bd92eac7a6ca42b3a3865cccab264a521230d1a5427cd1d496a08ec5d5b22f7795ddb7769b7791907d75c2e1ee7d74a7659a6143a026e1af8afcb8a5c10cefc59d397d443f09e8df11b6da2d14949d7088e201e79a8c43068a1e94e18c075c275b3ef2dc628014cb7c63b9187d1bd523c4120fe534879c9e8a31c068cbc9c0834570e14aca668fb9810d5cdb046e4fb768c3eee81e1020519fb993d9357b5c727890552b4f640ee274a1069d77c0c0e268e805aad0d55102e3c9c73cdc4cb8e15cbdedd9430dacf9e9f38ab497b7218d94adab68e3e8dcf630d86952472b8c952e577186431bf29597bd9b6d89aaf20b46f956dabc36c5cdc27d1214be573fa6677da1c6cad838ee268c5d51e94ae122e8204f2992765f35e3933fa5d37d8e8f5e8a5c4249cb63dff89195a76604b0f53ce41de1947ef9461fb96e5e4a7ed5ff65f9a9b4da5123b53e2dffdd1845f27bc9019953f026f90c7c9a5bcab301cbf38af17ed1ba04f32fc67aca22cac47e478b0e4161d01d823e496ead3ec7f4a2c7dad8432d3ddcd853cdf68e898abb96e5b3977a745c8703751d647a2310089b537a83744b58d99f7576fc0453c0e7ef46c6bee5d2604fcbbb60774387e40476e396919bb7afff6ed2bb01a8f55d1027b862a97ee91d92621e6f83eef496853d27c3bed77d7515487fc6930565a8c746134500ec4371bceee7f11f0537ff0862a7bfde5d69ed573395cab33cfeb3bf1c8a5f704d7df9d2fca7b06772eaf78364b885ad2d99121045cc618de19f84a1938725312fdd1e3072f10d45840d49f54d41ab3d3d56ebe37dcaf2362b474069efa05c0cd23d8839efd20bb622804cdad132c4a3c77ae8ed9c2d24aeec5f23a071501601624dd72036ed6000db996a0ae08c47850f6a3a04c33f637b9254448238bb5b81da6c258e51cdddde11f5f9e79dc9ef6eda89c4dec7b6f279b17232a052a4d787680b9dfdbe274ed5638f0900ed73c84be98591ef7a34958cad3fdc9bcc998832c052cea7b2c99415044b66b552517eec9b4c5bbc8bb5a6efc2140bf20567d99004839e7d7ec94fa852b8105371b053768226d40888606f72f7c5dcc660688a869b306cf0a198082f8f16c9e16117f9c16cce5299ae171384e3d71bca5c0b5e3580fa3d5fae14db587b65bc2e4f54cc5947ad8e6e7933dfbe619aca5e144bea56b3e220d6e6402d1820f6a2779fda1442490e46195279ac7c4ac18b4cd46407793082ae9f0182350feedc60b697f70c8d4c0c7b18bf325fbfa1d1460c1998ef9fe9d52c9f81b069513862d41ca54885f7820b41758f35807e42c2cb59b6600db1da54ac6e3a356460e7aa003a1041a20a35dac196a929be45e4490f99e93bfb58bd154b5a61d3155530ad06c7464f4a5d5ef4a6a10954eb0ea736c6dbd7ed321134f5c01f40a27906eb82fb8d57ada90d709a134a1a609db3be2631375f0075d21888a65fcba190a786305eebcb5b8420b3be198479bc257b51d3199e0e295ecf8da7c8502b70a2fa4f0e40191ff1e7653f9dc869a6701951496b93d2190972fe8e37c31b4d42e7cc1db1dbd8acb4392246e83adc80b02866c65b714a6cf358773f94477becb4c79b37b9779f7d99ed51c4c570799dc918932604c79082d9c3f094feac02741779b51d361e2f65ace0e0b729afb34226fcd26608a1e5e61287c3c1b6aa3f22bebbd75c4e68efc8726613b13d0bae2c6989de8fff71935ac6c539b58ac1b58e3fe7c058652c573b93ac1c0aaad61a8ba8c48542ce3b742fa78ff132f54e62c8fa42c4c4d491db5e98882443b1cb577383d5c36dea61db59badb679f9eae7ddef73b6d6203940577d5d1c7d927d56298818a7b461bd0bf0634266e5b1a57cc909ebe23fd9058b54e0b0a3b41c6afdb9a69c9c8cad665fda02f8eaa7f4ccacba0c58e46530c03ef29f919748d730bcbeed3b3a5278fdbb3c384f11fde1b717a210878464d8d55d3063dd6cfbb1be4f43b2637be1b2710ef2e067fb7d865da6d08b009328934e2b9bb46f8135b34018f044ecdd06b709af616b556f37f644e18ab0ad34046e9a31160bcf10995f211f1ce30447bc4533f8f209c511d765e746226699bf5920541fb6eb29da3bed5da85aae2442ff841fc6d75e9c8b06ab09ad5c832e977dda657abaae1785f15b1659e50ce04708d7a99a31a64b4e83ae2f7aa5401d0420888f63037ea443e63bfc3be6d2983011241ee6bb9fcc520fc109d431b28ceb115d5b563ff984ad19f0ba9e69632808ac864bced87b6022f294e68b120ab2cb45387d40d68fa11e5f4d6e18858bee3f4ac701e65b09158d723af53a865cfd4395a0084eaa220dc1d5a1379fd34dbf8d78381c314882a433f053e8c94dd84871dab5cdedb15ad98c3ae9b8bbab89705383037e18b164613cc99fe1052b24a4f1b27f0b3b9cfe5bcbc35b213be89108efcebeff826ae1efe015114330996738c91e9c9dc3bc68a6b7ab07249c6037662e343195700d7f9c7b4e36f6b0e25cddf5aa3f1e46a905bc1207cc190095866c9dfedc5b93376494d0ed30419409a369510b59a36a42c8fff362914abc5c5b3c0cdc41523054b3a73bc0d83eea82b44061b29a9fe619649427747fcb86cbec64b8aa39369f26ec4b365c819a5176a2d3cc698d3172e22bf4fbe48b155f486430884dc7cafab1a0de28ab338b2f22ee37f84113a2f816ed5a0e1758a259d833c954b01f6ff852b4f6fbd0f709cf9fc712cfb222348d62aa3d8905ff7abb43e8bf03c7d113f6221a82f56434ee29d05685592bb52b2cd8ae9b3a9e5226ffa83d026e9c1161129ec14697d1d093ff197c6276032b9cbdaa6b7de4613b4576ef4c0bc72900196ee423d03548a79ef9b68852a4212df8135d380e848644b76a561e321a5d22d161ead7c8c4f40a8781e29f89ae25ee060337b642da7d3658450603c7c8914e24379a12f09e854dad04ce50c4100c0933190e661d39149d23fc8a8752cc53d6edd614ea44d96ed750510299bb1528d896643491390f3722b7c4fe7f74191c9376ba8acbb91086d12158674fce9c263f9400ec35e425173db95128d15894b05e27e7846533a243412d4ea4bc015b565df3a6c6e490422d2aaac6bc40c35ee38ff9c709b3692c4f13ed222086792bdcfa0a76cdc22ef9f77906daddf2f990fcfc6536367dbef6b0f0c7926d0551c6ba66bc1cd48ebf6cab51b199dbc200af6cd1aff9e1ca4ee4632df754802d514cf08cf7ce1b1bf113031f5f82352c599f8aa6278974608a1474126fe1dc71df1f0bd3ecb83a9db1940f1e0c28ac140bc8d0f4b5686ba1e821485aeafdd1fe8e574b3adf531559da7d7b199aaf416853f9ec13093c526c149fb2b74120ec03be7a46877a6b68d683bfed50379410836e6f14e6f67d87c474dba943b015647517abe98e99461acc7ee5a9c43109a4ff66dec6386e8adc7f518a93a928bbc7ed535ee8a0251a8dfd27ce7593fdc7415ecf576c8948cea85b3b8d2f6b268c1b7b179df3f4700fad93e821c896516d8a69873de538d0aff7a4b8f5e342b59b1f52cc83962505a7dfd48c411d022959bfafc238d0c1e8e42576fad1122102d993145c6c38266d4a88b9cdcce634cb8c489a4f666a9c6d06b817f2d917661d40da8944f96fe41429ad40e5463e45f8f2fd4596d7ff7b99f4afd70204fbc2f55ecc1a199292d91ffc9f4e7d779eb8dba22549d2113550903c0623ce35e425282c6d73b22f97a2558be677321203998a0869aa2b96dcc75c57e34f0c9a48d88ac88cf789e4e44672f146aca198d223013f0b382e1dba8ddb2b15b9817141e0d0a7cdc05b3545afe6563946dede9b7d440d2d84ca0264f09cb5d17a034a4f8519b98ab6a4bebb24efe3d4d2c3441386673b7a1a365f54522ab2d0b99e1a017def19b9217328a9ba4237745037a88afccfb0619787881e75d37b4b790275dc55735dbd42f0afc294b5bdd781032cff17e2cca386e6153420b10f0b15f4ade89a314f4d948d67b3481e853df1d5d61e09cfd6aff338bb2c9555a598034ee4b19300764dc146febc4926d16632204d9e39f632a509a2eb60710e32ea02d4a0356fc9e1dba5ff6f028531acb5ee4a7a87f08c0128e56201f6417c99e992864fd4cc3d8e14c1c22b96d13feeeb95c85a48bb3d451f358a748f6312d3420ad2ce5ae5b404478300c1a0b5e749719cbe6205457572faacff7c831549eba8c43f58ce86122a0761d07692d920c557d0956dc6dd768ce24980939faf6c6e6b68a376732e2f31828c4a7758434f3c3938093310eb7c475409e81395f38fd30209fb40194f64913d0be9e481d0b9e73311daa5ea00fb9bcb9b2364f0be4e6e9be5a4a89001f07f61e1e08960502ea737d07d147dfa4c3b5fd067d6ef207d612d30fb4058f0634b328174c94cebf07ea471b97e100488c416dfbf8c6e99bfc25b59cb89c8eb31e1370d709b862d356f14bbd9827cb52e60855bbd3209012ae0efa5910fe66678153ea281b8fddb2250be9a26de5660827a13d4460e2b701e0155bc9b8bcd57f6768ad497729bc777bffd65a9f852692897f919f912782a5faddf8c1ebe480e3e97d484959c39a094f6da957e1fd692e8bfc0ba71b552da724135a27b1c4986c9ff0263f337fbc989d339a8665a37d685d15fff4b68f65c804e3ac37015ac51b5ebed6ab67ee74bfbb39626cdb82143f1a2a2ddef43bfab7a85810118ed84a3c57ba7059d82a38c9ea499403dddee81435197e3d94600ed0dc7725c8a97dd1d94e054b42bd0e7a72f51980e881852216df0c4459b7e35a61e8799b49aeabd00483cb79087c97c961635ba61658d7f63186f4d25c7ba311a735de422455d9ef56783cb700573cb0625e2324d897f4c3c490394b19b031e2f5b00ca88b5569aa3537334e0855208c0a5f7b2b4703ff9deda9cb1edbd144735d6041d124d6ed7e1ad3534520151f687b480983f0b6a05658e86355e33ce11d1be8b5d22d9f687471ca7205f58f61762a78f7d4f840ffabf0328b116e6cdd13d5b4fc033ffd7c673f61ac257f4ea73a385fa4a55bf2ca7a96b0196125a26c8232f29a864dcaad002f458710d00ee927b0d8b79eec433724b23807a153b522bab893a73dc82971ac690e9dc46b6821aab9ffdfe04609b2c2e65c971d8d79dd5be76b449f263a79ba15ebb845a7f78964554f9ba3068723809af77b22a189bfc07603048b719818977e7dc717545a9d2a6f596fc4c5edd8d2d62a512e6f5af48114bc8e94a5e33b2396ad9c6edf7c5bc249d4ca12009ce2afaee46f164215e914f97334f5936c1e68641d511f6c6d6a44d110d4f09355a1abd76783f27ed6e065ac599cce63cb58281b94ce7e0f8b07c32c708e5d244e7378a9850c8936edcd9c07082cf51e9376ee401f1dcbb9f5d4d9ce910b87c2f9c117b174b55c0b7b55d3c81c0710a5518ca5c5fc549e68febd7c69735c217a156c3635105bfa68e384f0eb343f7c60b63c6290dd195608c525d24c0c9cb84232f6a59c0928db1244fc9e11700d0dd1006400ec815bf853462ea39f670a9b72b79615b1662352fca9a10499865f793d804744b41bc1c806c27ebbcf1495204581661ede39c64e3f16bc3995954c8eebba436321d58056c0033b5008a2c167d0c73dc</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -534,7 +345,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD-graphs-7-1"><span class="nav-number">1.</span> <span class="nav-text">六 graphs 7.1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT%E6%8F%90%E7%BA%B2-11-13-%E6%8B%96%E5%BB%B6%E7%97%87%E2%80%A6"><span class="nav-number">1.1.</span> <span class="nav-text">PPT提纲 ---11.13 拖延症…</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83-tree"><span class="nav-number">2.</span> <span class="nav-text">七 tree</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT%E6%8F%90%E7%BA%B2%E9%A2%84%E4%B9%A0-11-13"><span class="nav-number">2.1.</span> <span class="nav-text">PPT提纲预习 ----11.13</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E4%B8%8A-%E6%8F%90%E7%BA%B2"><span class="nav-number">2.2.</span> <span class="nav-text">课上 | 提纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%96%91%E9%97%AE"><span class="nav-number">2.3.</span> <span class="nav-text">疑问</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB-fc-11-17%E5%91%A8%E6%97%A5"><span class="nav-number">3.</span> <span class="nav-text">八 fc ---11.17周日</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E4%B8%AD%E6%98%93%E9%94%99%E7%82%B9%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">作业中易错点总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%96%91%E9%97%AE-1"><span class="nav-number">5.</span> <span class="nav-text">疑问</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
