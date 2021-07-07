@@ -1,70 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Arduino与Assembly</title>
-    <url>/2019/11/01/Arduino/</url>
-    <content><![CDATA[<h2 id="Lab–汇编语言初识-amp-语法结构"><a href="#Lab–汇编语言初识-amp-语法结构" class="headerlink" title="Lab–汇编语言初识&amp;语法结构"></a>Lab–汇编语言初识&amp;语法结构</h2><span id="more"></span>
-<h3 id="第一个程序的理解"><a href="#第一个程序的理解" class="headerlink" title="第一个程序的理解"></a>第一个程序的理解</h3><ol>
-<li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
-<li>.org 0     :the start address</li>
-<li>r16--r31,PPRB,PORTC等等在microprocessor’s CPU也就是Atmega328p里</li>
-</ol>
-<h2 id="lab2-portb-连led"><a href="#lab2-portb-连led" class="headerlink" title="lab2 portb 连led"></a>lab2 portb 连led</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
-<li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
-<li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li>
-</ol>
-<h3 id="arduino里几个概念"><a href="#arduino里几个概念" class="headerlink" title="arduino里几个概念"></a>arduino里几个概念</h3><ol>
-<li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
-<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
- 它们 连接着the external digital pins
-</code></pre>
-<table>
-<thead>
-<tr>
-<th>Atemega pin</th>
-<th>Nano digital pin</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PB0(在芯片的四周))</td>
-<td>D8(在nano的两周,可连接面包板的线)</td>
-</tr>
-<tr>
-<td>PB1</td>
-<td>D9</td>
-</tr>
-<tr>
-<td>….</td>
-<td>….</td>
-</tr>
-</tbody></table>
-</li>
-<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)
-</code></pre>
-</li>
-<li>CPU怎么链接PORTB: databus</li>
-<li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
-<li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.<h2 id="Lab3-portc-很好理解-读value"><a href="#Lab3-portc-很好理解-读value" class="headerlink" title="Lab3 portc 很好理解 读value"></a>Lab3 portc 很好理解 读value</h2></li>
-</ol>
-<h2 id="疑问疑惑"><a href="#疑问疑惑" class="headerlink" title="疑问疑惑"></a>疑问疑惑</h2><h3 id="程序内的语法"><a href="#程序内的语法" class="headerlink" title="程序内的语法:"></a>程序内的语法:</h3><ol>
-<li>main,mainloop的意思</li>
-<li>rjmp?</li>
-<li>brlo <strong>lessthan</strong>? 为什么是lessthan,brlo本身不就是当lower时吗</li>
-<li>.org 0,地址0 是跟0x06等等同一地位吗,那我在.equ里面最小的那个地址开始可以吗 --11.3<h3 id="led-on-s"><a href="#led-on-s" class="headerlink" title="led_on.s:"></a>led_on.s:</h3></li>
-<li>SREG的作用是什么,设置为0要干什么<h3 id="第三个程序-portc-lab3"><a href="#第三个程序-portc-lab3" class="headerlink" title="第三个程序:portc(lab3)"></a>第三个程序:portc(lab3)</h3></li>
-<li>从PINC中读取数据到PORTC,那pinc的数据从何而来?</li>
-</ol>
-]]></content>
-      <categories>
-        <category>2019</category>
-        <category>KCL</category>
-        <category>Arduino</category>
-      </categories>
-      <tags>
-        <tag>单片机</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CS_note</title>
     <url>/2019/10/31/Assembly/</url>
     <content><![CDATA[<h1 id="五-performance-measurement-and-analysis"><a href="#五-performance-measurement-and-analysis" class="headerlink" title="五 performance measurement and analysis"></a>五 performance measurement and analysis</h1><span id="more"></span>
@@ -278,6 +214,70 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
       </categories>
       <tags>
         <tag>空间向量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Arduino与Assembly</title>
+    <url>/2019/11/01/Arduino/</url>
+    <content><![CDATA[<h2 id="Lab–汇编语言初识-amp-语法结构"><a href="#Lab–汇编语言初识-amp-语法结构" class="headerlink" title="Lab–汇编语言初识&amp;语法结构"></a>Lab–汇编语言初识&amp;语法结构</h2><span id="more"></span>
+<h3 id="第一个程序的理解"><a href="#第一个程序的理解" class="headerlink" title="第一个程序的理解"></a>第一个程序的理解</h3><ol>
+<li>.equ SREG,0x3f     :treat the label SREG as 0x3f</li>
+<li>.org 0     :the start address</li>
+<li>r16--r31,PPRB,PORTC等等在microprocessor’s CPU也就是Atmega328p里</li>
+</ol>
+<h2 id="lab2-portb-连led"><a href="#lab2-portb-连led" class="headerlink" title="lab2 portb 连led"></a>lab2 portb 连led</h2><h3 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h3><ol>
+<li><h4 id="SREG-status-register"><a href="#SREG-status-register" class="headerlink" title="SREG : status register"></a>SREG : status register</h4></li>
+<li><h4 id="Rd-Destination-register-in-the-register-file"><a href="#Rd-Destination-register-in-the-register-file" class="headerlink" title="Rd : Destination register in the register file"></a>Rd : Destination register in the register file</h4></li>
+</ol>
+<h3 id="arduino里几个概念"><a href="#arduino里几个概念" class="headerlink" title="arduino里几个概念"></a>arduino里几个概念</h3><ol>
+<li><h4 id="ATmega是Arduino里面的正方形芯片-microcontroller"><a href="#ATmega是Arduino里面的正方形芯片-microcontroller" class="headerlink" title="ATmega是Arduino里面的正方形芯片,microcontroller"></a>ATmega是Arduino里面的正方形芯片,microcontroller</h4></li>
+<li><h4 id="PORTB"><a href="#PORTB" class="headerlink" title="PORTB"></a>PORTB</h4><pre><code> : an 8-bit I/O port with internal pull-up resistors, 位于: 正方形芯片的周边小点(8个:PB7:0)
+ 它们 连接着the external digital pins
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Atemega pin</th>
+<th>Nano digital pin</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PB0(在芯片的四周))</td>
+<td>D8(在nano的两周,可连接面包板的线)</td>
+</tr>
+<tr>
+<td>PB1</td>
+<td>D9</td>
+</tr>
+<tr>
+<td>….</td>
+<td>….</td>
+</tr>
+</tbody></table>
+</li>
+<li><h4 id="digital-pin"><a href="#digital-pin" class="headerlink" title="digital pin:"></a>digital pin:</h4><pre><code> 位于nona两周: I/O interface(HIGH/LOW)
+</code></pre>
+</li>
+<li>CPU怎么链接PORTB: databus</li>
+<li>DDRB跟PORTB,PORTC等等地位相等,都在register里,都是一个一个的寄存器,都是8bit.(each port on Atmega328 has a <strong>Data Direction Register</strong>)</li>
+<li>DDRB和PORTB的<strong>关系</strong>:<br>  each bit of in PORTB has a corresponding input or output mode bit in DDRB.<h2 id="Lab3-portc-很好理解-读value"><a href="#Lab3-portc-很好理解-读value" class="headerlink" title="Lab3 portc 很好理解 读value"></a>Lab3 portc 很好理解 读value</h2></li>
+</ol>
+<h2 id="疑问疑惑"><a href="#疑问疑惑" class="headerlink" title="疑问疑惑"></a>疑问疑惑</h2><h3 id="程序内的语法"><a href="#程序内的语法" class="headerlink" title="程序内的语法:"></a>程序内的语法:</h3><ol>
+<li>main,mainloop的意思</li>
+<li>rjmp?</li>
+<li>brlo <strong>lessthan</strong>? 为什么是lessthan,brlo本身不就是当lower时吗</li>
+<li>.org 0,地址0 是跟0x06等等同一地位吗,那我在.equ里面最小的那个地址开始可以吗 --11.3<h3 id="led-on-s"><a href="#led-on-s" class="headerlink" title="led_on.s:"></a>led_on.s:</h3></li>
+<li>SREG的作用是什么,设置为0要干什么<h3 id="第三个程序-portc-lab3"><a href="#第三个程序-portc-lab3" class="headerlink" title="第三个程序:portc(lab3)"></a>第三个程序:portc(lab3)</h3></li>
+<li>从PINC中读取数据到PORTC,那pinc的数据从何而来?</li>
+</ol>
+]]></content>
+      <categories>
+        <category>2019</category>
+        <category>KCL</category>
+        <category>Arduino</category>
+      </categories>
+      <tags>
+        <tag>单片机</tag>
       </tags>
   </entry>
   <entry>
