@@ -45,7 +45,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: true
   tab_replace:
@@ -107,14 +107,16 @@ githubEmojis:
 prism_plugin:
   mode: 'preprocess'
   theme: 'tomorrow'
-  line_number: false
+  line_number: true
   custom_css:
+
 
 search:
   path: search.xml
-  field: post
+  field: all
+  content: true
   format: html
-  limit: 10000
+  limit: 100000
 
 permalink_pinyin:
   enable: true

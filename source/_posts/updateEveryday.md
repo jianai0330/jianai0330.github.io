@@ -6,7 +6,9 @@ tag:
 categories:
 - UbuntuRecovery
 password: password
-top: 500
+abstract: 有东西被加密了，请输入密码查看
+message: 请输入密码
+top: 100
 ---
 
 
@@ -28,6 +30,13 @@ sudo grub-install /dev/sda
 2. ## 写个博客更新日志
     1. 21.7.6 改了背景颜色（就在source里_data）[颜色](https://www.sioe.cn/yingyong/yanse-rgb-16/)
         - [前人经验](https://marmalade.vip/nextthemebeautify3.html)
+    2. 7.7一早： 昨晚删掉的hexo-prism-plugin还是一装上就各种warn和err，所以还是uninstall了。。。
+        - 为什么点不进去博客了 点进去就404
+        - (新版next很好的讲解文章)[https://tding.top/archives/2bd6d82.html]
+        - (很好的插件选择)[https://tding.top/archives/567debe0.html]
+    3. 文章点进去404 ---删掉所有post 重新部署了一遍。。。完美
+    4. search功能还是始终不可以
+
 
 ```
 ├── .github            #git信息
@@ -72,3 +81,6 @@ sudo grub-install /dev/sda
 2. 进度条正中央的不见了
 3. 密码不管用了
 4. 标题和菜单颜色
+
+
+ npm update y18n --depth 4
