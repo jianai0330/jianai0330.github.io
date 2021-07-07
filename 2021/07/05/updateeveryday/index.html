@@ -261,7 +261,10 @@
 <li>但是，开机第一幕自动grub没解决</li>
 </ul>
 </li>
-<li>解决自动进入grub<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo update-grub</span><br><span class="line">sudo grub-install <span class="regexp">/dev/</span>sda</span><br></pre></td></tr></table></figure></li>
+<li>解决自动进入grub<pre><code>sudo update-grub
+sudo grub-install /dev/sda
+</code></pre>
+</li>
 </ol>
 </li>
 <li><h2 id="写个博客更新日志"><a href="#写个博客更新日志" class="headerlink" title="写个博客更新日志"></a>写个博客更新日志</h2><ol>
@@ -269,10 +272,51 @@
 <li><a target="_blank" rel="noopener" href="https://marmalade.vip/nextthemebeautify3.html">前人经验</a></li>
 </ul>
 </li>
+<li>7.7一早： 昨晚删掉的hexo-prism-plugin还是一装上就各种warn和err，所以还是uninstall了。。。<ul>
+<li>为什么点不进去博客了 点进去就404</li>
+</ul>
+</li>
 </ol>
 </li>
 </ol>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">├── .github            <span class="comment">#git信息</span></span><br><span class="line">├── languages          <span class="comment">#多语言</span></span><br><span class="line">|<span class="string">   ├── default.yml    #默认语言</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── zh-Hans.yml      #简体中文</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── zh-tw.yml      #繁体中文</span></span><br><span class="line"><span class="string">├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _custom        #可以自己修改的模板，覆盖原有模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _header.swig    #头部样式</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _sidebar.swig   #侧边栏样式</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _macro        #可以自己修改的模板，覆盖原有模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── post.swig    #文章模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── reward.swig    #打赏模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── sidebar.swig   #侧边栏模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _partial       #局部的布局</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── head       #头部模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── search     #搜索模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── share      #分享模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _script        #局部的布局</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _third-party   #第三方模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _layout.swig   #主页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── index.swig     #主页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── page           #页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── tag.swig       #tag模板</span></span><br><span class="line"><span class="string">├── scripts            #script源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── tags           #tags的script源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── marge.js       #页面模板</span></span><br><span class="line"><span class="string">├── source             #源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── css            #css源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _common    #*.styl基础css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _custom    #*.styl局部css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   └── _mixins    #mixins的css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── fonts          #字体</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── images         #图片</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── uploads        #添加的文件</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── js             #javascript源代码</span></span><br><span class="line"><span class="string">├── _config.yml        #主题配置文件</span></span><br><span class="line"><span class="string">└── README.md          #用GitHub的都知道</span></span><br></pre></td></tr></table></figure>
+<pre><code>├── .github            #git信息
+├── languages          #多语言
+|   ├── default.yml    #默认语言
+|   └── zh-Hans.yml      #简体中文
+|   └── zh-tw.yml      #繁体中文
+├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制
+|   ├── _custom        #可以自己修改的模板，覆盖原有模板
+|   |   ├── _header.swig    #头部样式
+|   |   ├── _sidebar.swig   #侧边栏样式
+|   ├── _macro        #可以自己修改的模板，覆盖原有模板
+|   |   ├── post.swig    #文章模板
+|   |   ├── reward.swig    #打赏模板
+|   |   ├── sidebar.swig   #侧边栏模板
+|   ├── _partial       #局部的布局
+|   |   ├── head       #头部模板
+|   |   ├── search     #搜索模板
+|   |   ├── share      #分享模板
+|   ├── _script        #局部的布局
+|   ├── _third-party   #第三方模板
+|   ├── _layout.swig   #主页面模板
+|   ├── index.swig     #主页面模板
+|   ├── page           #页面模板
+|   └── tag.swig       #tag模板
+├── scripts            #script源码
+|   ├── tags           #tags的script源码
+|   ├── marge.js       #页面模板
+├── source             #源码
+|   ├── css            #css源码
+|   |   ├── _common    #*.styl基础css
+|   |   ├── _custom    #*.styl局部css
+|   |   └── _mixins    #mixins的css
+|   ├── fonts          #字体
+|   ├── images         #图片
+|   ├── uploads        #添加的文件
+|   └── js             #javascript源代码
+├── _config.yml        #主题配置文件
+└── README.md          #用GitHub的都知道
+</code></pre>
 <ol>
 <li>search功能还不行</li>
 <li>进度条正中央的不见了</li>

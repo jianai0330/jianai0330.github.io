@@ -320,7 +320,13 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li><p>Assemblers汇编器的工作流程:PPT!<br>  1st pass: symbol table<br>  2nd pass: the instructions are completed using the value from the <strong>symbol table</strong>.<br>  完成将汇编语言变成机器语言的过程</p>
 </li>
 <li><p>一个汇编语言程序:main和mainloop是address label.?? main&amp;mainloop的理解</p>
-<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="meta">.equ</span> <span class="built_in">SREG</span>,<span class="number">0x3F</span></span><br><span class="line"><span class="meta">.org</span></span><br><span class="line"><span class="symbol">main:</span>   <span class="keyword">ldi</span> <span class="built_in">r16</span>,<span class="number">0</span></span><br><span class="line">        <span class="keyword">out</span> <span class="built_in">SREG</span>,<span class="built_in">r16</span></span><br><span class="line"><span class="symbol">mainloop:</span> <span class="keyword">rjmp</span> mainloop</span><br></pre></td></tr></table></figure></li>
+<pre><code>   .equ SREG,0x3F
+   .org
+   main:   ldi r16,0
+           out SREG,r16
+   mainloop: rjmp mainloop
+</code></pre>
+</li>
 <li><p>indirect addressing mode时:</p>
 </li>
 <li><p>JnS:operates by storing the current PC value in the first address of the routine itself,then continue with the instruction following that.    Jump-and-store.<br> JumpI:return from the subroutine.</p>
@@ -825,7 +831,14 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li>array更改element的原理</li>
 <li>array literals</li>
 <li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
-<li>for-each loop: remove和add会导致error<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">&quot;t&quot;</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>for-each loop: remove和add会导致error<pre><code class="java">for(String s : list)&#123;
+if(s.startWith(&quot;t&quot;))&#123;
+list.remove(s);
+//如果remove,会skip
+&#125;
+&#125;
+</code></pre>
+</li>
 </ol>
 <ul>
 <li>为何呢</li>
@@ -1135,7 +1148,10 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li>但是，开机第一幕自动grub没解决</li>
 </ul>
 </li>
-<li>解决自动进入grub<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">sudo update-grub</span><br><span class="line">sudo grub-install <span class="regexp">/dev/</span>sda</span><br></pre></td></tr></table></figure></li>
+<li>解决自动进入grub<pre><code>sudo update-grub
+sudo grub-install /dev/sda
+</code></pre>
+</li>
 </ol>
 </li>
 <li><h2 id="写个博客更新日志"><a href="#写个博客更新日志" class="headerlink" title="写个博客更新日志"></a>写个博客更新日志</h2><ol>
@@ -1143,10 +1159,51 @@ rref行简化阶梯形矩阵:在ref基上&lt;p&gt;非零首元所在的列/p&lt;
 <li><a href="https://marmalade.vip/nextthemebeautify3.html">前人经验</a></li>
 </ul>
 </li>
+<li>7.7一早： 昨晚删掉的hexo-prism-plugin还是一装上就各种warn和err，所以还是uninstall了。。。<ul>
+<li>为什么点不进去博客了 点进去就404</li>
+</ul>
+</li>
 </ol>
 </li>
 </ol>
-<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">├── .github            <span class="comment">#git信息</span></span><br><span class="line">├── languages          <span class="comment">#多语言</span></span><br><span class="line">|<span class="string">   ├── default.yml    #默认语言</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── zh-Hans.yml      #简体中文</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── zh-tw.yml      #繁体中文</span></span><br><span class="line"><span class="string">├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _custom        #可以自己修改的模板，覆盖原有模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _header.swig    #头部样式</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _sidebar.swig   #侧边栏样式</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _macro        #可以自己修改的模板，覆盖原有模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── post.swig    #文章模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── reward.swig    #打赏模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── sidebar.swig   #侧边栏模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _partial       #局部的布局</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── head       #头部模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── search     #搜索模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── share      #分享模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _script        #局部的布局</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _third-party   #第三方模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── _layout.swig   #主页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── index.swig     #主页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── page           #页面模板</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── tag.swig       #tag模板</span></span><br><span class="line"><span class="string">├── scripts            #script源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── tags           #tags的script源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── marge.js       #页面模板</span></span><br><span class="line"><span class="string">├── source             #源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── css            #css源码</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _common    #*.styl基础css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   ├── _custom    #*.styl局部css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   </span>|<span class="string">   └── _mixins    #mixins的css</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── fonts          #字体</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── images         #图片</span></span><br><span class="line"><span class="string"></span>|<span class="string">   ├── uploads        #添加的文件</span></span><br><span class="line"><span class="string"></span>|<span class="string">   └── js             #javascript源代码</span></span><br><span class="line"><span class="string">├── _config.yml        #主题配置文件</span></span><br><span class="line"><span class="string">└── README.md          #用GitHub的都知道</span></span><br></pre></td></tr></table></figure>
+<pre><code>├── .github            #git信息
+├── languages          #多语言
+|   ├── default.yml    #默认语言
+|   └── zh-Hans.yml      #简体中文
+|   └── zh-tw.yml      #繁体中文
+├── layout             #布局，根目录下的*.ejs文件是对主页，分页，存档等的控制
+|   ├── _custom        #可以自己修改的模板，覆盖原有模板
+|   |   ├── _header.swig    #头部样式
+|   |   ├── _sidebar.swig   #侧边栏样式
+|   ├── _macro        #可以自己修改的模板，覆盖原有模板
+|   |   ├── post.swig    #文章模板
+|   |   ├── reward.swig    #打赏模板
+|   |   ├── sidebar.swig   #侧边栏模板
+|   ├── _partial       #局部的布局
+|   |   ├── head       #头部模板
+|   |   ├── search     #搜索模板
+|   |   ├── share      #分享模板
+|   ├── _script        #局部的布局
+|   ├── _third-party   #第三方模板
+|   ├── _layout.swig   #主页面模板
+|   ├── index.swig     #主页面模板
+|   ├── page           #页面模板
+|   └── tag.swig       #tag模板
+├── scripts            #script源码
+|   ├── tags           #tags的script源码
+|   ├── marge.js       #页面模板
+├── source             #源码
+|   ├── css            #css源码
+|   |   ├── _common    #*.styl基础css
+|   |   ├── _custom    #*.styl局部css
+|   |   └── _mixins    #mixins的css
+|   ├── fonts          #字体
+|   ├── images         #图片
+|   ├── uploads        #添加的文件
+|   └── js             #javascript源代码
+├── _config.yml        #主题配置文件
+└── README.md          #用GitHub的都知道
+</code></pre>
 <ol>
 <li>search功能还不行</li>
 <li>进度条正中央的不见了</li>

@@ -343,7 +343,14 @@
 <li>array更改element的原理</li>
 <li>array literals</li>
 <li>array length<h3 id="周五11-22的回看11-25"><a href="#周五11-22的回看11-25" class="headerlink" title="周五11.22的回看11.25"></a>周五11.22的回看11.25</h3></li>
-<li>for-each loop: remove和add会导致error<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(String s : list)&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.startWith(<span class="string">&quot;t&quot;</span>))&#123;</span><br><span class="line">    list.remove(s);</span><br><span class="line">    <span class="comment">//如果remove,会skip</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>for-each loop: remove和add会导致error<pre><code class="java">for(String s : list)&#123;
+if(s.startWith(&quot;t&quot;))&#123;
+list.remove(s);
+//如果remove,会skip
+&#125;
+&#125;
+</code></pre>
+</li>
 </ol>
 <ul>
 <li>为何呢</li>
