@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-simple.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jianai0330.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduino与Assembly">
+<meta property="og:url" content="https://jianai0330.github.io/2019/11/01/Arduino/index.html">
+<meta property="og:site_name" content="Ajn">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-11-01T08:22:08.000Z">
+<meta property="article:modified_time" content="2019-11-01T08:22:08.000Z">
+<meta property="article:author" content="A jian">
+<meta property="article:tag" content="单片机">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://jianai0330.github.io/2019/11/01/Arduino/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Arduino与Assembly | Ajn</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Ajn" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Ajn</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Cohen</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>Tags<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>Categories<span class="badge">15</span></a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="calendar fa-fw"></i>Schedule</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/jianai0330" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://jianai0330.github.io/2019/11/01/Arduino/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://www.tianya999.com/uploads/allimg/180411/2308-1P411141646.jpg">
+      <meta itemprop="name" content="A jian">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ajn">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Arduino与Assembly
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-01 16:22:08" itemprop="dateCreated datePublished" datetime="2019-11-01T16:22:08+08:00">2019-11-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2019/" itemprop="url" rel="index"><span itemprop="name">2019</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2019/KCL/" itemprop="url" rel="index"><span itemprop="name">KCL</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2019/KCL/Arduino/" itemprop="url" rel="index"><span itemprop="name">Arduino</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="a228d097dd04e194f876191d263f1fdc1aa2c98a73ef37492e8112ceadd144c5">22064b17c03cb0c0e58c99349b6889d04da46185588523f900d7c5ae54c146cc098307235e01354e59e5deda1934f97b29ebe01bc00a09648483c460b080e62b7617063568e4dffed27d44d61d5f09926a79946bfb9a122fd52ea3bc641cb5ca36b7efddafa6c54247a225ec9973ac3cc6d302a681e5eef82b6df9628d3f784ac216b440c2589caa7c1ee698c70709746c2f2cd8c7d11ac2855d0ce1317267d2aa14a44686fb3eeeca28cac091d2d022f263b79a47698a9143274fdcfcb5ebd7ab8af71db18e3302d4606489fd4d2ca64eeda5dd9367bdba08c8135bf423983c9adc07188a168598736039cc838ebd788f41caf0b0dfc057179963c698e62ba78bcbc6de397774cb39a3d6fd40387604977c34d6a686b530460fd4ca96ef499d1a516041a809fd29c255e688bb7d76816e3d8935435301ad0e1a6f27651058024277555a84845de5e01314c12313fb0b44bbc2b2b5776b2fba860ce819a8bdd5a708427fe63376c713ad2e5da278e80f103c087c13e6b41b01a945568ff8c31ab47fdc731e0aa07e97fa8ee76f79e062d3c34994d303143d573d148b00b5a6bd804e0b0e721e4f559e6edc5aab29132495fee77ee17d6509a0ae00bc2af947000d287924084d708665ca863c7026da893bc3a7f358f0fb9c8fb0bd9aa9c3f07df761c0cad0870d6ca05d0bcc9c143aad1bd8b4ab3cbcf653a7ded64575c8e0db79a494af5fec11857e4e6a7307f033b76866391bd5d69e9fb616b567a2aa40d80c59eedc0174f5f3b9700c23693689be1ed8189e3c1180db018d880b27262ce7ccb37d83c497285bd2821123790b7bb6238bc0910f0b8d16503620077330f36dc3fd8c736569ea5cd4bcc6e469d909ee4161b669ac08c8be0e2e7387b2160b972afb9a3e1f3fe3dae91dffe0b2b54b9ec1f752e44e8c8a52d7dfc11a2f7768222b9e15ea89fdaa314b719b767d9c2c5be3f166e526f754f6d245456309b5a47053649fdd341ab3cfa035bd18f0854c6b7d01596f21a28f14d2d2035531b5819be5b1e6569b8c2ec86bda931336f678ac91a32b4c86c085b1fee38751d125205926c26815ea4b1af66a1f6ee4bd0e8389d1a482669ab312c6a48433f7c50162eb744fae58c79a74ee54a796cf0d3861442a69581c6ef2abfe70cfd4548077ca8839c0d67f4167d1f3d0bd73ff383c546bff073eca2e417adc95d2f44ef909fdb8db4de59c57fd0742dbc81c7326fd86bf0856e57f56fc1aba85f06c769357d9bb1138e4fde1371d0d9fe4d5671876326718b3e5fa5ea38d94bd040ba637a4e01d14801fc37430ec27a24f374e985cd2887a1f36e787a9c6bd59863b58aceee809de40eac2016841f48d960ee0fa7367e02d6220ba57cf2274404f4eb765178715ba05772ca95970646fb34591ee3120c96d20ef0f9f4dbd381ca7d6711ed15a524160284b15cc38ec9d4a2e9e809af8eb9cc480c88ca3b31fb8df14951da27046c660bb0d9f16b53e9be5d5a606460b8eeab84985c0285e9c7fe9d7d093f73f361edb27d4a11755d144d468f7fb21dfe467e0faee29c3bb60e20b2d4edd31d7fce7440d5706c96882e3c0c95f0e7aef06319395b8b31fc48cc527c8461ded89d084b9275ceb0bdeb996ed2409959490dd46222d306dfbcfbec4308c399b444b7ca45d509d62dfdc9045556243c1f93051cf622504478b580b1ef8739b7af210846ee0ac23105e0ad00bb4e88ed16b505713a7a26f3417ba41999e7c14a86f2816c1d2f03ba78f179261d84ca3d0f407ac6febffe72d9f9df2fe6b5f298e62df939ab49578d5928b844e8579a95a4d3234afa95c383241b270e3291c4044f76b418c7681e757d2a0733a7bb19b57284c5b5947916d53b1818b08d8c8bf8529a12f1d38922f14e4c814eb68977e30edebbc3dd44cecb10454f182fc02920797d4ed799ecac2fe0f1b598e1236e4f9491322b35ef88dce7475dbe0e8a4c7df8a7c0faab0b77a9cc7aaf774096028bbd3f014ee4e0ca46110dd98e1c5a3aceef098f4944822585324d4b9aa50ad860c58d0251677c13dd70cac57141e6cbcf696e81ee54ecb168c0babe7ad8e3c8389b7471823022b6a44f3f4c9e076315a24a7287be7e364cd48759bc894b4417707c40c41f7e21f50ef2dc55f72bed5327c26f2cc9d45afecca4b617c301c8d1e832b0a1903767dc3b3c8e474f8f7a80a6b949b35bd0cc5b25a4d7e88824acb3cb1c04d81d4dfb8814026126b6090aa5cb7b2c8882323f370f6d0012b1fdec2158a2e1fc1d2c3da3b30ee7fe538a8060cef261d8db70598681d995a4c658819883c2c0a687ad398bfc5c38f419f03468e2aef9a0a86e6146979ba6d700d88d6a50b409149ce45247ebfa992345171650f17b224c3dfb26e9ebcba70c7e68551a18665b24a91681c0a41b58449a24e8963d3c7af8192033e8dd5089d48b4bc67a0ca31aa0347a36aa9000f09483953d0f11a9cd625a21860889445e68a425a1d866cc9caa4017b45088c9ccffb115ea0c20123a4bf8dd9e8c1d410bcfcba9244bf21fe4ce8f5bc58c38a3c3eae53074382a1debb7dce645cbe4d3c59bc6883d059c60f5d2f5d481403e84527c2e9d782a830496d0a4c5d5a23bf53f4ca62039a7ed79df0f157e7ba53ee328eb011c936373da6a4e255c8455a87f12799306aa41fd8ebeec727b5dc8c2ffcf9da0d10b94e99ca194990d7089954d353019853bfbcba1135014ffaa1a9599c07dd8e39ee0b8ce6c367b9eaeb12c94f2fa0cb03bf269a43034689dd80ca9f4563ced17e8792f7aadbcb81a317d16701f8ac65f347b0197afabeaeb67dee5fd76a37b421158fdbe88a123231dacfa6635601787c5c737d0425e51c3456c46be25ed4c4f16eac92b9c2807ced5ee5639cc627ee6f5a2917b570d52f8c5a5603f512aa7cf8f2f0fee4e1af322aedd6f4efadd160d5a8e837ddfdafdb7d04d781fd22ab174d68a7df7d7b44ba6757f47b5e42e0fb0ffdd32c536759113eede132092a502c6167cb132c8320645899b03a664510d33476bde0ab22746f552dbc198fb24aa06a8240ac51de2bfde4af191e1769a70d377f6b71fea5a4eb5878acb1e261e1f4dba53c2e01034cda9baee89453cfc61b422743c88ffc5c45de1fe900db82daaf1f1c9baee123430688bbbe2d6e43c9ad6e3c48afa38bcecb9c84cc52d8dda7bdd0453efd913cb80decd0b7bad8ef2177e0c4e036d3a35015c1557b7ca60a15390598837f4cfd149ebea413fd98b79fac8f0b97a58ed2593b4ca0362ac81f7478433c486ff17572ed93f385cce2c667f8d6601e0a2bdbd2ad1e18787d98f26e8c1a2dcb9f9c93eb5a181f8ec2b7fe0bb0f7ea03d73c279ce1bdd79ae3e501f5663bf61d41754953ffd562a3a48c7685ba786c752450d78ca40ef783279342ff45c8345e020969304df05a46a1e785c1c99225364536e274967593e2bf0e96ca5361f90dbb4be1b54bea3fc36a5c2584b7c1158470b16060df7eb558a0d5fb8d5dcad5d47604af7877678a1e4a7d5de924aea8247b305abedd6150248ba9290802cdecede2de87b64bd95a5e5c89bb9a302d093f091e47abe9c95b479e05eb09214a0476314c0da5679cbb2243a76727b12b70246090bddbd4489f2c4b0923feb640e112d936e4b098ad2c04975645fee4a87c66134becd6a662ba8a6135a9e745f6aea410c4d51dc1def85f9edaae289b3fd1b819e713efa67cebc53ccc32d04b9bed9fe8cabf47d6359e37627fafee903927bfb3430ece974674783272a58928b64e12d09abdf5739f71963c9298f64beb9e9b05e1a674898a3f580dae39a79eab7f3c312686ada8077912654107bc58ff7f295f30f568c51855a18bfda043d7fc451afa879938162e2a87e26376c40733a040f5cbf1be224bcf09777372da645e40454440ac3838583c6263e10eaf1efaaee91ad2469333c2b3c0aa3b4e0e764da73e567f1ce031f8bb3066a96f85d611d5f8958acf68f384b81c50ed9a144ebd4e8cceaf8bbce2f2f389926c72bec9cbf0cd3623cb17054a42506fe68688911377d4301e311dcfa556a69c20ec7e5a338ecc4fa8766b973b816f991621f0a22f0c68f202f54fdb828b20e2d4d432a6ace125a247d999bb67540fa75f71ba38b137394e53f38ff57243281322d9b3ca1b3446ed0c24112ec53953c22deba938db086097150894e01862877bbe8d202589cf1bf45b90da6ad34a0b50fbc938807b31649989a18e1b307978990d4411186da729f7f9051496bd39f9491b4c38a6e49dcdd4e15ed3ba81f21e1926415cbc2127bc068b1dd502a6854ba5d76d69e496918bae6c77baffe0f6dab5dea683a0721f3e1f358e57b298d90420f67920b73e04c1348e9e31c3805a0bbd5da1d9d0fd1efde20ce5fd0ebf49c600bc22db0c2d2ea55185723d2caf9322fa9b3a4a81e22b44261d885105db1f15f5e8c5fa2842678a4cfed570c39162c2db16c5dc2796191c889c0c0c6c409012dd0558102085decd877d12b047794a5d12e28cbc71621d8b8be87621f9c6227d4a2caefbe7c89c9ff036adaf8333bc7c1f4955bb56e02dcc9cca31c29e031284ab4dd2d1466cc6cfe343cf64b12058c3ca9c7452322ec3fd1653f6156b69c413727e17d34c245afb5686398933b06d48748ae3d89d9e919a945b826aeb9b9d4ca45ab7dc287a91eb5027998a45617e360aacbaf8c979470b05faa5aa2fb28dcca3290aa96c3fe1fe841f90ffabd718790a2810116e6bc1e3891a7f18d9aa2284192b89e7f9a41591ca52038e41e2c8c7228e32109aa7ecf93f959ab290b8dc61a0481290b17d2a8d50fee9c9c28f06e0762ef12f5515c1d5681e2627bea38e80a3f9fc59ffb54489d6dc4dc5e11460a4d6d0133465de186ba9c76f122c56ae172876112bc1a186290675cd620b2d11ca25e718645b5ccf22a96d87deabadee4cd14fabdd48c494c8ba5e2a49569c78bbc7c4dd7bd594b949e4fb5e2d21b880fa6537599f19072f841732a7d8bb6ee53deb704acd44695311c9c982bd6d4b38eb9334b0f7b3277705a7b0c886a3cc1933d6a7e0b7039ef93a7ae695a36116ecbf3c5cbc99b01b755d8d80c5f8ff34e3a1d0e433e532792b1a883c58bfbd9efbccb35ca3c5341a93eb9a2247784f949356c5dc8ea70b76abc2afbe82f5f6e617ebcbe042893584d290ef691669aad711f792cf3aef40a0c7f7ab599cdd90bddac88d592fe23dc68fb5ef44750bd10331e6cc0a9146c9e478173ffcb191c8704d0fba3b89591b0f7eba6c132a2dd11537992fefde395544112e170f72186f06f684d32106405b6da06c0ea99c33345cf534bfe83f5cb7a81c80bc8540126ad35bf2b5f62fbc3c7975132c0b051cd99d8aaddd615b424c89bb1f803aad7c304c15839a759536ebff8a3243099fa475e46e410759d6c300f46c95e8f5179f</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/" rel="tag"># 单片机</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/10/31/Assembly/" rel="prev" title="CS_note">
+      <i class="fa fa-chevron-left"></i> CS_note
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/11/03/PPA/" rel="next" title="PPA_notes">
+      PPA_notes <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="A jian"
+      src="http://www.tianya999.com/uploads/allimg/180411/2308-1P411141646.jpg">
+  <p class="site-author-name" itemprop="name">A jian</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:aijian0330@gmail.com" title="E-Mail → mailto:aijian0330@gmail.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/aijian500" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;aijian500" rel="noopener" target="_blank"><i class="instagram fa-fw"></i>Instagram</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">A jian</span>
+</div>
+
+
+<div class="run_time" style=" text-align:center;">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+  <script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/30/2000 10:00:00");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Ajn已存在 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval("createtime()",250);
+  </script>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
