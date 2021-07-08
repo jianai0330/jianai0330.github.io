@@ -9,7 +9,7 @@
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
       <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>
       </label>
     </div>
   </div>
@@ -236,7 +236,10 @@
 </li>
 <li><p>外设 的概念</p>
 <ol>
-<li>还有外设的使能，失能，复位</li>
+<li>还有外设的使能，失能，复位<ol>
+<li>使能 enable</li>
+</ol>
+</li>
 <li>7未完待续</li>
 </ol>
 </li>
@@ -246,17 +249,58 @@
 <li>…</li>
 </ol>
 </li>
-<li><p>stm32里有xx组I/O，每一组IO有16个IO口，每组IO有10个32位寄存器</p>
+<li><p>stm32里有xx组I/O，每一组IO有16个IO口，每组IO有10个32位寄存器。每组IO其实就是一个GPIO端口</p>
+</li>
+<li><p>复用？？</p>
+</li>
+<li><p>串口的通信（结合串口通信实验）<br>| 通信标准 ｜ 引脚说明 ｜ 通信方式 ｜ 通信方向 ｜<br>| :—-: | :—: | :—: | :—: |<br>| UART(通用异步收发器)  | TXD（发送端）；RXD（接收端）；GND（公共地） | .. | 全双工 |<br>| SPI | SCK(同步时钟)；MISO；| 同步通信 | 全/半双工 |</p>
+<pre><code>1. ![串行通讯和并行通讯](https://pic2.zhimg.com/80/v2-dc0f1343063ddcb1fdd1e89ffc9fd529_1440w.jpg)
+2. 全双工：同一时刻两个设备之间 同时 收发数据
+</code></pre>
 </li>
 </ol>
 </li>
 </ol>
 <ol start="2">
 <li><h2 id="实验-源码-上手"><a href="#实验-源码-上手" class="headerlink" title="实验 源码 上手"></a>实验 源码 上手</h2><ol>
-<li>跑马灯 HAL库 源码<ol>
+<li><p>跑马灯 HAL库 源码   —<code>IO口输出</code></p>
+<ol>
 <li>7.6周二下午 成功 –结合开发手册，需要着重理解的是<code>GPIO</code>和<code>LED0（1）LED1（0）</code>(led.h文件里的IO输出电平取反操作)</li>
 <li>初识了一个project的全过程 –注意有HARDWARE文件夹的创建，LED加入path等等基本过程</li>
 <li>LED亮灭：引脚输出高低电</li>
+</ol>
+</li>
+<li><p>按键输入  — <code>IO口输入</code></p>
+</li>
+<li><p>串口通信  –主要是串口中断接收–每次接收到一个字符后-&gt;进入<code>中断</code>服务函数来处理</p>
+<ol>
+<li><p>HAL库</p>
+<ol>
+<li>huart串口句柄（一个传递参数，是个指针）</li>
+<li>uart是什么的缩写？</li>
+<li>串口MSP函数HAL_UART_MspInit –设置GPIO等MCU相关配置（因为HAL_UART_Init初始化与串口本身相关的参数【波特率停止位等】，MSP函数会在Init内部调用）</li>
+<li>HAL中定义了一个串口中断处理函数 HAL_UART_IRQHandler.</li>
+<li>HAL_UART_RECEIVE_IT，开启接受中断 —把每次接收到的字符保存在缓存指针中</li>
+<li>接收完成回调函数RxCpltCallback（huart）   —这些函数的参数都是huart😹</li>
+<li>TDR ： 发送数据寄存器</li>
+</ol>
+</li>
+<li><p>源码中：</p>
+<ol>
+<li>usart.c中<ol>
+<li>USART1-&gt;ISR&amp;0x40 表示什么？</li>
+<li>u8是什么  –u8是unsigned char，u16是unsigned short，u32是unsigned long。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>定时器</p>
+</li>
+<li><p>ADC：</p>
+<ol>
+<li>板子里有3个ADC</li>
 </ol>
 </li>
 </ol>
@@ -352,7 +396,7 @@
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
       <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>
       </label>
     </div>
   </div>
@@ -484,13 +528,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
+    <title>about</title>
+    <url>/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>about</title>
-    <url>/about/index.html</url>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
